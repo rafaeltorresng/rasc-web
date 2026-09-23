@@ -557,3 +557,31 @@ O wordmark é **uma apresentação simples e tipográfica do nome Rasc**.
 O Thinking Orb continua sendo **a linguagem viva de shaping e estado**, separada da identidade estática.
 
 Essa distinção deve permanecer fixa.
+
+---
+
+## Current implementation status
+
+### Design direction — approved
+
+The approved Brand Symbol direction above remains the target. The existing two-form raster mark visually corresponds to that concept: two curved complementary masses with central negative space and a subtle R-like gesture. This is a visual correspondence only; the repository does not record approval of these exact PNG exports as the final master.
+
+### Production master — not finalized
+
+The app currently contains:
+- RascLogo: two appearance-specific raster PNGs (1254 × 1254) in the app asset catalog. The RascLogo SwiftUI wrapper has no current call site.
+- AppIcon: macOS multi-size PNG exports in the AppIcon asset catalog. The audited 512 × 512 export is a near-white symbol raster on a transparent background (nontransparent bounds 131–380 in both axes), without the approved warm-ivory squircle/graphite-symbol treatment. These are current platform exports, not a verified vector/master app-icon source.
+- MenuBarIcon: 32 px and 64 px template-rendered PNGs used by the native status item. This is a platform derivative.
+- Onboarding and Home identity: Thinking Orb beside a native-text Rasc wordmark, rather than the static Brand Symbol lockup.
+- Thinking Orb: a separate dynamic state/shaping element, not the Brand Symbol.
+
+No verified vector or editable master was found in the app repository. The raster files are preserved for provenance under brand/source-current/ in this repository.
+
+### Remaining identity closure
+
+Before calling Brand Identity v1 production-final:
+1. Confirm whether the existing two-form raster mark is the approved final geometry, or commission/locate the approved master without treating these exports as editable masters.
+2. Produce/confirm the vector symbol, simple wordmark, and horizontal lockup specified above.
+3. Replace or formally revise the current AppIcon export to match the approved symbol/material direction: the audited 512 × 512 app icon is near-white artwork on transparency, rather than graphite on a warm-ivory macOS squircle. Current app-icon files are only implementation exports.
+4. Decide and record whether onboarding/Home should retain their current Orb-plus-wordmark identity or adopt the static Brand Symbol where appropriate. This audit changes no product UI.
+5. Verify the approved source at small sizes, in monochrome, and in its intended app/web contexts before definitive brand captures/exports.
