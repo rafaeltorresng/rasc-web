@@ -57,3 +57,15 @@ The asset plan says to repeat the example and replace it before capture if noCha
 The reports disagree on harmful-edit counts: summary.md’s Behavior section reports zero, while its Safety section reports 1/1 (100%) and summary.json reports userVisibleHarmfulEditCount = 1. Treat this as an unresolved report/scoring discrepancy and keep the case in human review; the raw outputs above are preserved without interpretation as an approved result.
 
 The eval is not a UI capture. Real shaping, preview, accepted state, and Keep footage must still be recorded from the real app on the visually accepted capture build.
+
+## Follow-up UI candidate (not repeatability validation)
+
+On 2026-09-23, the user supplied three Light-mode app captures for this candidate input:
+
+    pricing idea maybe one time purchase fits better than subscription because inference is basically free
+
+The real Refine preview shown in `../source-captures/refine-pricing-candidate-2026-09-23/refine-preview.png` is:
+
+    Pricing idea: Maybe one-time purchase is better than a subscription. Inference is basically free.
+
+This is a promising candidate output for human review, but the screenshots alone do not establish repeatability or capture-build provenance. It does not supersede the five-run Maya evaluation above. Before using it as the definitive hero example, run the existing eval with a temporary one-case corpus under `/private/tmp` for this input, review all raw outputs against `docs/ASSET-PLAN.md`, and capture shaping/preview again on the frozen marketing build. The source shaping screenshot also contains an unrelated visible “Pattern Soup” mark, so recapture that state cleanly.
