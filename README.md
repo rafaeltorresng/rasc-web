@@ -72,6 +72,17 @@ npm run lint
 
 No environment variables or public model endpoint are required. No new dependencies were added.
 
+## Static hosting
+
+Production must serve the **`dist/`** folder after `npm run build`. Do not publish the repository root: `index.html` references `/src/main.tsx`, which only works with the Vite dev server.
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm ci && npm run build` |
+| Publish directory | `dist` |
+
+`render.yaml` and `netlify.toml` encode these defaults. After deploy, the document should load hashed assets under `/assets/…`, not `/src/main.tsx`.
+
 ## Design sources
 
 - Simulated Mac wallpaper: the user's verified macOS “Hello Orange”, static dark appearance from Apple's original system asset. Source/encoding details: `public/mac-workspace/ASSET-SOURCE.md`. This is environment artwork, not Rasc identity.
