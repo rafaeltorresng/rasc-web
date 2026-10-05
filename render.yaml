@@ -1,0 +1,11 @@
+# Static site: publish Vite build output, not the repo root (dev index.html uses /src/main.tsx).
+services:
+  - type: web
+    name: rasc-web
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
