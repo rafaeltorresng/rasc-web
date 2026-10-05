@@ -1,0 +1,338 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "layout": {
+      "documentWidth": 1440,
+      "heroBottom": 896.046875,
+      "retrievalRight": 532.3984375,
+      "scrollY": 0,
+      "searchLeft": 588.3984375,
+      "sections": [
+        {
+          "height": 818.046875,
+          "paddingBottom": "0px",
+          "paddingTop": "36px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 723.2578125,
+          "paddingBottom": "48px",
+          "paddingTop": "96px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 755.1953125,
+          "paddingBottom": "0px",
+          "paddingTop": "48px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 405.890625,
+          "paddingBottom": "48px",
+          "paddingTop": "56px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 674,
+          "paddingBottom": "48px",
+          "paddingTop": "48px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 688.78125,
+          "paddingBottom": "96px",
+          "paddingTop": "96px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 686.53125,
+          "paddingBottom": "96px",
+          "paddingTop": "96px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 1440
+    }
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "layout": {
+      "documentWidth": 1366,
+      "heroBottom": 765.046875,
+      "retrievalRight": 495.875,
+      "scrollY": 0,
+      "searchLeft": 550.5078125,
+      "sections": [
+        {
+          "height": 687.046875,
+          "paddingBottom": "0px",
+          "paddingTop": "24px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 722.6796875,
+          "paddingBottom": "47.81px",
+          "paddingTop": "95.62px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 755,
+          "paddingBottom": "0px",
+          "paddingTop": "47.81px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 404.328125,
+          "paddingBottom": "47.81px",
+          "paddingTop": "54.64px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 673.609375,
+          "paddingBottom": "47.81px",
+          "paddingTop": "47.81px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 688.015625,
+          "paddingBottom": "95.62px",
+          "paddingTop": "95.62px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 685.765625,
+          "paddingBottom": "95.62px",
+          "paddingTop": "95.62px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 1366
+    }
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "layout": {
+      "documentWidth": 1024,
+      "heroBottom": 765.046875,
+      "retrievalRight": 641.203125,
+      "scrollY": 0,
+      "searchLeft": 132,
+      "sections": [
+        {
+          "height": 687.046875,
+          "paddingBottom": "0px",
+          "paddingTop": "24px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 574.234375,
+          "paddingBottom": "35.84px",
+          "paddingTop": "71.68px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 714.5703125,
+          "paddingBottom": "0px",
+          "paddingTop": "35.84px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 378.6796875,
+          "paddingBottom": "35.84px",
+          "paddingTop": "40.96px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 926.1953125,
+          "paddingBottom": "35.84px",
+          "paddingTop": "35.84px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 571.484375,
+          "paddingBottom": "71.68px",
+          "paddingTop": "71.68px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 620.96875,
+          "paddingBottom": "71.68px",
+          "paddingTop": "71.68px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 1024
+    }
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "layout": {
+      "documentWidth": 768,
+      "heroBottom": 1005.796875,
+      "retrievalRight": 628.3984375,
+      "scrollY": 0,
+      "searchLeft": 38.3984375,
+      "sections": [
+        {
+          "height": 927.796875,
+          "paddingBottom": "0px",
+          "paddingTop": "32px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 665.0859375,
+          "paddingBottom": "32px",
+          "paddingTop": "64px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 1006.59375,
+          "paddingBottom": "0px",
+          "paddingTop": "32px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 440.6875,
+          "paddingBottom": "32px",
+          "paddingTop": "40px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 905.5859375,
+          "paddingBottom": "32px",
+          "paddingTop": "32px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 565.5859375,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 540.9375,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 768
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "layout": {
+      "documentWidth": 390,
+      "heroBottom": 835.203125,
+      "retrievalRight": 368,
+      "scrollY": 0,
+      "searchLeft": 22,
+      "sections": [
+        {
+          "height": 769.203125,
+          "paddingBottom": "0px",
+          "paddingTop": "28px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 679.2265625,
+          "paddingBottom": "32px",
+          "paddingTop": "64px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 949.6953125,
+          "paddingBottom": "0px",
+          "paddingTop": "32px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 442.78125,
+          "paddingBottom": "32px",
+          "paddingTop": "40px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 1014.875,
+          "paddingBottom": "32px",
+          "paddingTop": "32px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 869.9609375,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 628.328125,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "layout": {
+      "documentWidth": 320,
+      "heroBottom": 912.1796875,
+      "retrievalRight": 302,
+      "scrollY": 0,
+      "searchLeft": 18,
+      "sections": [
+        {
+          "height": 846.1796875,
+          "paddingBottom": "0px",
+          "paddingTop": "28px",
+          "section": "hero-section page-container"
+        },
+        {
+          "height": 766.8515625,
+          "paddingBottom": "32px",
+          "paddingTop": "64px",
+          "section": "owned-moment section-pad"
+        },
+        {
+          "height": 1043.9765625,
+          "paddingBottom": "0px",
+          "paddingTop": "32px",
+          "section": "interaction-section section-pad"
+        },
+        {
+          "height": 465.6796875,
+          "paddingBottom": "32px",
+          "paddingTop": "40px",
+          "section": "no-system-section section-pad"
+        },
+        {
+          "height": 1039.921875,
+          "paddingBottom": "32px",
+          "paddingTop": "32px",
+          "section": "retrieval-section section-pad"
+        },
+        {
+          "height": 912.65625,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "trust-section section-pad"
+        },
+        {
+          "height": 634.8828125,
+          "paddingBottom": "64px",
+          "paddingTop": "64px",
+          "section": "closing-section section-pad"
+        }
+      ],
+      "viewport": 320
+    }
+  }
+]
