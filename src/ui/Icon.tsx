@@ -1,6 +1,7 @@
 // Selected Lucide glyphs; provenance and license: public/icons/ASSET-SOURCE.md.
 // Identity marks and native macOS indicators deliberately stay separate.
 import type { ReactNode } from 'react';
+import { publicUrl } from '../lib/publicUrl';
 
 const glyphs = {
   download: <><path d="M12 15V3" />
@@ -55,7 +56,7 @@ export default function Icon({ name, className = '' }: { name: IconName; classNa
 }
 
 export function AppleIntelligenceIcon({ alt = '' }: { alt?: string }) {
-  return <img className="apple-intelligence-icon" src="/icons/apple-intelligence.png" width="24" height="24" alt={alt} />;
+  return <img className="apple-intelligence-icon" src={publicUrl('icons/apple-intelligence.png')} width="24" height="24" alt={alt} />;
 }
 
 // Official Octicons mark; provenance and MIT notice: public/icons/ASSET-SOURCE.md.

@@ -81,7 +81,21 @@ Production must serve the **`dist/`** folder after `npm run build`. Do not publi
 | Build command | `npm ci && npm run build` |
 | Publish directory | `dist` |
 
-`render.yaml` and `netlify.toml` encode these defaults. After deploy, the document should load hashed assets under `/assets/…`, not `/src/main.tsx`.
+`render.yaml` and `netlify.toml` encode these defaults for generic static hosts.
+
+### GitHub Pages (`rafaeltorres.dev/rasc-web/`)
+
+This repo is a **project site** under a custom domain. Use the **`Deploy GitHub Pages`** workflow (`.github/workflows/deploy-pages.yml`), not “Deploy from branch /`/`”.
+
+1. Repo **Settings → Pages → Build and deployment → Source**: **GitHub Actions**.
+2. Push to `main` (or run the workflow manually). The build sets `VITE_BASE_PATH=/rasc-web/`.
+3. After deploy, the page should load `/rasc-web/assets/*.js`, not `/src/main.tsx`.
+
+Local preview of the Pages build:
+
+```sh
+VITE_BASE_PATH=/rasc-web/ npm run build && npm run preview
+```
 
 ## Design sources
 
