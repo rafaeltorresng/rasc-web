@@ -1,0 +1,139 @@
+{
+  "configuration": {
+    "caseCount": 3,
+    "criticalStabilityOnly": false,
+    "filterCategories": [
+      "landing-polish"
+    ],
+    "filterTags": [
+      "landing-polish"
+    ],
+    "repetitions": 3,
+    "split": "dev"
+  },
+  "environment": {
+    "appVersion": "0.1.0-beta.3",
+    "modelAvailability": "available",
+    "modelIdentifier": "system-language-model.default",
+    "osVersion": "Version 26.5.1 (Build 25F80)",
+    "promptVersion": "refine-v2-language-preference",
+    "provider": "foundation-models",
+    "runFinishedAt": "2026-10-03T01:33:08Z",
+    "runStartedAt": "2026-10-03T01:32:59Z",
+    "samplingConfiguration": "production FoundationModelsRefinementProvider (unchanged in M12A)"
+  },
+  "records": [
+    {
+      "availability": "available",
+      "caseID": "landing-follow-up",
+      "decision": "changed",
+      "input": "follow up ask what still feels unclear before sending another draft",
+      "kind": "message",
+      "latencyMs": 2320.266008377075,
+      "modelIdentifier": "system-language-model.default",
+      "output": "Follow up and ask what still feels unclear before sending another draft",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 0
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-follow-up",
+      "decision": "changed",
+      "input": "follow up ask what still feels unclear before sending another draft",
+      "kind": "message",
+      "latencyMs": 785.1759195327759,
+      "modelIdentifier": "system-language-model.default",
+      "output": "Follow up and ask what still feels unclear before sending another draft",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 1
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-follow-up",
+      "decision": "changed",
+      "input": "follow up ask what still feels unclear before sending another draft",
+      "kind": "message",
+      "latencyMs": 770.218014717102,
+      "modelIdentifier": "system-language-model.default",
+      "output": "Follow up and ask what still feels unclear before sending another draft",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 2
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-meeting",
+      "decision": "changed",
+      "input": "team meeting idea maybe start with whats blocked then updates at the end",
+      "kind": "meeting",
+      "latencyMs": 782.2660207748413,
+      "modelIdentifier": "system-language-model.default",
+      "output": "team meeting idea maybe start with whats blocked then updates at the end",
+      "productionRejection": "no_change",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 0
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-meeting",
+      "decision": "changed",
+      "input": "team meeting idea maybe start with whats blocked then updates at the end",
+      "kind": "meeting",
+      "latencyMs": 1036.7670059204102,
+      "modelIdentifier": "system-language-model.default",
+      "output": "Start the meeting with a quick overview of what's blocked, then proceed to the updates at the end.",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 1
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-meeting",
+      "decision": "changed",
+      "input": "team meeting idea maybe start with whats blocked then updates at the end",
+      "kind": "meeting",
+      "latencyMs": 858.2700490951538,
+      "modelIdentifier": "system-language-model.default",
+      "output": "Team meeting idea: start with what's blocked and then update at the end",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 2
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-workshop",
+      "decision": "changed",
+      "input": "workshop idea less slides more time trying things maybe start with one example",
+      "kind": "idea",
+      "latencyMs": 777.4089574813843,
+      "modelIdentifier": "system-language-model.default",
+      "output": "workshop idea less slides more time trying things maybe start with one example",
+      "productionRejection": "no_change",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 0
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-workshop",
+      "decision": "changed",
+      "input": "workshop idea less slides more time trying things maybe start with one example",
+      "kind": "idea",
+      "latencyMs": 777.4169445037842,
+      "modelIdentifier": "system-language-model.default",
+      "output": "workshop idea less slides more time trying things maybe start with one example",
+      "productionRejection": "no_change",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 1
+    },
+    {
+      "availability": "available",
+      "caseID": "landing-workshop",
+      "decision": "changed",
+      "input": "workshop idea less slides more time trying things maybe start with one example",
+      "kind": "idea",
+      "latencyMs": 773.5999822616577,
+      "modelIdentifier": "system-language-model.default",
+      "output": "workshop idea less slides more time trying things maybe start with one example",
+      "productionRejection": "no_change",
+      "promptVersion": "refine-v2-language-preference",
+      "runIndex": 2
+    }
+  ]
+}

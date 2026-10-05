@@ -1,0 +1,111 @@
+{
+  "description": "Production on-device Refine evaluation of four synthetic technical candidates, three runs each. Current hero uses two selected conservative outputs; public playback is deterministic with no model calls.",
+  "selectedCases": [
+    "hero-engineering",
+    "hero-product-design"
+  ],
+  "selectionNotes": {
+    "hero-engineering": "Three identical outputs. Preserve the hypothesis, technical terms and lowercase; add only the missing sentence boundary.",
+    "hero-product-design": "Three useful cleanups preserve may and meaning; final punctuation varies. Select the observed full-stop output.",
+    "hero-design-inline": "Not selected: two runs removed maybe, strengthening the original thought.",
+    "hero-engineering-direct": "Not selected: one no_change rejection and one output omitted the duplicate-event hypothesis."
+  },
+  "records": [
+    {
+      "caseID": "hero-design-inline",
+      "input": "maybe keep the error next to the field so people know what to fix",
+      "output": "Maybe keep the error next to the field so people know what to fix",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-design-inline",
+      "input": "maybe keep the error next to the field so people know what to fix",
+      "output": "Keep the error next to the field so people know what to fix",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-design-inline",
+      "input": "maybe keep the error next to the field so people know what to fix",
+      "output": "Keep the error next to the field so people know what to fix",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering",
+      "input": "retry might be sending the same event twice check the handler before adding another guard",
+      "output": "retry might be sending the same event twice. check the handler before adding another guard",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering",
+      "input": "retry might be sending the same event twice check the handler before adding another guard",
+      "output": "retry might be sending the same event twice. check the handler before adding another guard",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering",
+      "input": "retry might be sending the same event twice check the handler before adding another guard",
+      "output": "retry might be sending the same event twice. check the handler before adding another guard",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-product-design",
+      "input": "people may miss the required fields show whats missing before they submit",
+      "output": "People may miss the required fields. Show what's missing before they submit.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-product-design",
+      "input": "people may miss the required fields show whats missing before they submit",
+      "output": "People may miss the required fields. Show what's missing before they submit",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-product-design",
+      "input": "people may miss the required fields show whats missing before they submit",
+      "output": "People may miss the required fields. Show what's missing before they submit",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering-direct",
+      "input": "the same event might be sent twice check the retry handler before adding another guard",
+      "output": "the same event might be sent twice check the retry handler before adding another guard",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering-direct",
+      "input": "the same event might be sent twice check the retry handler before adding another guard",
+      "output": "The same event might be sent twice. Check the retry handler before adding another guard",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering-direct",
+      "input": "the same event might be sent twice check the retry handler before adding another guard",
+      "output": "Check the retry handler before adding another guard.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    }
+  ]
+}

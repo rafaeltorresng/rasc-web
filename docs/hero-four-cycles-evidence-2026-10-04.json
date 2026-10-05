@@ -1,0 +1,137 @@
+{
+  "description": "Production on-device Refine evaluation of four hero situations and a more direct reply variant, three runs per candidate. Synthetic isolated corpus; no personal notes. Public fixtures select observed conservative outputs, not live inference.",
+  "selectedCases": [
+    "hero-followup",
+    "hero-workshop",
+    "hero-reply-direct",
+    "hero-break"
+  ],
+  "selectionNotes": {
+    "hero-followup": "Keep the existing observed fixture; new runs varied only final punctuation.",
+    "hero-workshop": "Use the observed two-sentence cleanup with maybe preserved. One run returned noChange.",
+    "hero-reply-direct": "Use direct draft wording instead of meta-instructions. All three changed; punctuation varied. Select the quieter full-stop variant.",
+    "hero-break": "Three identical cleanups preserving maybe."
+  },
+  "records": [
+    {
+      "caseID": "hero-break",
+      "input": "maybe go for a walk after lunch leave the phone at home for a while",
+      "output": "Maybe go for a walk after lunch. Leave the phone at home for a while.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-break",
+      "input": "maybe go for a walk after lunch leave the phone at home for a while",
+      "output": "Maybe go for a walk after lunch. Leave the phone at home for a while.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-break",
+      "input": "maybe go for a walk after lunch leave the phone at home for a while",
+      "output": "Maybe go for a walk after lunch. Leave the phone at home for a while.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-followup",
+      "input": "before sending another draft ask whats still unclear maybe a quick conversation would help",
+      "output": "Before sending another draft, ask what's still unclear. Maybe a quick conversation would help.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-followup",
+      "input": "before sending another draft ask whats still unclear maybe a quick conversation would help",
+      "output": "Before sending another draft, ask what's still unclear. Maybe a quick conversation would help.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-followup",
+      "input": "before sending another draft ask whats still unclear maybe a quick conversation would help",
+      "output": "Before sending another draft, ask what's still unclear. Maybe a quick conversation would help",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply",
+      "input": "thank them for the feedback say ill try a simpler version and send it tomorrow",
+      "output": "thank them for the feedback say ill try a simpler version and send it tomorrow",
+      "decision": "noChange",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply",
+      "input": "thank them for the feedback say ill try a simpler version and send it tomorrow",
+      "output": "Thank them for the feedback. I'll try a simpler version and send it tomorrow",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply",
+      "input": "thank them for the feedback say ill try a simpler version and send it tomorrow",
+      "output": "Thank them for the feedback. I will try a simpler version and send it tomorrow.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-workshop",
+      "input": "maybe start the workshop with one small exercise leave more time for questions",
+      "output": "maybe start the workshop with one small exercise leave more time for questions",
+      "decision": "noChange",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-workshop",
+      "input": "maybe start the workshop with one small exercise leave more time for questions",
+      "output": "Maybe start the workshop with one small exercise, leave more time for questions",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-workshop",
+      "input": "maybe start the workshop with one small exercise leave more time for questions",
+      "output": "Maybe start the workshop with one small exercise. Leave more time for questions.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply-direct",
+      "input": "thanks for the feedback ill try a simpler version and send it tomorrow",
+      "output": "Thanks for the feedback! I'll try a simpler version and send it tomorrow.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply-direct",
+      "input": "thanks for the feedback ill try a simpler version and send it tomorrow",
+      "output": "Thanks for the feedback! I'll try a simpler version and send it tomorrow.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-reply-direct",
+      "input": "thanks for the feedback ill try a simpler version and send it tomorrow",
+      "output": "Thanks for the feedback. I'll try a simpler version and send it tomorrow.",
+      "decision": "changed",
+      "productionRejection": null,
+      "availability": "available"
+    }
+  ]
+}
