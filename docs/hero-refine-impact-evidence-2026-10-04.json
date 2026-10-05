@@ -1,0 +1,550 @@
+{
+  "description": "Synthetic production on-device comparison to replace the rejected duplicate-event fixture. Twenty candidates, three runs each. Public demo selects an exact observed conservative output, no live inference.",
+  "selectedCases": [
+    "hero-upload-input"
+  ],
+  "selectedOutput": "User loses everything if upload fails. Keep what they typed. Show clear error. Let them retry.",
+  "selectionNotes": "Separates the observed problem from three supplied actions. Two usable runs varied capitalization; one no_change rejection. Exclude outputs that altered meaning or showed little benefit.",
+  "records": [
+    {
+      "caseID": "hero-engineering-handoff",
+      "input": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "output": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering-handoff",
+      "input": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "output": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-engineering-handoff",
+      "input": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "output": "fixed the crash but still need to check empty files and cancel during upload before merging",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-offline-edits",
+      "input": "save edits locally first sync when back online dont lose changes when the connection drops",
+      "output": "Save edits locally first, sync when back online, and don't lose changes when the connection drops",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-offline-edits",
+      "input": "save edits locally first sync when back online dont lose changes when the connection drops",
+      "output": "Save edits locally first, sync when back online, and don't lose changes when the connection drops",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-offline-edits",
+      "input": "save edits locally first sync when back online dont lose changes when the connection drops",
+      "output": "Save edits locally first. Sync when back online. Don't lose changes when the connection drops.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-retry",
+      "input": "upload failed but button still says uploading need to reset it and keep the file so they can try again",
+      "output": "Upload failed, but the button still says uploading. Need to reset it and keep the file so they can try again",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-retry",
+      "input": "upload failed but button still says uploading need to reset it and keep the file so they can try again",
+      "output": "Upload failed, but the button still says \"uploading.\" Please reset it and keep the file so they can try again.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-retry",
+      "input": "upload failed but button still says uploading need to reset it and keep the file so they can try again",
+      "output": "Upload failed but button still says uploading. Need to reset it and keep the file so they can try again",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-state",
+      "input": "upload fails button stuck loading should reset it and let people try again without choosing the file again",
+      "output": "Upload fails button stuck loading. Should reset it and let people try again without choosing the file again",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-state",
+      "input": "upload fails button stuck loading should reset it and let people try again without choosing the file again",
+      "output": "Upload fails button stuck loading. Should reset it and let people try again without choosing the file again",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-state",
+      "input": "upload fails button stuck loading should reset it and let people try again without choosing the file again",
+      "output": "Upload fails button stuck loading. Should reset it and let people try again without choosing the file again",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-loading-data",
+      "input": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "output": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-loading-data",
+      "input": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "output": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-loading-data",
+      "input": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "output": "loading state ends before data arrives feels broken keep spinner until we have something to show",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "messyText",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-save",
+      "input": "settings form saves too soon wait till user clicks save otherwise half edits get applied",
+      "output": "settings form saves too soon wait till user clicks save otherwise half edits get applied",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-save",
+      "input": "settings form saves too soon wait till user clicks save otherwise half edits get applied",
+      "output": "Settings form saves too soon. Wait until user clicks Save otherwise half edits get applied",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-save",
+      "input": "settings form saves too soon wait till user clicks save otherwise half edits get applied",
+      "output": "settings form saves too soon wait till user clicks save otherwise half edits get applied",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-recovery",
+      "input": "upload error shouldnt clear the selected file people need to retry not start over",
+      "output": "upload error shouldn't clear the selected file. People need to retry. Not start over",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-recovery",
+      "input": "upload error shouldnt clear the selected file people need to retry not start over",
+      "output": "upload error shouldnt clear the selected file people need to retry not start over",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-recovery",
+      "input": "upload error shouldnt clear the selected file people need to retry not start over",
+      "output": "upload error shouldnt clear the selected file people need to retry not start over",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-rough",
+      "input": "on upload fail keep file selected dont make them start over just retry",
+      "output": "on upload fail keep file selected dont make them start over just retry",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-rough",
+      "input": "on upload fail keep file selected dont make them start over just retry",
+      "output": "On upload fail, keep the file selected, and don't make them start over. Just retry",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-rough",
+      "input": "on upload fail keep file selected dont make them start over just retry",
+      "output": "on upload fail keep file selected dont make them start over just retry",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-migration-checks",
+      "input": "migration plan backup database run on copy check row counts then switch over",
+      "output": "Backup the database, then run a check to verify row counts. After that, switch over the operations.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-migration-checks",
+      "input": "migration plan backup database run on copy check row counts then switch over",
+      "output": "migration plan backup database run on copy check row counts then switch over",
+      "decision": "noChange",
+      "productionRejection": null,
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-migration-checks",
+      "input": "migration plan backup database run on copy check row counts then switch over",
+      "output": "migration plan backup database run on copy check row counts then switch over",
+      "decision": "noChange",
+      "productionRejection": null,
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-checks",
+      "input": "before shipping\nempty state keyboard navigation slow connection\ncancel upload halfway make sure retry works",
+      "output": "before shipping\nempty state keyboard navigation slow connection\ncancel upload halfway make sure retry works",
+      "decision": "noChange",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-checks",
+      "input": "before shipping\nempty state keyboard navigation slow connection\ncancel upload halfway make sure retry works",
+      "output": "Before shipping, ensure the keyboard navigation is smooth and the connection is stable. Cancel the upload halfway and retry the upload to confirm it works properly.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-checks",
+      "input": "before shipping\nempty state keyboard navigation slow connection\ncancel upload halfway make sure retry works",
+      "output": "Before shipping\nEmpty state\nKeyboard navigation is slow\nConnection is slow\nCancel upload halfway\nMake sure retry works",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-fragments",
+      "input": "release check\nkeyboard works\nempty state makes sense\nslow network doesnt lose input",
+      "output": "release check\nkeyboard works\nempty state makes sense\nslow network doesn't lose input",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-fragments",
+      "input": "release check\nkeyboard works\nempty state makes sense\nslow network doesnt lose input",
+      "output": "Release check\nKeyboard works\nEmpty state makes sense\nSlow network doesn't lose input",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-fragments",
+      "input": "release check\nkeyboard works\nempty state makes sense\nslow network doesnt lose input",
+      "output": "Release check\nKeyboard works\nEmpty state makes sense\nSlow network doesn't lose input",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-rough",
+      "input": "before release need check no results keyboard only slow network and what happens if upload cancelled halfway",
+      "output": "Before release, we need to check the keyboard, network, and upload process. If upload is cancelled halfway, we need to ensure there are no issues with the data or the upload process.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "tasks",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-rough",
+      "input": "before release need check no results keyboard only slow network and what happens if upload cancelled halfway",
+      "output": "Before release, we need to check that the upload does not fail halfway. Keyboard, network, and upload speed are slow.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-release-rough",
+      "input": "before release need check no results keyboard only slow network and what happens if upload cancelled halfway",
+      "output": "Before release, we need to check that the upload isn't cancelled halfway. We also need to ensure the network is stable and the keyboard is working well.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-bug",
+      "input": "upload bug button stuck on uploading after failure cant retry without refresh which wipes the form",
+      "output": "The upload bug button is stuck on uploading after failure. It cannot be retried without refreshing the form, which wipes the form.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-bug",
+      "input": "upload bug button stuck on uploading after failure cant retry without refresh which wipes the form",
+      "output": "Upload bug button stuck on uploading after failure. Cant retry without refresh, which wipes the form",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-bug",
+      "input": "upload bug button stuck on uploading after failure cant retry without refresh which wipes the form",
+      "output": "Upload bug button stuck on uploading after failure. Cant retry without refresh which wipes the form",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report",
+      "input": "upload failed button still uploading people cant retry unless refresh resets all fields",
+      "output": "Upload failed. Button still uploading. People can't retry unless refresh resets all fields",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report",
+      "input": "upload failed button still uploading people cant retry unless refresh resets all fields",
+      "output": "Upload failed. Button is still uploading. People can't retry unless refresh resets all fields",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report",
+      "input": "upload failed button still uploading people cant retry unless refresh resets all fields",
+      "output": "Upload failed. Button still uploading. People can't retry unless refresh resets all fields",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report-direct",
+      "input": "bug report upload failed button stuck retry needs refresh but refresh deletes form input",
+      "output": "bug report upload failed button stuck retry needs refresh but refresh deletes form input",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report-direct",
+      "input": "bug report upload failed button stuck retry needs refresh but refresh deletes form input",
+      "output": "Bug report upload failed. Button stuck. Retry needs refresh, but refresh deletes form input.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-report-direct",
+      "input": "bug report upload failed button stuck retry needs refresh but refresh deletes form input",
+      "output": "Bug report upload failed button stuck. Retry needs refresh, but refresh deletes form input",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-messy",
+      "input": "review getting messy mixing bug fix with cleanup should split into separate changes",
+      "output": "review getting messy mixing bug fix with cleanup should split into separate changes",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "messyText",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-messy",
+      "input": "review getting messy mixing bug fix with cleanup should split into separate changes",
+      "output": "review getting messy mixing bug fix with cleanup should split into separate changes",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "messyText",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-messy",
+      "input": "review getting messy mixing bug fix with cleanup should split into separate changes",
+      "output": "Review getting messy. Mixing bug fix with cleanup should be split into separate changes",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "messyText",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-scope",
+      "input": "this change does two things fixing the bug and cleaning up the code better split them so review is easier",
+      "output": "this change fixes the bug and cleans up the code better. split them so review is easier",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-scope",
+      "input": "this change does two things fixing the bug and cleaning up the code better split them so review is easier",
+      "output": "this change does two things: fixing the bug and cleaning up the code better. split them so review is easier",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-scope",
+      "input": "this change does two things fixing the bug and cleaning up the code better split them so review is easier",
+      "output": "this change does two things: fixing the bug and cleaning up the code. better split them so review is easier",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "technical",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-split",
+      "input": "same change bug fix plus cleanup hard to review split into separate changes",
+      "output": "same change bug fix plus cleanup hard to review split into separate changes",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-split",
+      "input": "same change bug fix plus cleanup hard to review split into separate changes",
+      "output": "Same change bug fix plus cleanup. Hard to review. Split into separate changes.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-review-split",
+      "input": "same change bug fix plus cleanup hard to review split into separate changes",
+      "output": "Same change bug fix plus cleanup. Hard to review. Split into separate changes",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "messyText",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-basics",
+      "input": "too many settings on first screen only show basics let people open advanced options when needed",
+      "output": "Too many settings on the first screen. Only show basics. Let people open advanced options when needed",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-basics",
+      "input": "too many settings on first screen only show basics let people open advanced options when needed",
+      "output": "Too many settings on the first screen only show the basics. Let people open advanced options when needed.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-settings-basics",
+      "input": "too many settings on first screen only show basics let people open advanced options when needed",
+      "output": "Show advanced options when needed",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-input",
+      "input": "user loses everything if upload fails keep what they typed show clear error let them retry",
+      "output": "User loses everything if upload fails. Keep what they typed. Show clear error. Let them retry.",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-input",
+      "input": "user loses everything if upload fails keep what they typed show clear error let them retry",
+      "output": "user loses everything if upload fails. keep what they typed. show clear error. let them retry",
+      "decision": "changed",
+      "productionRejection": null,
+      "kind": "message",
+      "availability": "available"
+    },
+    {
+      "caseID": "hero-upload-input",
+      "input": "user loses everything if upload fails keep what they typed show clear error let them retry",
+      "output": "user loses everything if upload fails keep what they typed show clear error let them retry",
+      "decision": "changed",
+      "productionRejection": "no_change",
+      "kind": "message",
+      "availability": "available"
+    }
+  ]
+}
