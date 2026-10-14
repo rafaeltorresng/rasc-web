@@ -1,25 +1,48 @@
-/* Marketing framing only. The pixels within each surface are native captures.
-   Keep their proportions, content, focus treatment and native typography intact. */
+/* Native captures retain their proportions and typography. The live hero only
+   replaces the two orb slots and adds one caret to a cursor-free native capture. */
 .product-tableau { margin: 32px 0 0; }
 .product-tableau__stage {
   position: relative;
   isolation: isolate;
   aspect-ratio: 1120 / 700;
 }
-.product-tableau__stage > img {
+.product-tableau__window {
   position: absolute;
   display: block;
-  height: auto;
   border-radius: 2% / 4.5%;
   /* The screenshot supplies the native edge; the page supplies soft depth. */
   box-shadow: 0 2px 5px rgb(41 36 48 / 5%), 0 18px 42px -16px rgb(41 36 48 / 16%);
 }
+.product-tableau__window > img { display: block; width: 100%; height: auto; border-radius: inherit; }
 .product-tableau__home { width: 74.1%; left: 3.6%; top: 5.4%; z-index: 1; border-radius: 1.5% / 2.2%; }
 .product-tableau__stage > .product-tableau__scratchpad {
   width: 65.2%; left: 30.3%; top: 29%; z-index: 2;
   box-shadow: 0 2px 5px rgb(41 36 48 / 6%), 0 25px 55px -18px rgb(41 36 48 / 23%);
 }
 .product-tableau__refine { width: 56%; left: 5.4%; top: 52%; z-index: 3; border-radius: 2.2% / 4.4%; }
+/* Coordinates are relative to the captured pixel dimensions, so they remain
+   registered with the native chrome at every responsive size. The opaque fill
+   is sampled from the native PNG canvas (#fbfafd); it covers the original orb. */
+.product-tableau__orb-mask {
+  position: absolute; pointer-events: none; background: #fbfafd;
+}
+.product-tableau__orb-mask { display: grid; place-items: center; }
+.product-tableau__orb-mask > .thinking-orb { width: 71.4286%; height: 71.4286%; }
+.product-tableau__scratchpad .product-tableau__orb-mask {
+  left: 2.22222%; top: 10%; width: 3.88889%; height: 8.75%;
+}
+.product-tableau__refine .product-tableau__orb-mask {
+  left: 2.5%; top: 9.0625%; width: 4.375%; height: 8.75%;
+}
+/* The captured text has no cursor. Nothing covers or alters the final glyph.
+   One 1pt caret sits beyond retry, with a small native-scale gap. */
+.product-tableau__caret {
+  position: absolute; pointer-events: none;
+  left: 92.36111%; top: 28.125%; width: .13889%; height: 5.625%;
+  background: var(--violet); animation: tableau-caret-blink 1.1s step-end infinite;
+}
+.product-tableau[data-motion="paused"] .product-tableau__caret { animation: none; }
+@keyframes tableau-caret-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 .product-tableau__caption {
   display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
   padding: 18px 0; border-bottom: 1px solid var(--hairline-soft);

@@ -51,7 +51,7 @@ export default function LandingPage() {
               <div className="hero-download"><DownloadLink /></div>
             </div>
           </div>
-          <ProductTableau />
+          <ProductTableau live />
         </section>
         <OwnedMoment />
         <InteractionStory />
