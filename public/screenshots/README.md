@@ -1,5 +1,9 @@
 # Real app capture
 
+The new light-mode hero uses the native 0.1.0/build 6 capture set in
+[`tableau/README.md`](tableau/README.md). Its layered composition combines
+separate app states; the interfaces themselves are real captures.
+
 `rasc-scratchpad-beta4.png` was captured through the native macOS app on 8 October
 2026, from the beta.4/build 5 Release candidate after its build and regression
 checks. It is a 1440 × 880 capture of the 720 × 440 scratchpad in dark appearance.

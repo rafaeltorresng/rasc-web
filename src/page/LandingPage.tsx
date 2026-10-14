@@ -1,6 +1,7 @@
 import { landingCopy } from '../content/copy';
 import { launch } from '../content/launch';
-import { HeroDemo, HomeSearchScene } from '../product/ProductScenes';
+import { HomeSearchScene } from '../product/ProductScenes';
+import ProductTableau from '../product/ProductTableau';
 import { BrandSymbol, DownloadDetails, DownloadLink, SourceLink, Wordmark } from './Brand';
 import Header from './Header';
 import InteractionStory from './InteractionStory';
@@ -37,7 +38,7 @@ export default function LandingPage() {
       <a className="skip-link" href="#main">Skip to content</a>
       <Header />
       <main id="main">
-        <section className="hero-section page-container" aria-labelledby="hero-title">
+        <section className="hero-section hero-section--tableau page-container" aria-labelledby="hero-title">
           <div className="hero-copy">
             <div className="hero-heading">
               <h1 id="hero-title">A scratchpad for<br /><span>unfinished thoughts.</span></h1>
@@ -55,7 +56,7 @@ export default function LandingPage() {
               <div className="hero-download"><DownloadLink /></div>
             </div>
           </div>
-          <HeroDemo />
+          <ProductTableau />
         </section>
         <OwnedMoment />
         <InteractionStory />

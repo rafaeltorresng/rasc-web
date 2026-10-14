@@ -1,0 +1,29 @@
+.showcase-studies { width: min(1120px, calc(100% - 80px)); margin: 60px auto; }
+.showcase-studies > header { margin-bottom: 64px; }
+.showcase-studies h1 { font-size: 42px; margin: 32px 0 16px; }
+.showcase-studies > header > p { color: var(--ink-muted); }
+.showcase-study { margin-bottom: 72px; }
+.showcase-study__heading { display: flex; gap: 40px; justify-content: space-between; align-items: baseline; }
+.showcase-study__heading h2 { font-size: 26px; letter-spacing: -.035em; }
+.showcase-study__heading p { max-width: 470px; color: var(--ink-muted); font-size: 14px; line-height: 1.6; }
+.showcase-study__scene { position: relative; background: white; padding: 12px 24px; border: 1px solid var(--hairline-soft); }
+.showcase-study .product-tableau { margin: 0; }
+.showcase-study--b .product-tableau__stage { aspect-ratio: 1120 / 700; }
+.showcase-study--b .product-tableau__home { width: 42%; left: 54%; top: 8%; }
+.showcase-study--b .product-tableau__stage > .product-tableau__scratchpad { width: 66%; left: 20%; top: 30%; }
+.showcase-study--b .product-tableau__refine { display: none; }
+.showcase-study__context { position: absolute; left: 5%; top: 12%; width: 69%; height: 73%; padding: 32px 40px; background: #f2f0ed; border-radius: 12px; color: #8e8983; }
+.showcase-study__context > div { font-size: 12px; border-bottom: 1px solid #dcd8d3; padding-bottom: 18px; }
+.showcase-study__context p { font-family: Georgia, serif; font-size: 26px; line-height: 1.5; margin-top: 48px; }
+.showcase-study__context hr { width: 62%; margin: 18px 0; border: 0; border-bottom: 1px solid #dcd8d3; }
+.showcase-study--c .product-tableau__stage > .product-tableau__scratchpad { width: 69%; left: 2%; top: 15%; }
+.showcase-study--c .product-tableau__home { width: 39%; left: 57%; top: 6%; }
+.showcase-study--c .product-tableau__refine { width: 41%; left: 58%; top: 47%; }
+.showcase-study__search { position: absolute; width: 32%; height: auto; left: 10%; top: 63%; border-radius: 10px; box-shadow: var(--shadow-panel); }
+.showcase-post { width: 1200px; height: 1080px; padding: 54px 60px 36px; background: white; }
+.showcase-post__heading { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 48px; }
+.showcase-post h1 { margin: 0; font-size: 62px; line-height: 1.08; }
+.showcase-post h1 span { color: var(--violet); }
+.showcase-post__heading > p { color: var(--ink-muted); font: italic 22px Georgia, serif; margin-bottom: 8px; }
+.showcase-post .product-tableau { margin-top: 20px; }
+.showcase-post footer { margin-top: 14px; color: var(--ink-muted); font-size: 14px; }
