@@ -7,11 +7,6 @@ import Header from './Header';
 import InteractionStory from './InteractionStory';
 import { NoSystemSection, OwnedMoment } from './EditorialSections';
 import { AppleIntelligenceIcon } from '../ui/Icon';
-import { publicUrl } from '../lib/publicUrl';
-
-function NativeAppCapture() {
-  return <details className="native-app-capture"><summary>See the real Mac app</summary><figure><img src={publicUrl('screenshots/rasc-scratchpad-0.1.0.png')} width="1440" height="880" alt="The actual Rasc scratchpad in dark mode, with a thought, optional Refine, Keep and Home controls." loading="lazy" /><figcaption>Actual app · Rasc 0.1.0 · synthetic example. The animated scenes on this page are illustrations. Refine suggestions can make mistakes; compare them with your original before accepting.</figcaption></figure></details>;
-}
 
 function RetrievalSection() {
   const { retrieval } = landingCopy;
@@ -63,7 +58,6 @@ export default function LandingPage() {
         <NoSystemSection />
         <RetrievalSection />
         <TrustSection />
-        <div className="page-container"><NativeAppCapture /></div>
         <ClosingSection />
       </main>
       <Footer />

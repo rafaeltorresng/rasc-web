@@ -50,3 +50,11 @@ Geometry and 16×16 viewBox are unchanged. It is displayed at 14px with
 The external-link glyph remains at a subordinate 12px. The mark is decorative
 for accessibility; the link retains its text name. MIT notice is shipped in
 `OCTICONS-LICENSE.txt`. No runtime package or remote asset request was added.
+
+## Favicon and touch icon
+
+`favicon-16.png`, `favicon-32.png` and `apple-touch-icon.png` are Lanczos
+downscales of the same `652 × 652` crop used by `public/brand-symbol.svg`, taken
+from `brand/source-current/RascLogo.imageset/rasc-dark.png` (RascLogo raster).
+Browsers rasterize the embedded-mask SVG poorly at tab sizes; fixed-size PNGs
+avoid that. Regenerate with `sips` from that crop if the logo asset changes.

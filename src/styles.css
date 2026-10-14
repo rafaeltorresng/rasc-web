@@ -133,11 +133,6 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
   word-break: break-all;
   color: var(--ink);
 }
-.native-app-capture { margin-block: 24px; color: var(--ink-muted); font-size: 13px; }
-.native-app-capture summary { display: list-item; cursor: pointer; padding-block: 12px; }
-.native-app-capture figure { margin: 16px 0 0; max-width: 720px; }
-.native-app-capture img { display: block; width: 100%; height: auto; border-radius: 14px; }
-.native-app-capture figcaption { margin-top: 12px; line-height: 1.6; }
 .hero-demo { margin: 28px 0 0; min-width: 0; }
 .demo-stage, .step-stage { position: relative; overflow: hidden; isolation: isolate; container-type: inline-size; border: 1px solid rgb(41 36 48 / 11%); border-radius: 18px; background: var(--work-canvas); }
 .demo-stage { height: 490px; }

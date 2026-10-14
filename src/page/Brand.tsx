@@ -3,7 +3,7 @@ import { publicUrl } from '../lib/publicUrl';
 import Icon, { GitHubIcon } from '../ui/Icon';
 
 export function BrandSymbol({ className = '' }: { className?: string }) {
-  return <img className={`brand-symbol ${className}`} src={publicUrl('brand-symbol.svg')} width="32" height="32" alt="" />;
+  return <img className={`brand-symbol ${className}`} src={publicUrl('favicon-32.png')} width="32" height="32" alt="" />;
 }
 
 export function Wordmark() {
