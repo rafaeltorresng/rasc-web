@@ -10,7 +10,7 @@ if (canonical && (!['https:', 'http:'].includes(canonical.protocol)
   throw new Error('VITE_SITE_URL must be an http(s) site URL ending in /, without credentials, query or fragment.');
 }
 
-// GitHub Pages project site: https://rafaeltorres.dev/rasc-web/
+// Production site: https://rasc.app/ (GitHub Pages custom domain, root base path).
 export default defineConfig({
   base: process.env.VITE_BASE_PATH ?? '/',
   plugins: [react(), {

@@ -30,11 +30,16 @@ npm run dev
 Production build (matches GitHub Pages):
 
 ```sh
-VITE_BASE_PATH=/rasc-web/ VITE_SITE_URL=https://rafaeltorres.dev/rasc-web/ npm run build
+VITE_BASE_PATH=/ VITE_SITE_URL=https://rasc.app/ npm run build
 npm run preview
 ```
 
 ## Deploy
 
 Pushes to `main` run `.github/workflows/deploy-pages.yml` (lint, typecheck, build,
-GitHub Pages). Custom domain path: `/rasc-web/` on `rafaeltorres.dev`.
+GitHub Pages). Custom domain: `https://rasc.app/` with `VITE_BASE_PATH=/`.
+
+Legacy bookmarks to `/rasc-web/` on the same host are redirected via
+`public/rasc-web/index.html`. The previous project URL on `rafaeltorres.dev`
+must be redirected at that host (DNS or site config); it is not served by this
+repository after the domain move.

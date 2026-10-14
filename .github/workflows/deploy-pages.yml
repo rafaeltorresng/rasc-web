@@ -28,8 +28,8 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
         env:
-          VITE_BASE_PATH: /rasc-web/
-          VITE_SITE_URL: https://rafaeltorres.dev/rasc-web/
+          VITE_BASE_PATH: /
+          VITE_SITE_URL: https://rasc.app/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
