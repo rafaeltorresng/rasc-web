@@ -50,7 +50,8 @@ export function DownloadDetails({ compact = false, showDetails = true }: { compa
                   <a href={launch.checksumHref} target="_blank" rel="noreferrer">
                     SHA-256 checksum file ↗
                   </a>
-                  {' · '}
+                </p>
+                <p className="download-details__checksum">
                   <code>{launch.sha256}</code>
                 </p>
               </>

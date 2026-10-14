@@ -116,9 +116,23 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .download-details summary { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 4px 0; }
 .download-details summary::after { content: '+'; margin-left: 4px; }
 .download-details details[open] summary::after { content: '−'; }
-.download-details__body { width: min(420px, 100%); margin: 8px auto 0; padding: 18px; border: 1px solid var(--hairline); border-radius: 12px; background: white; box-shadow: var(--shadow-panel); text-align: left; font-size: 13px; }
+.download-details__body { width: min(420px, 100%); margin: 8px auto 0; padding: 18px; border: 1px solid var(--hairline); border-radius: 12px; background: white; box-shadow: var(--shadow-panel); text-align: left; font-size: 13px; min-width: 0; overflow-wrap: anywhere; }
 .download-details__body p { margin-bottom: 12px; }
+.download-details__body p:last-child { margin-bottom: 0; }
 .download-details__body a { color: var(--action-fill); }
+.download-details__checksum { margin-top: -4px; }
+.download-details__checksum code {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--surface-raised);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  color: var(--ink);
+}
 .native-app-capture { margin-block: 24px; color: var(--ink-muted); font-size: 13px; }
 .native-app-capture summary { display: list-item; cursor: pointer; padding-block: 12px; }
 .native-app-capture figure { margin: 16px 0 0; max-width: 720px; }
