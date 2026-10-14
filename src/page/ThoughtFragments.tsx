@@ -7,7 +7,7 @@ import EditorialEntrance from './EditorialEntrance';
 let sequenceEnd = 0;
 const fragments = landingCopy.pause.thoughts.map((groups) => {
   const text = groups.join(' ');
-  const plan = createTypingPlan(text);
+  const plan = createTypingPlan(text, undefined, 0.48);
   const start = sequenceEnd;
   const end = start + plan.at(-1)!.at;
   sequenceEnd = end + sceneMotion.editorialThoughtPause;

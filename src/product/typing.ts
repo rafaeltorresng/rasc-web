@@ -3,7 +3,8 @@ export type TypingPlan = readonly Keystroke[];
 
 // Scripted keystrokes, not random delays or a percentage of the string.
 // Short runs vary in pace; word boundaries and punctuation leave thinking room.
-export function createTypingPlan(text: string, budget?: number): TypingPlan {
+/** `pace` scales delays (lower = faster). Hero demos keep the default. */
+export function createTypingPlan(text: string, budget?: number, pace = 1): TypingPlan {
   const characters = [...new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(text)];
   const rhythm = [48, 63, 41, 54, 72, 46, 58];
   const seed = [...text].reduce((value, character) => (value + character.codePointAt(0)!) % rhythm.length, 0);
@@ -23,9 +24,11 @@ export function createTypingPlan(text: string, budget?: number): TypingPlan {
     }
     return { at, end: index + character.length, character };
   });
+  const paced = strokes.map((stroke) => ({ ...stroke, at: Math.round(stroke.at * pace) }));
+  const pacedEnd = paced.at(-1)?.at ?? 0;
   // Longer fixtures fit their scene without speeding up the shorter ones.
-  const scale = budget && at > budget ? budget / at : 1;
-  return strokes.map((stroke) => ({ ...stroke, at: Math.round(stroke.at * scale) }));
+  const scale = budget && pacedEnd > budget ? budget / pacedEnd : 1;
+  return paced.map((stroke) => ({ ...stroke, at: Math.round(stroke.at * scale) }));
 }
 
 export function typedLength(plan: TypingPlan, elapsed: number): number {

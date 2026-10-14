@@ -18,6 +18,9 @@
   --action-fill: #c74a14;
   --action-ink: #a93c10;
   --violet: #7564d8;
+  --orb-violet-highlight: #6754cc;
+  --orb-violet-deep: #5c47bd;
+  --orb-violet-shadow: #473296;
   /* Existing web text mapping; darker than the native focus accent. */
   --violet-ink: #6253bc;
   --violet-wash: rgb(117 100 216 / 13%);
@@ -244,7 +247,16 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .thought-shaping { width: fit-content; }
 .editorial-index { display: block; font-family: var(--font-editorial); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--ink-muted); }
 .editorial-orb-group { width: fit-content; margin: 24px auto 0; }
-.editorial-orb { display: block; width: 80px; height: 80px; padding: 0; border: 0; border-radius: 50%; background: transparent; }
+.editorial-orb {
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  filter: drop-shadow(0 0 10px rgb(103 84 204 / 0.32)) drop-shadow(0 0 3px rgb(169 60 16 / 0.14));
+}
 .reading-column { max-width: 650px; }
 .reading-column h2 { max-width: 620px; }
 .owned-intro { margin-bottom: 0; color: var(--ink-muted); font-size: 18px; line-height: 1.6; }

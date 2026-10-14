@@ -52,7 +52,7 @@ export default function LandingPage() {
             </div>
             <div className="hero-summary">
               <p className="hero-description">{landingCopy.hero.description}</p>
-              <div className="hero-download"><DownloadLink /><DownloadDetails compact showDetails={false} /></div>
+              <div className="hero-download"><DownloadLink /></div>
             </div>
           </div>
           <HeroDemo />

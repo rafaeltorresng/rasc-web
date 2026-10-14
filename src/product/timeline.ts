@@ -35,7 +35,7 @@ export const sceneMotion = {
   editorialOrbTransition: 600,
   editorialEnter: 500,
   editorialStagger: 120,
-  editorialThoughtPause: 500,
+  editorialThoughtPause: 260,
   typing: 5600,
   invokeCue: 800,
   shortcutCue: 450,
