@@ -2,7 +2,8 @@
 
 Public landing for [Rasc](https://github.com/rafaeltorresng/rasc), a native Mac
 scratchpad for unfinished thoughts. React 19, TypeScript and Vite; static hosting,
-no backend, account, analytics or model endpoint.
+no backend, account, or model endpoint. Page views use Cloudflare Web Analytics
+(privacy-oriented, no cookies).
 
 ## Current release status
 
