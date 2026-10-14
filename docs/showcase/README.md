@@ -25,17 +25,21 @@ section and the recorded C study.
 
 ## Implementation
 
-`src/product/ProductTableau.tsx` is the reusable static composition. Native
+`src/product/ProductTableau.tsx` is the reusable composition. Native
 captured pixels supply all app UI, including Home's actual brand symbol and the
 current Refine comparison controls. CSS provides only placement, proportional
-scaling, frame radii and restrained neutral shadows. No new runtime dependencies,
-fonts, shaders or animation timers were introduced.
+scaling, frame radii and restrained neutral shadows. The landing enables its
+`live` variant: the existing native-derived `ThinkingOrb` renderer overlays the
+editor and preview orb slots, and the editor caret blinks. The capture files
+remain untouched. No new runtime dependencies, fonts or shaders were introduced.
 
 At desktop width the note renders at approximately 730 CSS px, close to its
 native 720 pt width. On mobile it uses 96% of the scene, with Home behind and a
 smaller Refine view below. Essential product copy remains outside the images;
-the grouped composition has an accessible description and a visible provenance
-caption. The static hero needs no special reduced-motion behavior.
+the grouped composition has an accessible description. Animation stops outside
+the viewport or when the tab is hidden. With reduced motion enabled, the original
+static captures render without overlays. Home's Brand Symbol stays static.
+The study and post views use the default static variant.
 
 The foreground and supporting colors reuse existing documented web mappings.
 Orange and violet remain the existing action and focus colors; native semantic
@@ -88,3 +92,32 @@ Build and lint passed. Browser checks at 320, 390, 768, 1024 and 1440 CSS px
 found no horizontal overflow and all tableau assets loaded. Desktop, tablet and
 mobile layouts were visually inspected. A production build at the real Pages
 subpath is checked before delivery. No publication, commit or app-source edit.
+
+For the live hero, build and lint passed. Browser review at 1440 and 390 CSS px
+confirmed registered overlays and no mobile overflow. Consecutive orb captures
+differed while running and matched while paused; the caret showed both opacity
+states. Automatic offscreen pause was checked. Reduced-motion
+and hidden-tab behavior are implemented but were not separately browser-tested.
+
+The live hero's right-hand provenance caption and Pause control were removed
+at the user's request.
+
+## Lossless capture and final cursor correction
+
+All three hero surfaces now use native Retina PNGs: Home 2000 × 1360,
+scratchpad 1440 × 640, and Refine 1280 × 640. They were captured from the same
+accepted build in another isolated fixture session. The post exports were
+regenerated from these PNGs. The older JPEG assets remain historical captures.
+
+The earlier opaque caret mask clipped the y and left a thin violet residue.
+It is removed completely. The new note was captured while its native cursor
+was invisible; its complete glyph pixels are untouched. One animated 1pt caret
+is placed at source x=1330, five pixels beyond the last dark glyph pixel.
+The orb-slot backgrounds match the native PNG canvas, #fbfafd.
+
+Build and lint passed after the PNG replacement. Pixel inspection found zero
+embedded violet pixels beside retry and confirmed that no caret mask remains.
+An offline two-state proof verified the complete y and the single cursor.
+The new post export was visually inspected. Browser review of this final
+revision was blocked by the browser tool's local-URL policy; earlier browser
+checks above do not verify this final asset revision.
