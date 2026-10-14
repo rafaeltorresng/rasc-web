@@ -2,9 +2,9 @@
 
 ## Product state
 
-The Rasc macOS app is feature-complete for the current phase. Do not propose app features while working on the website unless explicitly asked.
+The Rasc macOS app is a release candidate, not a certified public binary. Verify claims against the current source and artifact. Do not propose app features while working on the website unless explicitly asked.
 
-This repository is currently a commercial/design source repository. No landing implementation or frontend scaffolding exists or is requested in the current phase.
+This repository contains a React/TypeScript/Vite landing. Historical commercial/design documents are context, not proof of current functionality. The release status and source links must match verified publication facts in `src/content/launch.ts`.
 
 ## Source priority
 

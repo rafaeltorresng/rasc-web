@@ -1,16 +1,19 @@
-import { publicUrl } from '../lib/publicUrl';
+// Distribution facts for Rasc 0.1.0 — verified 2026-10-14 against GitHub Release v0.1.0.
+const RELEASE_TAG = 'v0.1.0';
+const RELEASE_BASE = `https://github.com/rafaeltorresng/rasc/releases/download/${RELEASE_TAG}`;
 
-// Verified against the actual beta.3 bundle and repository on 2026-10-02.
-// This existing artifact is copied byte-for-byte, never rebuilt here.
 export const launch = {
-  version: '0.1.0-beta.3',
-  build: 4,
-  filename: 'Rasc-0.1.0-beta.3.dmg',
-  downloadHref: publicUrl('downloads/Rasc-0.1.0-beta.3.dmg'),
-  checksumHref: publicUrl('downloads/Rasc-0.1.0-beta.3.dmg.sha256'),
-  sha256: '41094a2612d6e38c3ee94ae0d2ac529274e71a56c0282ed154e9cd8ad0045cc2',
+  version: '0.1.0',
+  build: 6,
+  filename: 'Rasc-0.1.0-unsigned.dmg',
+  downloadHref: `${RELEASE_BASE}/Rasc-0.1.0-unsigned.dmg`,
+  checksumHref: `${RELEASE_BASE}/Rasc-0.1.0-unsigned.dmg.sha256`,
+  sha256: 'c14f5ad965b6eb963311e0548cf6d42a24c1e086545b49f741a404a3e47e3853',
+  installGuideHref:
+    'https://github.com/rafaeltorresng/rasc/blob/main/docs/INSTALL-UNSIGNED.md',
   githubHref: 'https://github.com/rafaeltorresng/rasc',
   sourcePublic: true,
+  publicReleaseReady: true,
   platform: 'Apple silicon · macOS 14+',
   refineRequirement: 'Refine needs macOS 26+ with Apple Intelligence enabled.',
   notarized: false,

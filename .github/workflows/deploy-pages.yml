@@ -24,9 +24,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm run build
         env:
           VITE_BASE_PATH: /rasc-web/
+          VITE_SITE_URL: https://rafaeltorres.dev/rasc-web/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

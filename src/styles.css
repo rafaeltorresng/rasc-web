@@ -24,6 +24,10 @@
   --hairline: #e2dde7;
   --hairline-soft: rgb(226 221 231 / 72%);
   --work-canvas: #eae7e2;
+  /* Web-only simulated Mac desktop: violet-warm graphite, aligned with ink/canvas. */
+  --mac-desktop: #6e6a71;
+  --mac-desktop-top: #848089;
+  --mac-desktop-deep: #5a565d;
   --radius-panel: 14px;
   --shadow-panel: 0 24px 65px -18px rgb(33 26 41 / 24%), 0 8px 24px -8px rgb(33 26 41 / 16%), 0 1px 4px rgb(33 26 41 / 8%);
   --shadow-hero-panel: 0 28px 70px -18px rgb(33 26 41 / 36%), 0 10px 28px -10px rgb(33 26 41 / 22%), 0 1px 5px rgb(33 26 41 / 12%);
@@ -112,14 +116,27 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .download-details__body { width: min(420px, 100%); margin: 8px auto 0; padding: 18px; border: 1px solid var(--hairline); border-radius: 12px; background: white; box-shadow: var(--shadow-panel); text-align: left; font-size: 13px; }
 .download-details__body p { margin-bottom: 12px; }
 .download-details__body a { color: var(--action-fill); }
+.native-app-capture { margin-block: 24px; color: var(--ink-muted); font-size: 13px; }
+.native-app-capture summary { display: list-item; cursor: pointer; padding-block: 12px; }
+.native-app-capture figure { margin: 16px 0 0; max-width: 720px; }
+.native-app-capture img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.native-app-capture figcaption { margin-top: 12px; line-height: 1.6; }
 .hero-demo { margin: 28px 0 0; min-width: 0; }
-.demo-stage, .step-stage { position: relative; overflow: hidden; isolation: isolate; container-type: inline-size; border: 1px solid rgb(66 58 52 / 10%); border-radius: 18px; background: var(--work-canvas); }
+.demo-stage, .step-stage { position: relative; overflow: hidden; isolation: isolate; container-type: inline-size; border: 1px solid rgb(41 36 48 / 11%); border-radius: 18px; background: var(--work-canvas); }
 .demo-stage { height: 490px; }
-.mac-work { position: absolute; inset: 0; background: #9d260c url('/mac-workspace/hello-orange-dark.jpg') center / cover no-repeat; }
+.mac-work {
+  position: absolute;
+  inset: 0;
+  background-color: var(--mac-desktop-deep);
+  background-image:
+    radial-gradient(ellipse 115% 80% at 50% -8%, rgb(251 250 253 / 11%), transparent 54%),
+    radial-gradient(ellipse 72% 58% at 92% 96%, rgb(117 100 216 / 8%), transparent 50%),
+    linear-gradient(168deg, var(--mac-desktop-top) 0%, var(--mac-desktop) 46%, var(--mac-desktop-deep) 100%);
+}
 /* Tahoe's idle menu bar is transparent. Menus use glass when opened; the
    resting bar does not need an opaque/frosted strip over the wallpaper. */
 .mac-menu { --menu-icon-slot: 22px; --menu-icon-gap: 7px; display: flex; height: 29px; align-items: center; justify-content: space-between; gap: 18px; padding-inline: 18px; background: transparent; color: rgb(255 255 255 / 96%); font-size: 11px; line-height: 1; white-space: nowrap; }
-.mac-menu__menus, .mac-menu__status { display: flex; height: 100%; align-items: center; gap: 17px; filter: drop-shadow(0 1px 1px rgb(37 12 5 / 32%)); }
+.mac-menu__menus, .mac-menu__status { display: flex; height: 100%; align-items: center; gap: 17px; filter: drop-shadow(0 1px 1.5px rgb(33 26 41 / 34%)); }
 .mac-menu__menus { min-width: 0; }
 .mac-menu__status { flex: none; gap: var(--menu-icon-gap); }
 .mac-menu__icon { display: grid; height: 100%; min-width: var(--menu-icon-slot); flex: none; place-items: center; }
@@ -141,7 +158,7 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .menu-battery__outline { left: 0; width: 23px; mask: url('/mac-workspace/icons/battery-outline.png') center / contain no-repeat; }
 .menu-battery__cap { right: 0; width: 2px; mask: url('/mac-workspace/icons/battery-cap.png') center / contain no-repeat; }
 .menu-battery__level { position: absolute; top: 2px; bottom: 2px; left: 2px; width: 17px; border-radius: 1px; background: currentColor; }
-.chat-workspace { --chat-canvas: #fff; --chat-sidebar: #f6f6f6; --chat-text: #474747; --chat-heading: #333; --chat-muted: #777; --chat-line: #e8e8e8; --chat-field: #f1f1f1; color-scheme: light; position: absolute; top: 51px; bottom: 18px; left: 5%; width: 90%; display: grid; grid-template-columns: 180px minmax(0, 1fr); overflow: hidden; border: 1px solid rgb(36 26 20 / 18%); border-radius: 12px; background: var(--chat-canvas); box-shadow: 0 14px 30px -14px rgb(40 17 8 / 24%), 0 2px 6px rgb(40 17 8 / 10%); color: var(--chat-text); font-size: 12px; }
+.chat-workspace { --chat-canvas: #fff; --chat-sidebar: #f6f6f6; --chat-text: #474747; --chat-heading: #333; --chat-muted: #777; --chat-line: #e8e8e8; --chat-field: #f1f1f1; color-scheme: light; position: absolute; top: 51px; bottom: 18px; left: 5%; width: 90%; display: grid; grid-template-columns: 180px minmax(0, 1fr); overflow: hidden; border: 1px solid rgb(33 26 41 / 14%); border-radius: 12px; background: var(--chat-canvas); box-shadow: 0 16px 36px -16px rgb(33 26 41 / 26%), 0 3px 8px rgb(33 26 41 / 10%); color: var(--chat-text); font-size: 12px; }
 .demo-stage .chat-workspace { top: 41px; bottom: 12px; left: 3.25%; width: 93.5%; }
 .chat-sidebar { min-width: 0; background: var(--chat-sidebar); border-right: 1px solid rgb(0 0 0 / 5%); }
 .chat-sidebar__titlebar { display: flex; height: 42px; align-items: center; justify-content: space-between; padding-inline: 14px; }
@@ -202,7 +219,7 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .scratchpad-actions button:hover { color: var(--action-fill); }
 .home-glyph { width: 18px; height: 18px; }
 .active-shortcut { display: flex; gap: 7px; align-items: center; color: var(--ink-muted); font-size: 11px; }
-.scratchpad-copy { position: relative; padding: 22px 25px 76px; color: #302e34; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; line-height: 1.58; letter-spacing: -.015em; white-space: pre-wrap; overflow-wrap: anywhere; }
+.scratchpad-copy { position: relative; padding: 22px 25px 76px; color: #302e34; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; font-size: 16px; line-height: 1.58; letter-spacing: normal; white-space: pre-wrap; overflow-wrap: anywhere; }
 .scratchpad-window.is-shaping .scratchpad-copy { color: rgb(48 46 52 / 78%); }
 .scratchpad-copy--preview .scratchpad-text { animation: content-resolve var(--motion-content) ease both; }
 .editor-caret, .search-caret { position: relative; display: inline-block; width: 0; height: 1em; vertical-align: text-bottom; }
@@ -597,7 +614,8 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 }
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
   .site-header__inner[data-scrolled="true"] { background: var(--canvas); border-color: var(--hairline); -webkit-backdrop-filter: none; backdrop-filter: none; }
-  .mac-menu { background: #3b170d; color: #fff; }
+  .mac-work { background-image: none; background-color: var(--mac-desktop); }
+  .mac-menu { background: var(--mac-desktop-deep); color: #fff; }
   .mac-menu__menus, .mac-menu__status { filter: none; }
 }
 @supports not (backdrop-filter: blur(16px)) {

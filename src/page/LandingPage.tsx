@@ -6,6 +6,11 @@ import Header from './Header';
 import InteractionStory from './InteractionStory';
 import { NoSystemSection, OwnedMoment } from './EditorialSections';
 import { AppleIntelligenceIcon } from '../ui/Icon';
+import { publicUrl } from '../lib/publicUrl';
+
+function NativeAppCapture() {
+  return <details className="native-app-capture"><summary>See the real Mac app</summary><figure><img src={publicUrl('screenshots/rasc-scratchpad-0.1.0.png')} width="1440" height="880" alt="The actual Rasc scratchpad in dark mode, with a thought, optional Refine, Keep and Home controls." loading="lazy" /><figcaption>Actual app · Rasc 0.1.0 · synthetic example. The animated scenes on this page are illustrations. Refine suggestions can make mistakes; compare them with your original before accepting.</figcaption></figure></details>;
+}
 
 function RetrievalSection() {
   const { retrieval } = landingCopy;
@@ -19,7 +24,7 @@ function TrustSection() {
 
 function ClosingSection() {
   const { closing } = landingCopy;
-  return <section className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbol className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p><DownloadLink /><DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
+  return <section id="release-status" className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbol className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p>{launch.publicReleaseReady ? <DownloadLink /> : <p>Public release in preparation. Download and public source links will appear here when ready.</p>}<DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
 }
 
 function Footer() {
@@ -37,7 +42,7 @@ export default function LandingPage() {
             <div className="hero-heading">
               <h1 id="hero-title">A scratchpad for<br /><span>unfinished thoughts.</span></h1>
               <p className="platform-cue">
-                <span className="platform-cue__product">Native Mac app · Open source</span>
+                <span className="platform-cue__product">Native Mac app · {launch.sourcePublic ? 'Open source' : 'MIT licensed'}</span>
                 <span className="platform-cue__refine" title="Refine with Apple Intelligence, on your Mac">
                   <span className="platform-cue__separator" aria-hidden="true">·</span>
                   <AppleIntelligenceIcon alt="Apple Intelligence" />
@@ -57,6 +62,7 @@ export default function LandingPage() {
         <NoSystemSection />
         <RetrievalSection />
         <TrustSection />
+        <div className="page-container"><NativeAppCapture /></div>
         <ClosingSection />
       </main>
       <Footer />
