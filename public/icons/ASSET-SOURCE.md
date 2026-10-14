@@ -53,8 +53,10 @@ for accessibility; the link retains its text name. MIT notice is shipped in
 
 ## Favicon and touch icon
 
-`favicon-16.png`, `favicon-32.png` and `apple-touch-icon.png` are Lanczos
-downscales of the same `652 × 652` crop used by `public/brand-symbol.svg`, taken
-from `brand/source-current/RascLogo.imageset/rasc-dark.png` (RascLogo raster).
-Browsers rasterize the embedded-mask SVG poorly at tab sizes; fixed-size PNGs
-avoid that. Regenerate with `sips` from that crop if the logo asset changes.
+`favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`, `brand-symbol-128.png`
+and `brand-symbol-256.png` are Lanczos downscales of the same `652 × 652` crop
+used by `public/brand-symbol.svg`, from
+`brand/source-current/RascLogo.imageset/rasc-dark.png` (RascLogo raster). Tab
+icons use the small PNGs; header/footer/closing wordmarks use `srcSet` up to
+256w so Retina scales stay sharp. Regenerate with `sips` from that crop if the
+logo asset changes.

@@ -3,7 +3,20 @@ import { publicUrl } from '../lib/publicUrl';
 import Icon, { GitHubIcon } from '../ui/Icon';
 
 export function BrandSymbol({ className = '' }: { className?: string }) {
-  return <img className={`brand-symbol ${className}`} src={publicUrl('favicon-32.png')} width="32" height="32" alt="" />;
+  const mark128 = publicUrl('brand-symbol-128.png');
+  const mark256 = publicUrl('brand-symbol-256.png');
+  return (
+    <img
+      className={`brand-symbol ${className}`}
+      src={mark128}
+      srcSet={`${mark128} 128w, ${mark256} 256w`}
+      sizes="48px"
+      width={256}
+      height={256}
+      alt=""
+      decoding="async"
+    />
+  );
 }
 
 export function Wordmark() {
