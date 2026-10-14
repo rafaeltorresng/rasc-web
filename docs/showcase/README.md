@@ -72,6 +72,16 @@ layout and text detail at 100% were checked before delivery.
 **Placement recommendation:** main hero, plus the standalone post export.
 Repeating the same tableau immediately below the hero would dilute its impact.
 
+## Compact-window adjustment
+
+The editor was recaptured at 720 × 320 pt instead of 720 × 440 pt: about 27%
+less height at the same display width. Refine was recaptured at 640 × 320 pt
+and expanded from 42% to 56% of the composition width, with its top moved from
+56% to 52%. Its text and controls render about 50% larger, and the suggestion
+wraps across two lines. All resizing happened in the native isolated capture
+app; the web and export keep each image's actual proportions. Mobile Refine
+also increases from 67% to 88% of the scene width.
+
 ## Validation
 
 Build and lint passed. Browser checks at 320, 390, 768, 1024 and 1440 CSS px

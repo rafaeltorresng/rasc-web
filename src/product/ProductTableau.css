@@ -10,7 +10,7 @@
   position: absolute;
   display: block;
   height: auto;
-  border-radius: 2% / 3.27%;
+  border-radius: 2% / 4.5%;
   /* The screenshot supplies the native edge; the page supplies soft depth. */
   box-shadow: 0 2px 5px rgb(41 36 48 / 5%), 0 18px 42px -16px rgb(41 36 48 / 16%);
 }
@@ -19,7 +19,7 @@
   width: 65.2%; left: 30.3%; top: 29%; z-index: 2;
   box-shadow: 0 2px 5px rgb(41 36 48 / 6%), 0 25px 55px -18px rgb(41 36 48 / 23%);
 }
-.product-tableau__refine { width: 42%; left: 5.4%; top: 56%; z-index: 3; }
+.product-tableau__refine { width: 56%; left: 5.4%; top: 52%; z-index: 3; border-radius: 2.2% / 4.4%; }
 .product-tableau__caption {
   display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
   padding: 18px 0; border-bottom: 1px solid var(--hairline-soft);
@@ -49,6 +49,6 @@
   .product-tableau__stage { aspect-ratio: 1 / 1.06; }
   .product-tableau__home { width: 90%; left: 2%; top: 0; }
   .product-tableau__stage > .product-tableau__scratchpad { width: 96%; left: 4%; top: 27%; }
-  .product-tableau__refine { width: 67%; left: 0; top: 61%; }
+  .product-tableau__refine { width: 88%; left: 0; top: 54%; }
   .product-tableau__caption { flex-direction: column; gap: 3px; padding-top: 14px; }
 }
