@@ -1,0 +1,54 @@
+/* Marketing framing only. The pixels within each surface are native captures.
+   Keep their proportions, content, focus treatment and native typography intact. */
+.product-tableau { margin: 32px 0 0; }
+.product-tableau__stage {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1120 / 700;
+}
+.product-tableau__stage > img {
+  position: absolute;
+  display: block;
+  height: auto;
+  border-radius: 2% / 3.27%;
+  /* The screenshot supplies the native edge; the page supplies soft depth. */
+  box-shadow: 0 2px 5px rgb(41 36 48 / 5%), 0 18px 42px -16px rgb(41 36 48 / 16%);
+}
+.product-tableau__home { width: 74.1%; left: 3.6%; top: 5.4%; z-index: 1; border-radius: 1.5% / 2.2%; }
+.product-tableau__stage > .product-tableau__scratchpad {
+  width: 65.2%; left: 30.3%; top: 29%; z-index: 2;
+  box-shadow: 0 2px 5px rgb(41 36 48 / 6%), 0 25px 55px -18px rgb(41 36 48 / 23%);
+}
+.product-tableau__refine { width: 42%; left: 5.4%; top: 56%; z-index: 3; }
+.product-tableau__caption {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
+  padding: 18px 0; border-bottom: 1px solid var(--hairline-soft);
+  color: var(--ink-muted); font-size: 12px; line-height: 1.6;
+}
+.product-tableau__caption p { margin: 0; }
+.product-tableau__caption p > span { color: var(--ink); }
+.product-tableau__provenance { font-size: 11px; }
+.hero-section--tableau { padding-top: 48px; }
+.hero-section--tableau .hero-copy { grid-template-columns: 1.65fr 1fr; align-items: center; gap: 48px; }
+.hero-section--tableau .hero-summary { justify-self: end; gap: 26px; }
+.hero-section--tableau .hero-description { font-size: 23px; }
+
+@media (max-width: 820px) {
+  .hero-section--tableau .hero-copy { grid-template-columns: 1fr; gap: 20px; }
+  .hero-section--tableau .hero-summary { justify-self: center; gap: 20px; }
+  .hero-section--tableau .hero-description { font-size: 21px; }
+  .product-tableau { margin-top: 28px; }
+  .product-tableau__caption { gap: 12px; font-size: 11px; }
+  .product-tableau__provenance { font-size: 10px; }
+}
+@media (max-width: 600px) {
+  .hero-section--tableau { padding-top: 28px; }
+  .hero-section--tableau .hero-description { font-size: 18px; }
+  /* Recompose instead of shrinking the entire desktop scene into a thumbnail.
+     The note is nearly full width; Home remains a recognizable quiet anchor. */
+  .product-tableau__stage { aspect-ratio: 1 / 1.06; }
+  .product-tableau__home { width: 90%; left: 2%; top: 0; }
+  .product-tableau__stage > .product-tableau__scratchpad { width: 96%; left: 4%; top: 27%; }
+  .product-tableau__refine { width: 67%; left: 0; top: 61%; }
+  .product-tableau__caption { flex-direction: column; gap: 3px; padding-top: 14px; }
+}
