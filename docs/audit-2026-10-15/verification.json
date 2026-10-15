@@ -1,0 +1,895 @@
+{
+  "baseCommit": "089363a",
+  "branch": "rafa/website-reliability-audit",
+  "commands": {
+    "lint": "passed",
+    "typecheck": "passed (including E2E types)",
+    "unit": "40 passed",
+    "productionBuild": "passed with VITE_SITE_URL=https://rasc.app/",
+    "diffCheck": "passed"
+  },
+  "stats": {
+    "startTime": "2026-10-15T21:40:38.224Z",
+    "duration": 313031.94299999997,
+    "expected": 115,
+    "skipped": 5,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": {
+    "android-chromium": {
+      "passed": 19,
+      "skipped": 1
+    },
+    "chrome-mac": {
+      "passed": 19,
+      "skipped": 1
+    },
+    "chromium": {
+      "passed": 20
+    },
+    "firefox": {
+      "passed": 19,
+      "skipped": 1
+    },
+    "iphone-webkit": {
+      "passed": 19,
+      "skipped": 1
+    },
+    "webkit": {
+      "passed": 19,
+      "skipped": 1
+    }
+  },
+  "scenarios": [
+    {
+      "project": "chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 782
+    },
+    {
+      "project": "chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 2212
+    },
+    {
+      "project": "chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 797
+    },
+    {
+      "project": "firefox",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 1461
+    },
+    {
+      "project": "firefox",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 3694
+    },
+    {
+      "project": "firefox",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 1065
+    },
+    {
+      "project": "webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 1450
+    },
+    {
+      "project": "webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 3572
+    },
+    {
+      "project": "webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 1053
+    },
+    {
+      "project": "chrome-mac",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 1665
+    },
+    {
+      "project": "chrome-mac",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 3313
+    },
+    {
+      "project": "chrome-mac",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 986
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 1290
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 3827
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 941
+    },
+    {
+      "project": "android-chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "passed",
+      "durationMs": 598
+    },
+    {
+      "project": "android-chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "passed",
+      "durationMs": 2324
+    },
+    {
+      "project": "android-chromium",
+      "file": "distribution.spec.ts",
+      "scenario": "metadata, anchors, assets and production query routes remain intact",
+      "status": "passed",
+      "durationMs": 940
+    },
+    {
+      "project": "chromium",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "passed",
+      "durationMs": 30191
+    },
+    {
+      "project": "firefox",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "skipped",
+      "durationMs": 251
+    },
+    {
+      "project": "webkit",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "skipped",
+      "durationMs": 236
+    },
+    {
+      "project": "chrome-mac",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "skipped",
+      "durationMs": 315
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "skipped",
+      "durationMs": 203
+    },
+    {
+      "project": "android-chromium",
+      "file": "lab.spec.ts",
+      "scenario": "lab measurements and final visual evidence",
+      "status": "skipped",
+      "durationMs": 169
+    },
+    {
+      "project": "chromium",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 6528
+    },
+    {
+      "project": "chromium",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 1518
+    },
+    {
+      "project": "chromium",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1720
+    },
+    {
+      "project": "chromium",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5123
+    },
+    {
+      "project": "chromium",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 1576
+    },
+    {
+      "project": "firefox",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 6981
+    },
+    {
+      "project": "firefox",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 2373
+    },
+    {
+      "project": "firefox",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1663
+    },
+    {
+      "project": "firefox",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5462
+    },
+    {
+      "project": "firefox",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 2218
+    },
+    {
+      "project": "webkit",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 7068
+    },
+    {
+      "project": "webkit",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 2491
+    },
+    {
+      "project": "webkit",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1889
+    },
+    {
+      "project": "webkit",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5486
+    },
+    {
+      "project": "webkit",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 2078
+    },
+    {
+      "project": "chrome-mac",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 6782
+    },
+    {
+      "project": "chrome-mac",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 1701
+    },
+    {
+      "project": "chrome-mac",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1830
+    },
+    {
+      "project": "chrome-mac",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5199
+    },
+    {
+      "project": "chrome-mac",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 1740
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 7141
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 2484
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1893
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5411
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 1961
+    },
+    {
+      "project": "android-chromium",
+      "file": "quality.spec.ts",
+      "scenario": "responsive landing: required widths and intermediate short viewports",
+      "status": "passed",
+      "durationMs": 6657
+    },
+    {
+      "project": "android-chromium",
+      "file": "quality.spec.ts",
+      "scenario": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "passed",
+      "durationMs": 2105
+    },
+    {
+      "project": "android-chromium",
+      "file": "quality.spec.ts",
+      "scenario": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "passed",
+      "durationMs": 1714
+    },
+    {
+      "project": "android-chromium",
+      "file": "quality.spec.ts",
+      "scenario": "Home and Search tolerate pause, manual selection and replay",
+      "status": "passed",
+      "durationMs": 5148
+    },
+    {
+      "project": "android-chromium",
+      "file": "quality.spec.ts",
+      "scenario": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "passed",
+      "durationMs": 1626
+    },
+    {
+      "project": "chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2784
+    },
+    {
+      "project": "chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 3085
+    },
+    {
+      "project": "chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 5789
+    },
+    {
+      "project": "chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 732
+    },
+    {
+      "project": "chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2647
+    },
+    {
+      "project": "firefox",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2788
+    },
+    {
+      "project": "firefox",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 2895
+    },
+    {
+      "project": "firefox",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 5366
+    },
+    {
+      "project": "firefox",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 691
+    },
+    {
+      "project": "firefox",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2848
+    },
+    {
+      "project": "webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2852
+    },
+    {
+      "project": "webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 3270
+    },
+    {
+      "project": "webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 5676
+    },
+    {
+      "project": "webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 767
+    },
+    {
+      "project": "webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2852
+    },
+    {
+      "project": "chrome-mac",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2815
+    },
+    {
+      "project": "chrome-mac",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 3195
+    },
+    {
+      "project": "chrome-mac",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 5863
+    },
+    {
+      "project": "chrome-mac",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 848
+    },
+    {
+      "project": "chrome-mac",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2755
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2796
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 2833
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 5990
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 735
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2794
+    },
+    {
+      "project": "android-chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "scene remains intact without canvas support",
+      "status": "passed",
+      "durationMs": 2775
+    },
+    {
+      "project": "android-chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "missing optional IntersectionObserver does not blank the landing",
+      "status": "passed",
+      "durationMs": 3139
+    },
+    {
+      "project": "android-chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "background and reload recover the selected scene without uncaught errors",
+      "status": "passed",
+      "durationMs": 6279
+    },
+    {
+      "project": "android-chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "failed installation screenshots preserve usable instructions",
+      "status": "passed",
+      "durationMs": 738
+    },
+    {
+      "project": "android-chromium",
+      "file": "resilience.spec.ts",
+      "scenario": "older browsers without Intl.Segmenter still render and refine",
+      "status": "passed",
+      "durationMs": 2702
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 12771
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 4764
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 10189
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16242
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5363
+    },
+    {
+      "project": "chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 6778
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 13121
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 5171
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 9879
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16422
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5755
+    },
+    {
+      "project": "firefox",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 6964
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 13111
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 5901
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 10499
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16563
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5543
+    },
+    {
+      "project": "webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 6978
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 12980
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 4882
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 10356
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16450
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5497
+    },
+    {
+      "project": "chrome-mac",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 7425
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 13032
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 5589
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 10448
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16600
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5527
+    },
+    {
+      "project": "iphone-webkit",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 7519
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "passed",
+      "durationMs": 12839
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "passed",
+      "durationMs": 5457
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "passed",
+      "durationMs": 10262
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "Try Refine works during early, middle and completed Capture",
+      "status": "passed",
+      "durationMs": 16286
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "passed",
+      "durationMs": 5400
+    },
+    {
+      "project": "android-chromium",
+      "file": "scenes.spec.ts",
+      "scenario": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "passed",
+      "durationMs": 7349
+    }
+  ],
+  "fullRunRuntimeErrors": 0,
+  "followUp": {
+    "reason": "Keep the image-error figcaption as the final figure child; targeted regression after the semantic ordering adjustment",
+    "scenariosPassed": 6,
+    "failures": 0,
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "browser": "Native Safari 26.5 (21624.2.5.11.4)",
+  "method": "CUA native UI + Web Inspector. No WebDriver session: remote automation disabled.",
+  "navigationCount": 12,
+  "privateSessions": 4,
+  "extensions": "None installed, verified Extensions settings",
+  "runs": [
+    {
+      "environment": "production-local",
+      "session": "private-1",
+      "result": "loaded; Try Refine → Accept → Keep; root=1, h1=1, CSS block/visible/opacity1; DOMContentLoaded699ms; JS9ms"
+    },
+    {
+      "environment": "development",
+      "session": "private-1",
+      "result": "loaded; Try Refine → Keep → Capture → Refine; root=1,h1=1,preview; DOMContentLoaded619ms; main.tsx260ms,Vite client247ms"
+    },
+    {
+      "environment": "public",
+      "session": "private-1",
+      "result": "loaded; rapid chapters; root=1,h1=1; DOMContentLoaded1163ms; entryJS484ms; Inspector reduced viewport294px paused scene at y263px; close Inspector resumed preview; no console errors shown"
+    },
+    {
+      "environment": "development",
+      "session": "private-2 fresh private storage",
+      "result": "loaded first navigation; Try Refine → Keep → Capture → Refine rendered shaping"
+    },
+    {
+      "environment": "development",
+      "session": "private-2 reload during shaping",
+      "result": "loaded; Capture restored, h1 and all section headings present"
+    },
+    {
+      "environment": "production-local final build",
+      "session": "private-3 first navigation",
+      "result": "loaded; Try Refine then 5 rounds Keep → Capture → Refine; no blank root; final shaping"
+    },
+    {
+      "environment": "production-local final build",
+      "session": "private-3 reload during preview",
+      "result": "loaded with Capture restored"
+    },
+    {
+      "environment": "production-local final build",
+      "session": "private-3 reload with Disable Caches",
+      "result": "loaded; JS index-CTjJOLtZ.js 80.14KB/14.9ms, CSS12.73KB/7.08ms, Loaded121ms; all headings present"
+    },
+    {
+      "environment": "production-local final build",
+      "session": "private-3 inspector snapshot after no-cache reload",
+      "result": "root1,h1=1,hero paused,document visible,root CSS block/visible/opacity1,DOMContentLoaded119ms; only five Cloudflare localhost CORS console entries, no runtime exception shown"
+    },
+    {
+      "environment": "public",
+      "session": "private-4 fresh private storage",
+      "result": "first load rendered; Try Refine and 5 rounds Keep → Capture → Refine; final shaping"
+    },
+    {
+      "environment": "public",
+      "session": "private-4 reload during shaping",
+      "result": "loaded; Capture restored and all headings present"
+    },
+    {
+      "environment": "public",
+      "session": "private-4 successive reload and first loaded full AX observation",
+      "result": "Try Refine clicked immediately in same call as full loaded AX observation; rendered shaping"
+    },
+    {
+      "environment": "public",
+      "session": "private-4 real browser tab switch",
+      "result": "new Start Page tab then Ctrl+Shift+Tab; Refine preview and Accept/Cancel intact"
+    },
+    {
+      "environment": "public",
+      "session": "private-4 inspector after warm reload",
+      "result": "root1,h1=1,preview,CSS block/visible/opacity1,DOMContentLoaded41ms,entryJS index-HEWK-IJz.js transfer0ms0 (cache); console had no errors before diagnostic expression"
+    }
+  ],
+  "limitations": [
+    "No physical iPhone connected/available through tools",
+    "No GPU device/driver variation or hardware acceleration toggle tested",
+    "Private windows reset session storage, not a guaranteed cold OS/CDN/TLS cache",
+    "No crash reproduced; no failing stack available",
+    "Earliest interaction means first loaded accessibility observation, not a pre-hydration programmatic click"
+  ]
+}

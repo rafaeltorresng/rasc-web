@@ -1,0 +1,272 @@
+[
+  {
+    "path": "screenshots/tableau/home.png",
+    "bytes": 383443,
+    "gzipBytes": null
+  },
+  {
+    "path": "brand-symbol.svg",
+    "bytes": 332618,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/index-DRrfeNeB.js",
+    "bytes": 252516,
+    "gzipBytes": 79336
+  },
+  {
+    "path": "rasc-symbol-current.png",
+    "bytes": 249200,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/m3-448-DainJOMd.png",
+    "bytes": 217061,
+    "gzipBytes": null
+  },
+  {
+    "path": "rasc-mac-icon-current.png",
+    "bytes": 205227,
+    "gzipBytes": null
+  },
+  {
+    "path": "og-image.png",
+    "bytes": 187431,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/home.jpg",
+    "bytes": 154025,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/search.jpg",
+    "bytes": 79717,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/refine.png",
+    "bytes": 70254,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/refine.jpg",
+    "bytes": 63958,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/rasc-scratchpad-beta4.png",
+    "bytes": 63821,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/rasc-scratchpad-0.1.0.png",
+    "bytes": 63821,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/m3-672-C3iP3U9y.webp",
+    "bytes": 59684,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/index-B_Hg7HKq.css",
+    "bytes": 58673,
+    "gzipBytes": 12306
+  },
+  {
+    "path": "screenshots/tableau/scratchpad.png",
+    "bytes": 55020,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/scratchpad.jpg",
+    "bytes": 54472,
+    "gzipBytes": null
+  },
+  {
+    "path": "brand-symbol-256.png",
+    "bytes": 53125,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/privacy-context-CyonwN4J.webp",
+    "bytes": 52050,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/dmg-C4pOCnOG.webp",
+    "bytes": 47960,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/m3-448-BGuzA_hQ.webp",
+    "bytes": 33086,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/blocked-B5LqO6Mw.webp",
+    "bytes": 32772,
+    "gzipBytes": null
+  },
+  {
+    "path": "apple-touch-icon.png",
+    "bytes": 28292,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/download-B0-MhQW-.webp",
+    "bytes": 18368,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/privacy-security-BVHe1kdz.webp",
+    "bytes": 15756,
+    "gzipBytes": null
+  },
+  {
+    "path": "brand-symbol-128.png",
+    "bytes": 15161,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/m3-224-_x7KB4wF.webp",
+    "bytes": 13858,
+    "gzipBytes": null
+  },
+  {
+    "path": "icons/apple-intelligence.png",
+    "bytes": 10391,
+    "gzipBytes": null
+  },
+  {
+    "path": "assets/privacy-selection-A4ja5k-S.webp",
+    "bytes": 10292,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/ASSET-SOURCE.md",
+    "bytes": 5985,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/tableau/README.md",
+    "bytes": 5319,
+    "gzipBytes": null
+  },
+  {
+    "path": "icons/ASSET-SOURCE.md",
+    "bytes": 3490,
+    "gzipBytes": null
+  },
+  {
+    "path": "icons/LUCIDE-LICENSE.txt",
+    "bytes": 3208,
+    "gzipBytes": null
+  },
+  {
+    "path": "index.html",
+    "bytes": 2500,
+    "gzipBytes": 841
+  },
+  {
+    "path": "mac-workspace/icons/chatgpt-symbol.svg",
+    "bytes": 2422,
+    "gzipBytes": null
+  },
+  {
+    "path": "favicon-32.png",
+    "bytes": 2126,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/superwhisper-symbol.png",
+    "bytes": 1516,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/rasc-menubar.png",
+    "bytes": 1416,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/controls.png",
+    "bytes": 1277,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/wifi.png",
+    "bytes": 1274,
+    "gzipBytes": null
+  },
+  {
+    "path": "favicon-16.png",
+    "bytes": 1261,
+    "gzipBytes": null
+  },
+  {
+    "path": "screenshots/README.md",
+    "bytes": 1199,
+    "gzipBytes": null
+  },
+  {
+    "path": "THINKING-ORBS-LICENSE.txt",
+    "bytes": 1070,
+    "gzipBytes": null
+  },
+  {
+    "path": "icons/OCTICONS-LICENSE.txt",
+    "bytes": 1068,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/apple-menu.png",
+    "bytes": 1043,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/icons/battery-outline.png",
+    "bytes": 765,
+    "gzipBytes": null
+  },
+  {
+    "path": "mac-workspace/ASSET-SOURCE.md",
+    "bytes": 680,
+    "gzipBytes": null
+  },
+  {
+    "path": "rasc-web/index.html",
+    "bytes": 403,
+    "gzipBytes": 251
+  },
+  {
+    "path": "mac-workspace/icons/battery-cap.png",
+    "bytes": 270,
+    "gzipBytes": null
+  },
+  {
+    "path": "downloads/README.md",
+    "bytes": 221,
+    "gzipBytes": null
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 160,
+    "gzipBytes": null
+  },
+  {
+    "path": "robots.txt",
+    "bytes": 62,
+    "gzipBytes": null
+  },
+  {
+    "path": "CNAME",
+    "bytes": 9,
+    "gzipBytes": null
+  },
+  {
+    "path": ".nojekyll",
+    "bytes": 0,
+    "gzipBytes": null
+  }
+]

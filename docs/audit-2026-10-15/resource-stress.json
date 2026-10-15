@@ -1,0 +1,17 @@
+{
+  "scope": "One Chromium page, 180 chapter selections, snapshots after forced GC; bounded sample, not a general leak proof",
+  "before": {
+    "Documents": 1,
+    "JSEventListeners": 224,
+    "Nodes": 879,
+    "TaskDuration": 0.120495,
+    "JSHeapUsedSize": 3627572
+  },
+  "after": {
+    "Documents": 1,
+    "JSEventListeners": 224,
+    "Nodes": 895,
+    "TaskDuration": 1.322819,
+    "JSHeapUsedSize": 4448408
+  }
+}

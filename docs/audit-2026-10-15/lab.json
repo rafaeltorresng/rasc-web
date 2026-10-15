@@ -1,0 +1,448 @@
+{
+  "engine": "chromium",
+  "conditions": "macOS Chromium; 390×844 CSS px; cold cache; 150ms RTT, 400000 B/s down, 100000 B/s up, CPU 4×; local uncompressed preview; analytics blocked; 3 independent contexts; Event Timing samples are interaction latency proxies, not field INP; CLS sum over observed session, not CrUX session-window aggregation",
+  "samples": [
+    {
+      "lcp": 2712,
+      "cls": 0,
+      "longTasks": [
+        69
+      ],
+      "interactions": [
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 404
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 868
+        }
+      ],
+      "resources": [
+        {
+          "path": "/assets/index-CTjJOLtZ.js",
+          "transferBytes": 80019,
+          "decodedBytes": 252495,
+          "ms": 394
+        },
+        {
+          "path": "/assets/index-DBCAh8bx.css",
+          "transferBytes": 12669,
+          "decodedBytes": 58407,
+          "ms": 222.0999999642372
+        },
+        {
+          "path": "/beacon.min.js",
+          "transferBytes": 0,
+          "decodedBytes": 0,
+          "ms": 7.800000011920929
+        },
+        {
+          "path": "/assets/download-B0-MhQW-.webp",
+          "transferBytes": 18668,
+          "decodedBytes": 18368,
+          "ms": 410
+        },
+        {
+          "path": "/assets/privacy-selection-A4ja5k-S.webp",
+          "transferBytes": 10592,
+          "decodedBytes": 10292,
+          "ms": 334.9000000357628
+        },
+        {
+          "path": "/assets/privacy-security-BVHe1kdz.webp",
+          "transferBytes": 16056,
+          "decodedBytes": 15756,
+          "ms": 391
+        },
+        {
+          "path": "/assets/blocked-B5LqO6Mw.webp",
+          "transferBytes": 33072,
+          "decodedBytes": 32772,
+          "ms": 540.8000000119209
+        },
+        {
+          "path": "/assets/dmg-C4pOCnOG.webp",
+          "transferBytes": 48260,
+          "decodedBytes": 47960,
+          "ms": 717.6000000238419
+        },
+        {
+          "path": "/assets/privacy-context-CyonwN4J.webp",
+          "transferBytes": 52350,
+          "decodedBytes": 52050,
+          "ms": 762.6999999880791
+        },
+        {
+          "path": "/brand-symbol-128.png",
+          "transferBytes": 15461,
+          "decodedBytes": 15161,
+          "ms": 963.2000000476837
+        },
+        {
+          "path": "/icons/apple-intelligence.png",
+          "transferBytes": 10691,
+          "decodedBytes": 10391,
+          "ms": 625.8999999761581
+        },
+        {
+          "path": "/screenshots/tableau/scratchpad.png",
+          "transferBytes": 55320,
+          "decodedBytes": 55020,
+          "ms": 1008.3999999761581
+        },
+        {
+          "path": "/screenshots/tableau/home.png",
+          "transferBytes": 383743,
+          "decodedBytes": 383443,
+          "ms": 1949.199999988079
+        },
+        {
+          "path": "/screenshots/tableau/refine.png",
+          "transferBytes": 70554,
+          "decodedBytes": 70254,
+          "ms": 1143.1000000238419
+        },
+        {
+          "path": "/mac-workspace/icons/chatgpt-symbol.svg",
+          "transferBytes": 1486,
+          "decodedBytes": 2422,
+          "ms": 764.0999999642372
+        },
+        {
+          "path": "/assets/m3-224-_x7KB4wF.webp",
+          "transferBytes": 14158,
+          "decodedBytes": 13858,
+          "ms": 861.7000000476837
+        }
+      ]
+    },
+    {
+      "lcp": 2732,
+      "cls": 0,
+      "longTasks": [
+        79,
+        56
+      ],
+      "interactions": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 408
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 960
+        }
+      ],
+      "resources": [
+        {
+          "path": "/assets/index-CTjJOLtZ.js",
+          "transferBytes": 80019,
+          "decodedBytes": 252495,
+          "ms": 400.19999998807907
+        },
+        {
+          "path": "/assets/index-DBCAh8bx.css",
+          "transferBytes": 12669,
+          "decodedBytes": 58407,
+          "ms": 228.30000001192093
+        },
+        {
+          "path": "/beacon.min.js",
+          "transferBytes": 0,
+          "decodedBytes": 0,
+          "ms": 15
+        },
+        {
+          "path": "/assets/download-B0-MhQW-.webp",
+          "transferBytes": 18668,
+          "decodedBytes": 18368,
+          "ms": 415
+        },
+        {
+          "path": "/assets/blocked-B5LqO6Mw.webp",
+          "transferBytes": 33072,
+          "decodedBytes": 32772,
+          "ms": 546.0999999642372
+        },
+        {
+          "path": "/assets/dmg-C4pOCnOG.webp",
+          "transferBytes": 48260,
+          "decodedBytes": 47960,
+          "ms": 722.1999999880791
+        },
+        {
+          "path": "/assets/privacy-context-CyonwN4J.webp",
+          "transferBytes": 52350,
+          "decodedBytes": 52050,
+          "ms": 767
+        },
+        {
+          "path": "/assets/privacy-selection-A4ja5k-S.webp",
+          "transferBytes": 10592,
+          "decodedBytes": 10292,
+          "ms": 340
+        },
+        {
+          "path": "/assets/privacy-security-BVHe1kdz.webp",
+          "transferBytes": 16056,
+          "decodedBytes": 15756,
+          "ms": 395.7000000476837
+        },
+        {
+          "path": "/brand-symbol-128.png",
+          "transferBytes": 15461,
+          "decodedBytes": 15161,
+          "ms": 946.3000000119209
+        },
+        {
+          "path": "/icons/apple-intelligence.png",
+          "transferBytes": 10691,
+          "decodedBytes": 10391,
+          "ms": 607.7000000476837
+        },
+        {
+          "path": "/screenshots/tableau/scratchpad.png",
+          "transferBytes": 55320,
+          "decodedBytes": 55020,
+          "ms": 989.6999999880791
+        },
+        {
+          "path": "/screenshots/tableau/refine.png",
+          "transferBytes": 70554,
+          "decodedBytes": 70254,
+          "ms": 1121.1000000238419
+        },
+        {
+          "path": "/screenshots/tableau/home.png",
+          "transferBytes": 383743,
+          "decodedBytes": 383443,
+          "ms": 1931.300000011921
+        },
+        {
+          "path": "/mac-workspace/icons/chatgpt-symbol.svg",
+          "transferBytes": 1486,
+          "decodedBytes": 2422,
+          "ms": 711.8000000119209
+        },
+        {
+          "path": "/assets/m3-224-_x7KB4wF.webp",
+          "transferBytes": 14158,
+          "decodedBytes": 13858,
+          "ms": 793.0999999642372
+        }
+      ]
+    },
+    {
+      "lcp": 2724,
+      "cls": 0,
+      "longTasks": [
+        70
+      ],
+      "interactions": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 404
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 852
+        }
+      ],
+      "resources": [
+        {
+          "path": "/assets/index-CTjJOLtZ.js",
+          "transferBytes": 80019,
+          "decodedBytes": 252495,
+          "ms": 395.5999999642372
+        },
+        {
+          "path": "/assets/index-DBCAh8bx.css",
+          "transferBytes": 12669,
+          "decodedBytes": 58407,
+          "ms": 226.80000001192093
+        },
+        {
+          "path": "/beacon.min.js",
+          "transferBytes": 0,
+          "decodedBytes": 0,
+          "ms": 8.5
+        },
+        {
+          "path": "/assets/download-B0-MhQW-.webp",
+          "transferBytes": 18668,
+          "decodedBytes": 18368,
+          "ms": 409
+        },
+        {
+          "path": "/assets/dmg-C4pOCnOG.webp",
+          "transferBytes": 48260,
+          "decodedBytes": 47960,
+          "ms": 715.6999999880791
+        },
+        {
+          "path": "/assets/privacy-security-BVHe1kdz.webp",
+          "transferBytes": 16056,
+          "decodedBytes": 15756,
+          "ms": 389.69999998807907
+        },
+        {
+          "path": "/assets/blocked-B5LqO6Mw.webp",
+          "transferBytes": 33072,
+          "decodedBytes": 32772,
+          "ms": 543.7999999523163
+        },
+        {
+          "path": "/assets/privacy-context-CyonwN4J.webp",
+          "transferBytes": 52350,
+          "decodedBytes": 52050,
+          "ms": 756.8999999761581
+        },
+        {
+          "path": "/assets/privacy-selection-A4ja5k-S.webp",
+          "transferBytes": 10592,
+          "decodedBytes": 10292,
+          "ms": 332.30000001192093
+        },
+        {
+          "path": "/icons/apple-intelligence.png",
+          "transferBytes": 10691,
+          "decodedBytes": 10391,
+          "ms": 629.1999999880791
+        },
+        {
+          "path": "/brand-symbol-128.png",
+          "transferBytes": 15461,
+          "decodedBytes": 15161,
+          "ms": 969.8999999761581
+        },
+        {
+          "path": "/screenshots/tableau/scratchpad.png",
+          "transferBytes": 55320,
+          "decodedBytes": 55020,
+          "ms": 1011.6000000238419
+        },
+        {
+          "path": "/screenshots/tableau/refine.png",
+          "transferBytes": 70554,
+          "decodedBytes": 70254,
+          "ms": 1138.4000000357628
+        },
+        {
+          "path": "/screenshots/tableau/home.png",
+          "transferBytes": 383743,
+          "decodedBytes": 383443,
+          "ms": 1949.1000000238419
+        },
+        {
+          "path": "/mac-workspace/icons/chatgpt-symbol.svg",
+          "transferBytes": 1486,
+          "decodedBytes": 2422,
+          "ms": 765
+        },
+        {
+          "path": "/assets/m3-224-_x7KB4wF.webp",
+          "transferBytes": 14158,
+          "decodedBytes": 13858,
+          "ms": 875
+        }
+      ]
+    }
+  ]
+}

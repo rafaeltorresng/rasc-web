@@ -1,0 +1,680 @@
+{
+  "sourceCommits": [
+    "156329e",
+    "e6aae11"
+  ],
+  "commands": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "unit": "40 passed",
+    "productionBuild": "passed; VITE_SITE_URL=https://rasc.app/",
+    "diffCheck": "passed"
+  },
+  "stats": {
+    "startTime": "2026-10-15T22:14:16.042Z",
+    "duration": 341317.347,
+    "expected": 121,
+    "skipped": 5,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": {
+    "chromium": {
+      "expected": 21
+    },
+    "firefox": {
+      "expected": 20,
+      "skipped": 1
+    },
+    "webkit": {
+      "expected": 20,
+      "skipped": 1
+    },
+    "chrome-mac": {
+      "expected": 20,
+      "skipped": 1
+    },
+    "iphone-webkit": {
+      "expected": 20,
+      "skipped": 1
+    },
+    "android-chromium": {
+      "expected": 20,
+      "skipped": 1
+    }
+  },
+  "cases": [
+    {
+      "project": "chromium",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "lab measurements and final visual evidence",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "webkit",
+      "test": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "android-chromium",
+      "test": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "chromium",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "installation guide: keyboard, rapid steps, Escape, close and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "hero motion ends within five seconds and stays stopped after returning",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "iphone-webkit",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "android-chromium",
+      "test": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    }
+  ],
+  "nativeSafari": "native-safari.json",
+  "CI": "Remote outcome and commit recorded in PR description; local results are not CI."
+}

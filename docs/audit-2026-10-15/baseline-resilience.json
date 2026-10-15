@@ -1,0 +1,436 @@
+{
+  "config": {
+    "argv": [
+      "/Users/rafatorres/.nvm/versions/node/v24.11.0/bin/node",
+      "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/resilience.spec.ts",
+      "--project=chromium"
+    ],
+    "configFile": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/playwright.config.ts",
+    "rootDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chrome-mac",
+        "name": "chrome-mac",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "iphone-webkit",
+        "name": "iphone-webkit",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "android-chromium",
+        "name": "android-chromium",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "chromium",
+        "testDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "snapshotDir": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5190",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "browserName": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run build:audit && npm run preview -- --host 127.0.0.1 --port 5190 --strictPort",
+      "url": "http://127.0.0.1:5190",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "resilience.spec.ts",
+      "file": "resilience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "scene remains intact without canvas support",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3052,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T21:16:54.415Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-47a1cdbb7058d354e471",
+          "file": "resilience.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "missing optional IntersectionObserver does not blank the landing",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 7925,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { level: 1 }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { level: 1 }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n    at /Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts:23:57",
+                    "location": {
+                      "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                      "column": 57,
+                      "line": 23
+                    },
+                    "snippet": "  21 |   await page.addInitScript(() => { Object.defineProperty(window, 'IntersectionObserver', { value: undefined }); });\n  22 |   await page.goto('/');\n> 23 |   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();\n     |                                                         ^\n  24 |   await page.getByRole('button', { name: 'Try Refine', exact: true }).click();\n  25 |   await expect(page.locator('.step-stage')).toHaveAttribute('data-phase', 'preview');\n  26 |   expect(errors).toEqual([]);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                        "column": 57,
+                        "line": 23
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { level: 1 }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n\n  21 |   await page.addInitScript(() => { Object.defineProperty(window, 'IntersectionObserver', { value: undefined }); });\n  22 |   await page.goto('/');\n> 23 |   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();\n     |                                                         ^\n  24 |   await page.getByRole('button', { name: 'Try Refine', exact: true }).click();\n  25 |   await expect(page.locator('.step-stage')).toHaveAttribute('data-phase', 'preview');\n  26 |   expect(errors).toEqual([]);\n    at /Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts:23:57"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T21:16:54.416Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-missing-optiona-fa1b0--does-not-blank-the-landing-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-missing-optiona-fa1b0--does-not-blank-the-landing-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-missing-optiona-fa1b0--does-not-blank-the-landing-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-missing-optiona-fa1b0--does-not-blank-the-landing-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                    "column": 57,
+                    "line": 23
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-465798cbfeee890a966f",
+          "file": "resilience.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "background and reload recover the selected scene without uncaught errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T21:16:57.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-4a1d62e8ca3544684d89",
+          "file": "resilience.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "failed installation screenshots preserve usable instructions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 7517,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\u001b[22m\n\n    at /Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts:59:122",
+                    "location": {
+                      "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                      "column": 122,
+                      "line": 59
+                    },
+                    "snippet": "  57 |   await page.locator('.hero-download').getByRole('button', { name: 'Installation help' }).click();\n  58 |   await expect(page.getByRole('dialog').getByText(/Find.*Rasc-0.1.1-unsigned.dmg/)).toBeVisible();\n> 59 |   await expect(page.getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })).toBeVisible();\n     |                                                                                                                          ^\n  60 |   await page.getByRole('button', { name: 'Close installation guide' }).click();\n  61 |   expect(await page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');\n  62 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                        "column": 122,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\nExpected: visible\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true }) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })\u001b[22m\n\n\n  57 |   await page.locator('.hero-download').getByRole('button', { name: 'Installation help' }).click();\n  58 |   await expect(page.getByRole('dialog').getByText(/Find.*Rasc-0.1.1-unsigned.dmg/)).toBeVisible();\n> 59 |   await expect(page.getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })).toBeVisible();\n     |                                                                                                                          ^\n  60 |   await page.getByRole('button', { name: 'Close installation guide' }).click();\n  61 |   expect(await page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');\n  62 | });\n    at /Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts:59:122"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T21:17:02.980Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-failed-installa-39673-reserve-usable-instructions-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-failed-installa-39673-reserve-usable-instructions-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-failed-installa-39673-reserve-usable-instructions-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/test-results/resilience-failed-installa-39673-reserve-usable-instructions-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/rafatorres/.codex/worktrees/website-reliability-audit/rasc-web/tests/e2e/resilience.spec.ts",
+                    "column": 122,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-40ffef106c6de0e8b318",
+          "file": "resilience.spec.ts",
+          "line": 48,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T21:16:51.136Z",
+    "duration": 19572.79,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
