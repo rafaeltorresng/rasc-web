@@ -9,11 +9,17 @@ for (const key of ['micro', 'content', 'scene', 'dismiss', 'editorialEnter', 'ed
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
-const showcase = new URLSearchParams(window.location.search).get('showcase');
+const params = new URLSearchParams(window.location.search);
+const showcase = params.get('showcase');
 // Local art-direction and export surfaces do not ship in the production bundle.
-if (import.meta.env.DEV && (showcase === 'studies' || showcase === 'post')) {
+if (import.meta.env.DEV && params.has('companion')) {
+  import('./page/CompanionStudy').then(({ default: CompanionStudy }) => {
+    root.render(<CompanionStudy />);
+  });
+} else if (import.meta.env.DEV && (showcase === 'studies' || showcase === 'post')) {
   import('./page/ShowcaseStudy').then(({ default: ShowcaseStudy }) => {
-    root.render(<ShowcaseStudy post={showcase === 'post'} />);
+    const pose = params.get('pose');
+    root.render(<ShowcaseStudy post={showcase === 'post'} companion={pose === 'm1' || pose === 'm3' ? pose : undefined} />);
   });
 } else {
   root.render(<React.StrictMode><LandingPage /></React.StrictMode>);

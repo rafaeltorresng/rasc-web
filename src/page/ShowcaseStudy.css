@@ -20,10 +20,22 @@
 .showcase-study--c .product-tableau__home { width: 39%; left: 57%; top: 6%; }
 .showcase-study--c .product-tableau__refine { width: 41%; left: 58%; top: 47%; }
 .showcase-study__search { position: absolute; width: 32%; height: auto; left: 10%; top: 63%; border-radius: 10px; box-shadow: var(--shadow-panel); }
-.showcase-post { width: 1200px; height: 1080px; padding: 54px 60px 36px; background: white; }
+.showcase-post { position: relative; width: 1200px; height: 1080px; padding: 54px 60px 36px; background: white; }
 .showcase-post__heading { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 48px; }
 .showcase-post h1 { margin: 0; font-size: 62px; line-height: 1.08; }
 .showcase-post h1 span { color: var(--violet); }
 .showcase-post__heading > p { color: var(--ink-muted); font: italic 22px Georgia, serif; margin-bottom: 8px; }
 .showcase-post .product-tableau { margin-top: 20px; }
+/* A publication is a fixed canvas, including when its preview viewport is
+   narrow. Keep the canonical geometry instead of applying landing breakpoints. */
+.showcase-post .product-tableau__stage { aspect-ratio: 1120 / 700; }
+.showcase-post .product-tableau__home { width: 74.1%; left: 3.6%; top: 5.4%; }
+.showcase-post .product-tableau__stage > .product-tableau__scratchpad { width: 65.2%; left: 30.3%; top: 29%; }
+.showcase-post .product-tableau__refine { width: 56%; left: 5.4%; top: 52%; }
 .showcase-post footer { margin-top: 14px; color: var(--ink-muted); font-size: 14px; }
+.showcase-post__signature { display: block; position: absolute; left: 1000.6875px; top: 829.1015625px; width: 101.515625px; aspect-ratio: 796 / 1103; overflow: hidden; }
+.showcase-post__signature > img { display: block; position: absolute; width: 104.522613%; max-width: none; height: auto; left: -2.01005%; top: -1.45059%; }
+/* M3 occupies the space below the editor, clear of all native surfaces.
+   Its fragment adds editorial meaning without suggesting a functional AI state. */
+.showcase-post__signature--m3 { left: 940px; top: 824px; width: auto; height: 190px; aspect-ratio: 788 / 1098; }
+.showcase-post__signature--m3 > img { width: 105.583757%; height: 103.460838%; left: -2.15736%; top: -1.821494%; }
