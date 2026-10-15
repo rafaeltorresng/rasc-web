@@ -25,3 +25,12 @@ For capture, use the real app Orb. Do not create a replacement or claim a still 
 - Verified vector master: none found in the app repository.
 
 See source-current/MANIFEST.md for file-level source paths, hashes, dimensions, use, and status.
+
+## Editorial companion — October 2026
+
+The companion is a separate editorial layer, introduced only in the
+“Not every thought is a note yet” section. M3 is the working reference, M0 an
+alternative, and M1 a secondary publication pose. It replaces neither the
+Brand Symbol nor the product's Thinking Orb. Invariants and usage rules are in
+`docs/EDITORIAL-COMPANION.md`; provenance is in `brand/companion/manifest.json`.
+The integration awaits visual approval before merge/deploy. The macOS app is unchanged.
