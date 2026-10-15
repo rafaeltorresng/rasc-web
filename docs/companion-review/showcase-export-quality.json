@@ -1,0 +1,20 @@
+{
+  "format": "lossless PNG",
+  "inspection": "native pixel crops, no enlargement",
+  "exports": [
+    {
+      "file": "docs/showcase/rasc-post-companion-m3@2x.png",
+      "width": 2400,
+      "height": 2160,
+      "sha256": "739d4edf76c91c4d69997200fe8f62e9d854c21d597a3ee45fc189f5d1faa3c0",
+      "bytes": 580260
+    },
+    {
+      "file": "docs/showcase/rasc-post-companion@2x.png",
+      "width": 2400,
+      "height": 2160,
+      "sha256": "7badc473a59a9b886eda56840a6778f740c4c3b14a5233edb3388409d9f843a7",
+      "bytes": 540446
+    }
+  ]
+}
