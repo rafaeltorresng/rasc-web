@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { siteDiscoveryFiles } from './src/lib/siteDiscovery.ts';
 
 // Set the real published address at build time. Local previews need no canonical.
 const siteUrl = process.env.VITE_SITE_URL;
@@ -25,6 +26,12 @@ export default defineConfig({
           { tag: 'meta', attrs: { property: 'og:url', content: canonical.href }, injectTo: 'head' },
         ],
       };
+    },
+    generateBundle() {
+      if (!canonical) return;
+      const files = siteDiscoveryFiles(canonical.href);
+      this.emitFile({ type: 'asset', fileName: 'robots.txt', source: files.robotsTxt });
+      this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: files.sitemapXml });
     },
   }],
 });
