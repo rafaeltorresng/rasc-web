@@ -1,16 +1,17 @@
 import { landingCopy } from '../content/copy';
 import EditorialEntrance from './EditorialEntrance';
-import ThoughtShaping from './ThoughtShaping';
+import EditorialCompanion from './EditorialCompanion';
 import ThoughtFragments from './ThoughtFragments';
+import type { ReactNode } from 'react';
 
-export function OwnedMoment() {
+export function OwnedMoment({ aside }: { aside?: ReactNode } = {}) {
   const { pause } = landingCopy;
   return (
     <section className="owned-moment section-pad" aria-labelledby="owned-title">
       <div className="page-container owned-layout">
         <div className="owned-aside">
           <p className="eyebrow">The place before the note</p>
-          <ThoughtShaping />
+          {aside ?? <EditorialCompanion />}
         </div>
         <div className="reading-column">
           <h2 id="owned-title">{pause.title}</h2>
