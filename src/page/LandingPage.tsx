@@ -7,6 +7,7 @@ import Header from './Header';
 import InteractionStory from './InteractionStory';
 import { NoSystemSection, OwnedMoment } from './EditorialSections';
 import { AppleIntelligenceIcon } from '../ui/Icon';
+import { InstallationHelp, InstallationProvider } from './InstallationGuide';
 
 function RetrievalSection() {
   const { retrieval } = landingCopy;
@@ -20,7 +21,7 @@ function TrustSection() {
 
 function ClosingSection() {
   const { closing } = landingCopy;
-  return <section id="release-status" className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbol className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p>{launch.publicReleaseReady ? <DownloadLink /> : <p>Public release in preparation. Download and public source links will appear here when ready.</p>}<DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
+  return <section id="release-status" className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbol className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p>{launch.publicReleaseReady ? <><DownloadLink />{!launch.notarized && <InstallationHelp />}</> : <p>Public release in preparation. Download and public source links will appear here when ready.</p>}<DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
 }
 
 function Footer() {
@@ -29,7 +30,7 @@ function Footer() {
 
 export default function LandingPage() {
   return (
-    <div id="top" className="site-shell">
+    <InstallationProvider><div id="top" className="site-shell">
       <a className="skip-link" href="#main">Skip to content</a>
       <Header />
       <main id="main">
@@ -48,7 +49,7 @@ export default function LandingPage() {
             </div>
             <div className="hero-summary">
               <p className="hero-description">{landingCopy.hero.description}</p>
-              <div className="hero-download"><DownloadLink /></div>
+              <div className="hero-download"><DownloadLink />{launch.publicReleaseReady && !launch.notarized && <InstallationHelp />}</div>
             </div>
           </div>
           <ProductTableau live />
@@ -61,6 +62,6 @@ export default function LandingPage() {
         <ClosingSection />
       </main>
       <Footer />
-    </div>
+    </div></InstallationProvider>
   );
 }
