@@ -42,7 +42,7 @@ Snapshots de inicialização observados (uma amostra por condição, **não benc
 
 A observação vazia imediatamente após iniciar uma navegação foi seguida de conteúdo no carregamento, sem reload corretivo. Não foi classificada como falha persistente. O episódio anterior, recuperado após reload, **continua inconclusivo**: não há stack ou estado de DOM daquele instante para comparar. As falhas de APIs opcionais reproduzidas na auditoria anterior permanecem corrigidas, sem atribuí-las ao relato original.
 
-Evidências: [registro das sessões](native-safari.json), [Refine no Safari nativo](native-safari-refine.jpg), [Inspector local](native-safari-inspector.jpg), [Inspector público](native-safari-public-inspector.jpg). Capturas nativas da ferramenta são JPEG; não são novos assets de produto.
+Evidências: [registro das sessões](native-safari.json), [Refine no Safari nativo](native-safari-refine.jpg), [Inspector local](native-safari-inspector.jpg), [Inspector público](native-safari-public-inspector.jpg). Capturas nativas da ferramenta são JPEG; não são novos assets de produto. A composição final está documentada em [desktop](final-hero-desktop.png) e [mobile emulado](final-hero-mobile.png), após a parada da animação.
 
 ## Hero: decisão de acessibilidade
 
