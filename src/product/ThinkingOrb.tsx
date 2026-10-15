@@ -143,7 +143,7 @@ export default function ThinkingOrb({
       }
       context.globalAlpha = 1;
       if (running) {
-        animation = requestAnimationFrame(() => draw((performance.now() - startedAtRef.current) / 1000));
+        animation = requestAnimationFrame(() => draw(((pausedAtRef.current || performance.now()) - startedAtRef.current) / 1000));
       }
     };
 
@@ -159,30 +159,31 @@ export default function ThinkingOrb({
       startedAtRef.current += performance.now() - pausedAtRef.current;
       pausedAtRef.current = 0;
     }
-    const observer = new IntersectionObserver(([entry]) => {
+    const observer = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(([entry]) => {
       inView = entry.isIntersecting;
       if (inView) {
         if ((active || composing || searching) && !reducedMotion && !startedAtRef.current) startedAtRef.current = performance.now();
-        draw((active || composing || searching) && !reducedMotion ? (performance.now() - startedAtRef.current) / 1000 : 0);
+        draw((active || composing || searching) && !reducedMotion ? ((pausedAtRef.current || performance.now()) - startedAtRef.current) / 1000 : 0);
       } else {
         cancelAnimationFrame(animation);
       }
     });
-    observer.observe(canvas);
+    if (observer) observer.observe(canvas);
+    // Without observation, keep the decorative canvas static.
     const onVisibilityChange = () => {
       if (document.visibilityState === 'visible' && inView) {
         if ((active || composing || searching) && !reducedMotion && !startedAtRef.current) startedAtRef.current = performance.now();
-        draw((active || composing || searching) && !reducedMotion ? (performance.now() - startedAtRef.current) / 1000 : 0);
+        draw((active || composing || searching) && !reducedMotion ? ((pausedAtRef.current || performance.now()) - startedAtRef.current) / 1000 : 0);
       } else {
         cancelAnimationFrame(animation);
       }
     };
     document.addEventListener('visibilitychange', onVisibilityChange);
-    draw((active || composing || searching) && !reducedMotion ? (performance.now() - startedAtRef.current) / 1000 : 0);
+    draw((active || composing || searching) && !reducedMotion ? ((pausedAtRef.current || performance.now()) - startedAtRef.current) / 1000 : 0);
 
     return () => {
       cancelAnimationFrame(animation);
-      observer.disconnect();
+      observer?.disconnect();
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };
   }, [active, composing, searching, paused, reducedMotion]);

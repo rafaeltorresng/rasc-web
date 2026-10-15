@@ -106,7 +106,7 @@ function ScratchpadWindow({
         ) : phase === 'keepCue' ? (
           <span className="active-shortcut"><Keycap>⇧⌘K</Keycap> Keep</span>
         ) : (
-          <div className="scratchpad-actions">{hasThought && !isShapingPhase && phase !== 'typing' && (onRefine ? <button type="button" onClick={onRefine}>⌘J <span>Refine</span></button> : <span>⌘J Refine</span>)}{hasThought && !isShapingPhase && phase !== 'typing' && (onKeep ? <button type="button" onClick={onKeep}>⇧⌘K <span>Keep</span></button> : <span>⇧⌘K Keep</span>)}<Icon name="home" className="home-glyph" /></div>
+          <div className="scratchpad-actions">{hasThought && !isShapingPhase && phase !== 'typing' && (onRefine ? <button type="button" aria-label="Refine thought (⌘J)" onClick={onRefine}>⌘J <span>Refine</span></button> : <span>⌘J Refine</span>)}{hasThought && !isShapingPhase && phase !== 'typing' && (onKeep ? <button type="button" aria-label="Keep thought (⇧⌘K)" onClick={onKeep}>⇧⌘K <span>Keep</span></button> : <span>⇧⌘K Keep</span>)}<Icon name="home" className="home-glyph" /></div>
         )}
       </div>
       <div className={`scratchpad-copy${isPreview ? ' scratchpad-copy--preview' : ''}${isTyping ? ' is-typing' : ''}`}>
@@ -161,6 +161,7 @@ export function HeroDemo() {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') { setVisible(true); return; }
     const observer = new IntersectionObserver(([entry]) => setVisible(entry.intersectionRatio >= 0.35), { threshold: [0, 0.35] });
     observer.observe(root);
     return () => observer.disconnect();
@@ -258,6 +259,7 @@ export function HomeSearchScene() {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') { setVisible(true); return; }
     const observer = new IntersectionObserver(([entry]) => setVisible(entry.intersectionRatio >= 0.2), { threshold: [0, 0.2] });
     observer.observe(root);
     return () => observer.disconnect();
@@ -312,16 +314,18 @@ export function StepScene({ step, accepted, revision, onSelect, onAccept }: {
 }) {
   const rootRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
+  const [motionPaused, setMotionPaused] = useState(false);
   const reduced = useReducedMotion();
   const pageVisible = usePageVisible();
   const chapter = stepPlayback[step];
-  const clock = useScenePlayback(demoTimeline, demoDuration, visible && pageVisible, reduced, chapter.still, 'typing', captureTyping.keystrokes);
+  const clock = useScenePlayback(demoTimeline, demoDuration, visible && pageVisible && !motionPaused, reduced, chapter.still, 'typing', captureTyping.keystrokes);
   const { seek } = clock;
   const { phase, elapsed } = clock;
 
   useEffect(() => {
     // Chapter selection is explicit. No scrolling-driven selection or timers
     // moving to the next chapter; each stops before another action is needed.
+    setMotionPaused(false);
     const selected = stepPlayback[step];
     if (step === 'refine' && accepted) seek('accepted');
     else seek(reduced ? selected.still : selected.start, !reduced, selected.end);
@@ -337,7 +341,7 @@ export function StepScene({ step, accepted, revision, onSelect, onAccept }: {
   }, []);
 
   const rascVisible = isRascVisible(phase);
-  const running = clock.wantsPlay && !clock.complete;
+  const running = clock.wantsPlay && !clock.complete && !motionPaused;
   const progress = typedLength(captureTyping.plan, elapsed - typingStart) / demoExample.rough.length;
   const accept = () => { seek('accepted'); onAccept(); };
   const status = phase === 'preview' ? 'The proposal is pending. Accept it, or keep your original.'
@@ -347,6 +351,7 @@ export function StepScene({ step, accepted, revision, onSelect, onAccept }: {
 
   return (
     <figure ref={rootRef} className="step-scene">
+      {step === 'capture' && !reduced && <button type="button" className="step-motion" aria-label={motionPaused ? 'Resume capture animation' : 'Pause capture animation'} title={motionPaused ? 'Resume animation' : 'Pause animation'} disabled={!clock.wantsPlay} onClick={() => setMotionPaused(value => !value)}><Icon name={motionPaused ? 'play' : 'pause'} /></button>}
       <div className="step-stage" data-product-state={step} data-phase={phase} data-paused={!running || !visible || !pageVisible}>
         <WorkContext desktop={false} />
         <div onFocusCapture={clock.pause} aria-hidden={!rascVisible || phase === 'closing'} inert={!rascVisible || phase === 'closing'}

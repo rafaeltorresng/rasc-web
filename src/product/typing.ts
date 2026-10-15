@@ -5,7 +5,16 @@ export type TypingPlan = readonly Keystroke[];
 // Short runs vary in pace; word boundaries and punctuation leave thinking room.
 /** `pace` scales delays (lower = faster). Hero demos keep the default. */
 export function createTypingPlan(text: string, budget?: number, pace = 1): TypingPlan {
-  const characters = [...new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(text)];
+  let offset = 0;
+  const characters = typeof Intl.Segmenter === 'function'
+    ? [...new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(text)]
+    : Array.from(text, segment => {
+      // Older browsers keep complete code points instead of failing during
+      // module initialization. Modern browsers retain full grapheme shaping.
+      const character = { segment, index: offset };
+      offset += segment.length;
+      return character;
+    });
   const rhythm = [48, 63, 41, 54, 72, 46, 58];
   const seed = [...text].reduce((value, character) => (value + character.codePointAt(0)!) % rhythm.length, 0);
   let at = 170;

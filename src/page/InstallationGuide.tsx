@@ -18,6 +18,8 @@ const preloadedShots: HTMLImageElement[] = [];
 // shots first so that click does not leave the first frame on its fallback text.
 function preloadInstallationShots() {
   if (typeof window === 'undefined' || preloadedShots.length > 0) return;
+  const platform = currentDownloadPlatform();
+  if (platform === 'mobile' || platform === 'other') return;
   for (const src of installationShots) {
     const image = new Image();
     image.src = src;
@@ -28,8 +30,8 @@ function preloadInstallationShots() {
 
 preloadInstallationShots();
 
-function retryShot(image: HTMLImageElement) {
-  if (image.dataset.retry === '1') return;
+function retryShot(image: HTMLImageElement, onFailure: () => void) {
+  if (image.dataset.retry === '1') { onFailure(); return; }
   image.dataset.retry = '1';
   const src = image.currentSrc || image.src;
   image.removeAttribute('src');
@@ -104,6 +106,8 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
   const bodyRef = useRef<HTMLDivElement>(null);
   const closingFromEffectCleanup = useRef(false);
   const [active, setActive] = useState(0);
+  const [failedShots, setFailedShots] = useState<readonly number[]>([]);
+  const failShot = (index: number) => setFailedShots(previous => previous.includes(index) ? previous : [...previous, index]);
   const step = steps[active];
 
   useEffect(() => {
@@ -186,19 +190,19 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
         <p className="installation-progress" aria-live="polite" aria-atomic="true">Step {active + 1} of 4 <span className="sr-only">— {step.label}</span></p>
         <h3 id="installation-step-title">{step.label}</h3>
         <p className="installation-instruction">{step.body}</p>
-        <figure className="installation-figure" data-step={active}>
+        <figure className="installation-figure" data-step={active} data-image-failed={failedShots.includes(active)}>
           {steps.map((item, index) => {
             const shown = index === active;
             if (index === 3) {
               return <div key={item.label} className={`installation-shot installation-security-visual${shown ? ' installation-shot--active' : ''}`} aria-hidden={!shown}>
                 <div className="installation-setting-cue">
                   <span>System Settings</span>
-                  <img src={privacySelectionShot} width={390} height={64} alt="Privacy & Security selected in the Settings sidebar." decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget)} />
+                  <img src={privacySelectionShot} width={390} height={64} alt="Privacy & Security selected in the Settings sidebar." decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget, () => failShot(index))} />
                   <span className="installation-setting-connector" aria-hidden="true">↓</span>
                 </div>
                 <picture>
                   <source media="(max-width: 767px)" srcSet={securityShot} />
-                  <img src={item.image} width={item.width} height={item.height} alt={shown ? item.alt : ''} decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget)} />
+                  <img src={item.image} width={item.width} height={item.height} alt={shown ? item.alt : ''} decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget, () => failShot(index))} />
                 </picture>
               </div>;
             }
@@ -213,10 +217,11 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
               decoding="sync"
               loading="eager"
               aria-hidden={!shown}
-              onError={event => retryShot(event.currentTarget)}
+              onError={event => retryShot(event.currentTarget, () => failShot(index))}
             />;
           })}
           {active === 1 && <span className="installation-drag-direction" aria-hidden="true">←</span>}
+          {failedShots.includes(active) && <figcaption className="installation-image-error" role="status">Image unavailable. Follow the instructions above.</figcaption>}
         </figure>
         <p className="installation-hint">{step.hint}</p>
         {active === 3 && <details className="installation-older-mac">
