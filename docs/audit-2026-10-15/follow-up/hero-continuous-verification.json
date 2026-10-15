@@ -1,0 +1,17 @@
+{
+  "scope": "Continuous hero without a manual pause control; preserves reduced motion and visibility suspension.",
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed"
+  },
+  "browserRegression": {
+    "startTime": "2026-10-15T22:59:41.406Z",
+    "duration": 34126.06800000001,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "CI": "New PR revision triggers the existing full CI; previous full results remain historical."
+}

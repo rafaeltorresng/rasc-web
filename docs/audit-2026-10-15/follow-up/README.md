@@ -1,12 +1,12 @@
 # Validação final — Safari nativo e movimento da hero
 
-Complemento à auditoria de 15/10/2026. Branch `rafa/website-reliability-audit`, base `089363a`. As correções anteriores foram preservadas. Aplicativo macOS, identidade, IA da landing e produção não foram alterados. Este complemento substitui as conclusões anteriores sobre cobertura nativa do Safari e duração da hero.
+Complemento à auditoria de 15/10/2026. Branch `rafa/website-reliability-audit`, base `089363a`. As correções anteriores foram preservadas. Aplicativo macOS, identidade, IA da landing e produção não foram alterados. Este complemento substitui as conclusões anteriores sobre cobertura nativa do Safari. A rodada completa registrada abaixo corresponde a `aefcae4`; a decisão posterior de movimento contínuo está descrita na seção da hero.
 
 ## Resultado e recomendação
 
 **Não reproduzi a tela branca nesta rodada delimitada.** Foram 12 navegações/reloads no Safari 26.5 nativo, em quatro sessões privadas, comparando desenvolvimento, build final local e produção pública. Os três ambientes renderizaram e toleraram as sequências exercitadas. Isso melhora a evidência de compatibilidade; não estabelece a causa do episódio anterior, nem prova ausência de falha intermitente em outro dispositivo.
 
-Recomendo aprovar o PR para merge após os checks remotos e a revisão do acabamento. Não há defeito crítico reproduzível conhecido pendente nesta branch. Recomendo o protocolo curto de iPhone abaixo antes de uma divulgação de grande alcance, sem manter esta investigação aberta indefinidamente.
+Recomendo aprovar o PR para merge após os checks remotos e a revisão do acabamento. Não há falha crítica funcional reproduzível conhecida pendente nesta branch; a decisão posterior de movimento contínuo reabre a pendência de acessibilidade da hero. Recomendo o protocolo curto de iPhone abaixo antes de uma divulgação de grande alcance, sem manter esta investigação aberta indefinidamente.
 
 ## Safari: método e evidência
 
@@ -25,7 +25,7 @@ Snapshots de inicialização observados (uma amostra por condição, **não benc
 - Local inicial: `rootChildren=1`, uma H1, CSS `block / visible / opacity 1`; DOMContentLoaded 699 ms; entrada JS em 9 ms.
 - Desenvolvimento: root/H1 presentes, Refine em `preview`; DOMContentLoaded 619 ms; `main.tsx` 260 ms.
 - Público inicial: root/H1 presentes; DOMContentLoaded 1163 ms; entrada `index-HEWK-IJz.js` em 484 ms.
-- Build final local sem cache: entrada `index-CTjJOLtZ.js` em 14,9 ms, CSS 7,08 ms; DOMContentLoaded 119 ms; hero estática após introdução.
+- Build auditado local sem cache (antes da decisão de movimento contínuo): entrada `index-CTjJOLtZ.js` em 14,9 ms, CSS 7,08 ms; DOMContentLoaded 119 ms; hero estática após introdução.
 - Público após reload: root/H1 e preview presentes; CSS visível; DOMContentLoaded 41 ms; entrada JS com transferência/duração zero, consistente com cache.
 
 ### O que foi diferenciado
@@ -42,21 +42,21 @@ Snapshots de inicialização observados (uma amostra por condição, **não benc
 
 A observação vazia imediatamente após iniciar uma navegação foi seguida de conteúdo no carregamento, sem reload corretivo. Não foi classificada como falha persistente. O episódio anterior, recuperado após reload, **continua inconclusivo**: não há stack ou estado de DOM daquele instante para comparar. As falhas de APIs opcionais reproduzidas na auditoria anterior permanecem corrigidas, sem atribuí-las ao relato original.
 
-Evidências: [registro das sessões](native-safari.json), [Refine no Safari nativo](native-safari-refine.jpg), [Inspector local](native-safari-inspector.jpg), [Inspector público](native-safari-public-inspector.jpg). Capturas nativas da ferramenta são JPEG; não são novos assets de produto. A composição final está documentada em [desktop](final-hero-desktop.png) e [mobile emulado](final-hero-mobile.png), após a parada da animação.
+Evidências: [registro das sessões](native-safari.json), [Refine no Safari nativo](native-safari-refine.jpg), [Inspector local](native-safari-inspector.jpg), [Inspector público](native-safari-public-inspector.jpg). Capturas nativas da ferramenta são JPEG; não são novos assets de produto. A composição final está documentada em [desktop](final-hero-desktop.png) e [mobile emulado](final-hero-mobile.png), na rodada anterior, após a parada da animação. O layout não mudou com a decisão de movimento contínuo.
 
 ## Hero: decisão de acessibilidade
 
-A versão com animação infinita, sem controle manual, **não atendia à WCAG 2.2.2**. Orbes e cursor começam automaticamente, convivem com texto e duram mais de cinco segundos; não são essenciais. Respeitar movimento reduzido e suspender fora da viewport não substitui esse requisito.
+**Decisão posterior do usuário: manter a hero sempre animada, sem botão de pausa.** O limite de quatro segundos adotado na rodada anterior foi removido. Orbes e cursor continuam enquanto a hero estiver visível e a página em primeiro plano; suspendem fora da viewport/aba e retomam ao voltar. Movimento reduzido mantém a composição estática desde o início; ausência de observer mantém decoração estática.
 
-A menor solução preservando a decisão de retirar o botão é **encerrar a animação automaticamente após quatro segundos da primeira entrada na viewport**, mantendo os mesmos captures, layout e caption. Não há botão novo. O cronômetro não reinicia ao rolar, alternar abas ou mudar a preferência de movimento. Movimento reduzido permanece estático desde o início; ausência de observer mantém decoração estática.
+Essa decisão preserva a preferência visual, mas **reabre a pendência da WCAG 2.2.2**: há movimento automático não essencial por mais de cinco segundos sem mecanismo manual para parar. Não declaramos esse critério atendido. Referência: [W3C — Understanding 2.2.2](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html).
 
-Essa solução atende ao limite temporal do critério para esta animação decorativa, sem alegar certificação WCAG da página inteira. Referência: [W3C — Understanding 2.2.2](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html).
+A regressão foi ajustada para confirmar movimento real após cinco segundos, blink do cursor, suspensão fora da viewport, retomada e preferência de movimento reduzido. Lint, typecheck, build e seis regressões da hero passaram (Chromium, Firefox, WebKit, Chrome instalado e emulações de iPhone/Android). Os resultados específicos estão em [hero-continuous-verification.json](hero-continuous-verification.json); a matriz completa anterior permanece como histórico. [Captura atual](hero-continuous.png).
 
 ## Defeito adicional corrigido
 
 **MOTION-01 — P2:** uma Thinking Orb pausada avançava um quadro ao sair e voltar à viewport. Observer/visibilidade chamavam o desenho usando o relógio atual, embora o RAF estivesse parado. Agora o desenho usa o instante de pausa. Não houve reset ou remontagem para mascarar o problema.
 
-O teste novo reproduziu o avanço em Chromium, WebKit e emulação de iPhone antes da correção; passou nos três depois. A regressão verifica parada em até cinco segundos, estabilidade dos pixels, ausência de blink CSS, scroll de ida/volta e mudança de preferência de movimento. A suspensão por visibilidade continua coberta pelos testes de cenas existentes.
+O teste novo reproduziu o avanço em Chromium, WebKit e emulação de iPhone antes da correção; passou nos três depois. A regressão original verificou a introdução finita; a regressão atual mantém a verificação de pixels estáveis durante suspensão e retomada correta. A suspensão por visibilidade continua coberta pelos testes de cenas existentes.
 
 Arquivos desta rodada: `src/product/ProductTableau.tsx`, `src/product/ThinkingOrb.tsx`, `tests/e2e/quality.spec.ts`, documentação/evidências. As demais alterações do PR são as correções e a infraestrutura de teste já aprovadas na auditoria original. Commits separam correções, testes/CI e documentação.
 

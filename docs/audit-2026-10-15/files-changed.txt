@@ -28,6 +28,8 @@ docs/audit-2026-10-15/files-changed.txt
 docs/audit-2026-10-15/follow-up/README.md
 docs/audit-2026-10-15/follow-up/final-hero-desktop.png
 docs/audit-2026-10-15/follow-up/final-hero-mobile.png
+docs/audit-2026-10-15/follow-up/hero-continuous-verification.json
+docs/audit-2026-10-15/follow-up/hero-continuous.png
 docs/audit-2026-10-15/follow-up/native-safari-inspector.jpg
 docs/audit-2026-10-15/follow-up/native-safari-public-inspector.jpg
 docs/audit-2026-10-15/follow-up/native-safari-refine.jpg

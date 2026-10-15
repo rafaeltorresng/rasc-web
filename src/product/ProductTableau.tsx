@@ -11,8 +11,6 @@ export default function ProductTableau({ className = '', caption = true, live = 
 }) {
   const root = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
-  const [motionStarted, setMotionStarted] = useState(false);
-  const [motionFinished, setMotionFinished] = useState(false);
   const [pageVisible, setPageVisible] = useState(() => document.visibilityState === 'visible');
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
@@ -22,10 +20,7 @@ export default function ProductTableau({ className = '', caption = true, live = 
     const updateMotion = () => setReduced(query.matches);
     const updateVisibility = () => setPageVisible(document.visibilityState === 'visible');
     const observer = typeof IntersectionObserver === 'undefined' ? null
-      : new IntersectionObserver(([entry]) => {
-        setInView(entry.isIntersecting);
-        if (entry.isIntersecting) setMotionStarted(true);
-      });
+      : new IntersectionObserver(([entry]) => setInView(entry.isIntersecting));
     if (observer) observer.observe(root.current);
     // Without observation, keep the decorative hero static.
     query.addEventListener('change', updateMotion);
@@ -37,16 +32,8 @@ export default function ProductTableau({ className = '', caption = true, live = 
     };
   }, [live]);
 
-  // One brief introduction, never restarted by scroll, tab visibility or motion
-  // preference changes. Decorative motion stops within WCAG 2.2.2's five seconds.
-  useEffect(() => {
-    if (!live || !motionStarted) return;
-    const timeout = window.setTimeout(() => setMotionFinished(true), 4000);
-    return () => window.clearTimeout(timeout);
-  }, [live, motionStarted]);
-
   const animated = live && !reduced;
-  const running = animated && !motionFinished && inView && pageVisible;
+  const running = animated && inView && pageVisible;
   const orb = <span className="product-tableau__orb-mask" aria-hidden="true"><ThinkingOrb composing paused={!running} /></span>;
 
   return (
