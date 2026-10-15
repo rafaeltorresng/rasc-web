@@ -1,6 +1,7 @@
 import { launch } from '../content/launch';
 import { publicUrl } from '../lib/publicUrl';
 import Icon, { GitHubIcon } from '../ui/Icon';
+import { InstallationHelp, useInstallationDownload } from './InstallationGuide';
 
 export function BrandSymbol({ className = '' }: { className?: string }) {
   const mark128 = publicUrl('brand-symbol-128.png');
@@ -24,8 +25,9 @@ export function Wordmark() {
 }
 
 export function DownloadLink({ className = 'button button--primary' }: { className?: string }) {
+  const handleDownload = useInstallationDownload();
   return launch.publicReleaseReady
-    ? <a className={className} href={launch.downloadHref} download={launch.filename}>Download for Mac <Icon name="download" /></a>
+    ? <a className={className} href={launch.downloadHref} download={launch.filename} onClick={handleDownload}>Download for Mac <Icon name="download" /></a>
     : <a className={className} href="#release-status">View release status <span aria-hidden="true">↓</span></a>;
 }
 
@@ -52,11 +54,8 @@ export function DownloadDetails({ compact = false, showDetails = true }: { compa
                   <p>Developer ID signed and notarized. Open the DMG and drag Rasc to Applications.</p>
                 ) : (
                   <p>
-                    Unsigned ad-hoc Release from GitHub. macOS may require <strong>Right-click → Open</strong>{' '}
-                    on first launch.{' '}
-                    <a href={launch.installGuideHref} target="_blank" rel="noreferrer">
-                      Install steps ↗
-                    </a>
+                    Ad-hoc signed Release from GitHub, not notarized by Apple. If macOS blocks the first launch, use <strong>Privacy &amp; Security → Open Anyway</strong>.{' '}
+                    <InstallationHelp />
                   </p>
                 )}
                 <p>
