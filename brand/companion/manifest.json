@@ -1,0 +1,199 @@
+{
+  "status": "Working reference approved for editorial integration; final character construction pending visual approval",
+  "date": "2026-10-14",
+  "generator": "Sharp 0.35.5",
+  "crop": {
+    "left": 203,
+    "top": 63,
+    "width": 832,
+    "height": 1136
+  },
+  "webp": {
+    "quality": 90,
+    "alphaQuality": 100,
+    "effort": 6
+  },
+  "originalsPreserved": true,
+  "assets": [
+    {
+      "id": "m3",
+      "source": "ChatGPT Image Oct 14, 2026, 08_23_32 PM-3.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "b3e4a4918bdae84de9649181ff886645151984f8e26157ea1cc8e124bb1121d4",
+      "master": "brand/companion/m3-master.png",
+      "masterSha256": "ab9f7a0ec4e427cf39003e3c01a10f06a544bc85bb6339fe876ea243dfe9662f",
+      "masterBytes": 687507,
+      "dimensions": {
+        "width": 832,
+        "height": 1136
+      },
+      "visibleBounds": {
+        "left": 17,
+        "top": 20,
+        "width": 788,
+        "height": 1098
+      },
+      "pixelsPreserved": true,
+      "alphaAudit": {
+        "hasAlpha": true,
+        "transparentPercent": 42.7127065276273,
+        "alphaAbove250Percent": 54.80123831933911,
+        "borderMax": 0
+      },
+      "exports": [
+        {
+          "file": "src/assets/companion/m3-224.webp",
+          "width": 224,
+          "height": 306,
+          "bytes": 13858,
+          "sha256": "47fa7e8f445b7e961fcf885a42fa34b25fef8a56b43aecd3cea9b04857f9625a"
+        },
+        {
+          "file": "src/assets/companion/m3-448.webp",
+          "width": 448,
+          "height": 612,
+          "bytes": 33086,
+          "sha256": "55c77eea9c8d78d29969f7adf9e9d6cfc339eace5ebb9c6f39ccddf4b7557edd"
+        },
+        {
+          "file": "src/assets/companion/m3-672.webp",
+          "width": 672,
+          "height": 918,
+          "bytes": 59684,
+          "sha256": "28eba82537578d09e6cfea969c7ac27a5e542ae718728f289bcb4edc98abc53b"
+        },
+        {
+          "file": "src/assets/companion/m3-448.png",
+          "width": 448,
+          "height": 612,
+          "bytes": 217061,
+          "sha256": "11b83ba576b36d9fa241503d6e2850f1007ccfd2ef3a6b5e69ca43176c6ada54"
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "source": "ChatGPT Image Oct 14, 2026, 08_23_30 PM-1.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "1896ad05ea5590d3f3827d90b1d9c90c129de7433b44d52f1f40eab710660b5b",
+      "master": "brand/companion/m1-master.png",
+      "masterSha256": "346936e0d06c0ff4802440ed16c59cef33052f4ea4bfc58dd3dc0eac998390a9",
+      "masterBytes": 684873,
+      "dimensions": {
+        "width": 832,
+        "height": 1136
+      },
+      "visibleBounds": {
+        "left": 16,
+        "top": 16,
+        "width": 796,
+        "height": 1103
+      },
+      "pixelsPreserved": true,
+      "alphaAudit": {
+        "hasAlpha": true,
+        "transparentPercent": 42.53707340195017,
+        "alphaAbove250Percent": 55.06331256771398,
+        "borderMax": 1
+      },
+      "exports": [
+        {
+          "file": "brand/companion/m1-web.webp",
+          "width": 320,
+          "height": 437,
+          "bytes": 21108,
+          "sha256": "8c1540cd367d787b32b18bc3fcf20b8baff1a4d94a660d7009f11d5345bd9007"
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "placement": {
+      "left": 1000.6875,
+      "top": 829.1015625,
+      "width": 101.515625,
+      "height": 140.6640625
+    },
+    "exports": [
+      {
+        "file": "docs/showcase/rasc-post-companion.png",
+        "width": 1200,
+        "height": 1080,
+        "bytes": 174774,
+        "sha256": "0bdc48be0af336c71fa11498418eb6a7b84d2d010bde0048e4652c2baf85be70",
+        "canonical": "docs/showcase/rasc-post.png",
+        "canonicalSha256": "abfa00297c4a567bbc6f4952b60b6ee9c1000a31993afc2f3d26f1f5c67d570d",
+        "placement": {
+          "x": 1001,
+          "y": 829,
+          "width": 102,
+          "height": 141
+        },
+        "pixelsChangedOutsideSignature": 0
+      },
+      {
+        "file": "docs/showcase/rasc-post-companion@2x.png",
+        "width": 2400,
+        "height": 2160,
+        "bytes": 540446,
+        "sha256": "7badc473a59a9b886eda56840a6778f740c4c3b14a5233edb3388409d9f843a7",
+        "canonical": "docs/showcase/rasc-post@2x.png",
+        "canonicalSha256": "bb7857c154739a1e4a5655ed2e1fa273fb9f2ec71947058afc52a9b02cb48636",
+        "placement": {
+          "x": 2001,
+          "y": 1658,
+          "width": 203,
+          "height": 281
+        },
+        "pixelsChangedOutsideSignature": 0
+      }
+    ],
+    "canonicalPreserved": true
+  },
+  "publicationM3": {
+    "pose": "m3",
+    "placement": {
+      "left": 940,
+      "top": 824,
+      "width": 136.35701275045537,
+      "height": 190
+    },
+    "exports": [
+      {
+        "file": "docs/showcase/rasc-post-companion-m3.png",
+        "width": 1200,
+        "height": 1080,
+        "bytes": 186331,
+        "sha256": "ba57da9e6f682a573610a9264a5c666195451674f980c6a09d5ed5fe53c08aa7",
+        "canonical": "docs/showcase/rasc-post.png",
+        "canonicalSha256": "abfa00297c4a567bbc6f4952b60b6ee9c1000a31993afc2f3d26f1f5c67d570d",
+        "placement": {
+          "x": 940,
+          "y": 824,
+          "width": 136,
+          "height": 190
+        },
+        "pixelsChangedOutsideSignature": 0
+      },
+      {
+        "file": "docs/showcase/rasc-post-companion-m3@2x.png",
+        "width": 2400,
+        "height": 2160,
+        "bytes": 580260,
+        "sha256": "739d4edf76c91c4d69997200fe8f62e9d854c21d597a3ee45fc189f5d1faa3c0",
+        "canonical": "docs/showcase/rasc-post@2x.png",
+        "canonicalSha256": "bb7857c154739a1e4a5655ed2e1fa273fb9f2ec71947058afc52a9b02cb48636",
+        "placement": {
+          "x": 1880,
+          "y": 1648,
+          "width": 273,
+          "height": 380
+        },
+        "pixelsChangedOutsideSignature": 0
+      }
+    ],
+    "canonicalPreserved": true
+  }
+}

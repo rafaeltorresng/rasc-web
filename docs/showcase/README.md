@@ -1,5 +1,19 @@
 # Rasc product tableau — 14 October 2026
 
+## Editorial companion addition — review branch
+
+The product-only hero and canonical `rasc-post.png` / `rasc-post@2x.png` exports
+remain unchanged. Separate `rasc-post-companion.png` (1200 × 1080) and
+`rasc-post-companion@2x.png` (2400 × 2160) exports add only M1 in the lower-right
+negative space. No product surface is moved, reduced or covered. Pixel checks
+confirmed zero changes outside the signature rectangle; source hashes and
+placement are in `brand/companion/manifest.json`.
+
+Local previews: `/?showcase=post` for the canonical composition and
+`/?showcase=post&pose=m1` for the publication variant. Both remain DEV-only.
+The lossless publication PNGs are separate from browser-review JPGs.
+Character and application rules: `docs/EDITORIAL-COMPANION.md`.
+
 ## Decision
 
 Use **A — Product Tableau in the main hero**. It replaces the automatically
@@ -121,3 +135,49 @@ An offline two-state proof verified the complete y and the single cursor.
 The new post export was visually inspected. Browser review of this final
 revision was blocked by the browser tool's local-URL policy; earlier browser
 checks above do not verify this final asset revision.
+
+## Publication alternative — M3
+
+The M1 signature remains available at `?showcase=post&pose=m1`. A separate
+local alternative uses `?showcase=post&pose=m3`; neither changes the canonical
+showcase or hero. These preview routes are development-only.
+
+M3 is 190px tall on the 1200 × 1080 canvas (35% taller than M1), positioned at
+x=940, y=824. The silhouette moves 61px inward, and its violet fragment relates
+the companion to an unfinished thought. There is 15px clearance beneath the
+scratchpad, 41px beside Home, and no overlap with any native surface or footer.
+The app remains at its original scale and placement.
+
+Prefer M3 for a more expressive brand publication; keep M1 as the quieter
+signature. Neither explains app behavior. At 390px feed width, M3 renders
+about 62px tall versus M1's 46px; the fragment is a color cue, not readable
+functional detail. Product copy still needs the accompanying post at that size.
+
+Lossless exports: `rasc-post-companion-m3.png` (1200 × 1080) and
+`rasc-post-companion-m3@2x.png` (2400 × 2160). Both composite the existing M3
+master over the matching canonical PNG, with zero changed pixels outside the
+character rectangle. No new pose, recoloring or generated imagery.
+
+Comparison boards in `../companion-review/showcase-comparison-desktop.png`
+and `showcase-comparison-feed.png` use the lossless exports. The 390px board is
+a feed-size simulation, not a mobile landing capture. A real 1200 × 1080 browser
+capture is saved as `showcase-m3-browser.jpg`. All preview images loaded; measured
+window rectangles confirm no character overlap. Build and lint passed.
+
+## Publication quality review
+
+Browser-review JPEGs and side-by-side thumbnail boards are review artifacts,
+not publication masters. Deliver the full `rasc-post-companion-m3@2x.png` or
+`rasc-post-companion@2x.png` directly when judging export quality. Both are
+lossless 2400 × 2160 PNGs composed from native Retina PNG captures; no JPEG
+capture is enlarged to create them.
+
+The development post preview now also loads the original transparent PNG
+character masters instead of compressed WebP web derivatives. These imports
+remain development-only and do not increase the production bundle. The landing
+retains its responsive optimized assets.
+
+Native-pixel detail crops of the note and Refine are in `../companion-review/`.
+Export dimensions and SHA-256 hashes were checked against the source manifest;
+results are in `showcase-export-quality.json`. Browser inspection confirms all
+three native captures and the 832 × 1136 M3 PNG loaded. Build and lint passed.

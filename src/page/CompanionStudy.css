@@ -1,0 +1,56 @@
+/* Imported only by the development route. No candidate ships to production. */
+.companion-review { padding: 24px 0; border-bottom: 1px solid var(--hairline); background: #fff; font-size: 13px; }
+.companion-review__surfaces, .companion-review__variants { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 16px; }
+.companion-review a { color: var(--ink-muted); }
+.companion-review a[aria-current] { color: var(--violet-ink); text-decoration: underline; text-underline-offset: 5px; }
+.companion-review p { margin: 20px 0 0; color: var(--ink-muted); }
+.companion-figure { display: block; position: relative; flex: none; aspect-ratio: var(--figure-ratio); overflow: hidden; }
+.companion-figure img { position: absolute; max-width: none; width: var(--image-width); height: auto; left: var(--image-left); top: var(--image-top); }
+.companion-thought { width: fit-content; }
+.companion-thought > .companion-figure { height: 280px; margin-top: 28px; }
+.companion-showcase { position: relative; display: flow-root; }
+/* Lower-right negative space. Native windows keep their canonical geometry. */
+.companion-signature { position: absolute; height: auto; width: 9.4%; right: 3.5%; top: calc(32px + 49cqw); }
+.companion-showcase { container-type: inline-size; }
+.companion-publication-preview { width: 1200px; }
+.companion-publication-preview--fit { width: min(1200px, 100%); }
+.companion-publication { width: 1200px; height: 1080px; padding: 54px 60px 36px; background: #fff; zoom: var(--publication-scale); }
+.companion-publication__heading { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 48px; }
+.companion-publication h1 { margin: 0; font-size: 62px; line-height: 1.08; }
+.companion-publication h1 span { color: var(--violet); }
+.companion-publication__heading > p { color: var(--ink-muted); font: italic 22px Georgia, serif; margin-bottom: 8px; }
+.companion-publication .product-tableau { margin-top: 20px; }
+.companion-publication .companion-signature { top: calc(20px + 49cqw); }
+.companion-publication footer { margin-top: 14px; color: var(--ink-muted); font-size: 14px; }
+/* Wide editorial composition: copy on the left, full tableau on the right.
+   M1 occupies the open space beneath the copy, never a product surface. */
+.companion-publication--wide { height: 675px; position: relative; padding: 40px 48px; }
+.companion-publication--wide .companion-publication__heading { display: block; position: absolute; width: 295px; top: 140px; left: 48px; margin: 0; }
+.companion-publication--wide h1 { font-size: 42px; line-height: 1.1; }
+.companion-publication--wide .companion-publication__heading > p { margin-top: 24px; font-size: 19px; }
+.companion-publication--wide .companion-showcase { position: absolute; width: 795px; top: 87px; right: 30px; overflow: visible; }
+.companion-publication--wide .product-tableau { margin: 0; }
+.companion-publication--wide .companion-signature { width: 95px; top: 306px; left: -249px; right: auto; }
+.companion-publication--wide footer { position: absolute; bottom: 26px; left: 48px; font-size: 12px; }
+/* Comparable stills: retain the original layout and copy, settle existing
+   entrance/typing effects so their random capture time cannot bias the review. */
+.companion-study[data-capture="true"] .editorial-entrance [data-editorial-beat],
+.companion-study[data-capture="true"] .thought-character,
+.companion-study[data-capture="true"] .thought-fragment q::before,
+.companion-study[data-capture="true"] .thought-fragment q::after { animation: none !important; opacity: 1 !important; transform: none !important; }
+@media (max-width: 820px) {
+  .companion-thought { display: flex; align-items: center; gap: 24px; margin-top: 20px; }
+  .companion-thought > .companion-figure { height: 128px; margin: 0; }
+}
+@media (max-width: 600px) {
+  /* No usable signature space around the mobile windows. Preserve the product
+     composition instead of squeezing another surface into it. */
+  .companion-showcase > .companion-signature { display: none; }
+  .companion-publication .companion-signature { display: block; }
+  /* Fixed publication canvases retain desktop window geometry when scaled into
+     a feed preview on a narrow device. They are not the mobile landing. */
+  .companion-publication .product-tableau__stage { aspect-ratio: 1120 / 700; }
+  .companion-publication .product-tableau__home { width: 74.1%; left: 3.6%; top: 5.4%; }
+  .companion-publication .product-tableau__stage > .product-tableau__scratchpad { width: 65.2%; left: 30.3%; top: 29%; }
+  .companion-publication .product-tableau__refine { width: 56%; left: 5.4%; top: 52%; }
+}

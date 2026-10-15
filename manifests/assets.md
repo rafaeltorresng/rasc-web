@@ -1,5 +1,12 @@
 # Landing Asset Manifest
 
+Editorial-companion addition (2026-10-14): the review branch uses M3 only in the
+conceptual section, with WebP 224/448/672 derivatives and PNG fallback in
+`src/assets/companion/`. M1 is reserved for a separate publication variant.
+Masters, source hashes, dimensions and alpha checks are recorded in
+`brand/companion/manifest.json`; usage rules are in `docs/EDITORIAL-COMPANION.md`.
+Abstract explorations are excluded. This does not revise the historical ledger below.
+
 Planned inventory transcribed from docs/ASSET-PLAN.md. This is a plan/status ledger, not a claim that landing captures exist. Existing implementation files copied for provenance are listed as current source assets. App captures are pending, and brand derivatives are blocked by production brand closure.
 
 | Filename | Category | Source | Required? | Current status | Expected source build | Appearance | Master format | Web format | Notes |

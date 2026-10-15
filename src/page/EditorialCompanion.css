@@ -1,0 +1,25 @@
+.editorial-companion { width: fit-content; }
+.editorial-companion__figure {
+  display: block;
+  position: relative;
+  height: 280px;
+  aspect-ratio: 788 / 1098;
+  margin-top: 28px;
+  overflow: hidden;
+  flex: none;
+}
+/* Masters share a padded 832 × 1136 frame. Register the visible M3 bounds
+   (17, 20, 788, 1098) so export padding never changes the approved composition. */
+.editorial-companion__figure > img {
+  display: block;
+  position: absolute;
+  width: 105.583757%;
+  max-width: none;
+  height: 103.460838%;
+  left: -2.15736%;
+  top: -1.821494%;
+}
+@media (max-width: 820px) {
+  .editorial-companion { display: flex; align-items: center; gap: 24px; margin-top: 20px; }
+  .editorial-companion__figure { height: 128px; margin-top: 0; }
+}
