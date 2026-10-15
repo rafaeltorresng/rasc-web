@@ -355,6 +355,7 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .window-titlebar-spacer { width: 40px; }
 .home-toolbar { display: flex; min-height: 58px; align-items: center; gap: 14px; padding: 8px 16px; border-bottom: 1px solid var(--hairline-soft); }
 .mini-brand { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 550; }
+.mini-brand > .brand-symbol { width: 24px; height: 24px; }
 .home-orb { display: block; width: 20px; height: 20px; flex: 0 0 20px; }
 .home-toolbar__search { display: flex; flex: 1; gap: 8px; align-items: center; min-width: 0; min-height: 32px; border: 1px solid rgb(117 100 216 / 28%); border-radius: 11px; padding: 7px 10px; color: var(--ink-muted); font-size: 11px; white-space: nowrap; }
 .new-scratch { display: inline-flex; align-items: center; gap: 5px; margin-left: auto; padding: 6px 8px; border: 1px solid var(--hairline-soft); border-radius: 7px; color: var(--action-fill); font-size: 10px; white-space: nowrap; }

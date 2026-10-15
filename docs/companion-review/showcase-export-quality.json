@@ -1,20 +1,44 @@
 {
   "format": "lossless PNG",
+  "date": "2026-10-14",
+  "homeCapture": {
+    "version": "0.1.1",
+    "build": 7,
+    "method": "native screencapture, unmodified pixels, synthetic fixture",
+    "pixelSize": [
+      2000,
+      1360
+    ]
+  },
   "inspection": "native pixel crops, no enlargement",
   "exports": [
     {
-      "file": "docs/showcase/rasc-post-companion-m3@2x.png",
+      "file": "public/screenshots/tableau/home.png",
+      "width": 2000,
+      "height": 1360,
+      "bytes": 383443,
+      "sha256": "757336988001089c2dc13909d864094feba86d138260a4bb7cedc3742d640116"
+    },
+    {
+      "file": "docs/showcase/rasc-post@2x.png",
       "width": 2400,
       "height": 2160,
-      "sha256": "739d4edf76c91c4d69997200fe8f62e9d854c21d597a3ee45fc189f5d1faa3c0",
-      "bytes": 580260
+      "bytes": 490698,
+      "sha256": "3be77a0b637aa18229571b0b41843b45c7821ab3c9a8e2d1ebbee9447ad22050"
     },
     {
       "file": "docs/showcase/rasc-post-companion@2x.png",
       "width": 2400,
       "height": 2160,
-      "sha256": "7badc473a59a9b886eda56840a6778f740c4c3b14a5233edb3388409d9f843a7",
-      "bytes": 540446
+      "bytes": 541151,
+      "sha256": "f34811ca56ea177cdc6a476ba59911872e1e21707a72c18f73303dd9ea492207"
+    },
+    {
+      "file": "docs/showcase/rasc-post-companion-m3@2x.png",
+      "width": 2400,
+      "height": 2160,
+      "bytes": 581132,
+      "sha256": "ac90a71d737acc4e09bf608c07e3022e8eaa610bc0ab49e3a9de0eedf534a9af"
     }
   ]
 }

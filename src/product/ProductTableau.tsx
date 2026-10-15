@@ -38,7 +38,7 @@ export default function ProductTableau({ className = '', caption = true, live = 
     <figure ref={root} className={`product-tableau ${className}`} data-motion={running ? 'running' : 'paused'}>
       <div className="product-tableau__stage" role="img" aria-label={`Rasc on Mac: a scratchpad with an unfinished thought in front of Home, and an optional Refine preview. Composed from real app captures with synthetic examples.${live ? ' Animated Thinking Orb and cursor details.' : ''}`}>
         <div className="product-tableau__window product-tableau__home">
-          <img src={publicUrl('screenshots/tableau/home.png')} width="2000" height="1360" alt="" aria-hidden="true" />
+          <img src={publicUrl('screenshots/tableau/home.png?v=75733698')} width="2000" height="1360" alt="" aria-hidden="true" />
         </div>
         <div className="product-tableau__window product-tableau__scratchpad">
           <img src={publicUrl('screenshots/tableau/scratchpad.png')} width="1440" height="640" alt="" aria-hidden="true" fetchPriority="high" />

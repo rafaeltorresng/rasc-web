@@ -1,0 +1,32 @@
+{
+  "status": "published; public download checksum verified",
+  "version": "0.1.1",
+  "build": 7,
+  "tag": "v0.1.1",
+  "filename": "Rasc-0.1.1-unsigned.dmg",
+  "sha256": "812323655859a5389cbd872075e81bc51509084ac14966c6a293911b5b383973",
+  "notarized": false,
+  "localInstalledApp": "/Applications/Rasc.app",
+  "checks": {
+    "releaseBuild": true,
+    "dmgVerification": true,
+    "bundleVerification": true,
+    "domainTestsPassed": 281,
+    "domainSuitesPassed": 22,
+    "localNativeXcodeTests": "runner launch blocked by LaunchServices; not passed",
+    "ciNativeTestsPassed": true,
+    "ciReleaseBuildPassed": true,
+    "ciUrl": "https://github.com/rafaeltorresng/rasc/actions/runs/38720415811",
+    "ciAttempt": 2,
+    "publicDownloadChecksumVerified": true
+  },
+  "homeCapture": "public/screenshots/tableau/home.png",
+  "publicationExports": [
+    "docs/showcase/rasc-post@2x.png",
+    "docs/showcase/rasc-post-companion@2x.png",
+    "docs/showcase/rasc-post-companion-m3@2x.png"
+  ],
+  "releaseUrl": "https://github.com/rafaeltorresng/rasc/releases/tag/v0.1.1",
+  "sourceCommit": "6e41805954a91a09f591e6a00dd4384bb59c4809",
+  "publishedAt": "2026-10-15T10:43:27Z"
+}

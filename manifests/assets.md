@@ -57,7 +57,7 @@ Planned inventory transcribed from docs/ASSET-PLAN.md. This is a plan/status led
 
 ## Existing app source assets copied for provenance
 
-Full SHA-256 list and source mappings are in brand/source-current/MANIFEST.md. The originals came from app source main at eb0884bf6d23335a750f0412b0f8eedd5b769311 (version/build 0.1.0-beta.3/4). These are current implementation sources/derivatives, not final web exports.
+Full SHA-256 list and source mappings are in brand/source-current/MANIFEST.md. The originals came from app source main at eb0884bf6d23335a750f0412b0f8eedd5b769311 (version/build 0.1.0-beta.3/4). These are historical implementation snapshots/derivatives, not final web exports.
 
 | Filename group | Category | Source | Required? | Current status | Appearance | Master format | Web format | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -89,3 +89,13 @@ User-provided Light-mode captures of one real Refine attempt. Input: `pricing id
 | source-captures/refine-pricing-candidate-2026-09-23/scratchpad-input.png | Refine candidate input | User-provided real app screenshot; original root filename `Screenshot 2026-09-23 at 15.07.00.png` | Candidate | Current source available; candidate only | Not recorded | Light | PNG, 1644×978 | None | Shows exact input in Scratchpad before Refine; purple desktop background included. SHA-256 `a709f3345b59c2bea27f4e186161d675462bfa207431cc7a693b5a9bec84cff4`. |
 | source-captures/refine-pricing-candidate-2026-09-23/refine-shaping.png | Refine shaping | User-provided real app screenshot; original root filename `Screenshot 2026-09-23 at 15.06.25.png` | Candidate | Current source available; unsuitable as final without clean recapture | Not recorded | Light | PNG, 3024×1964 | None | Shows `Refining…` with original text and Thinking Orb; purple background and visible “Pattern Soup” mark at lower right. SHA-256 `f807455ee0ce7aabf06493d5c3d0117223be1516f884c0b90c785a177e55327a`. |
 | source-captures/refine-pricing-candidate-2026-09-23/refine-preview.png | Refine preview | User-provided real app screenshot; original root filename `Screenshot 2026-09-23 at 15.08.44.png` | Candidate | Current source available; candidate output shown, not yet repeatability-approved | Not recorded | Light | PNG, 1632×940 | None | Shows actual app preview with Accept/Cancel controls. Input: `pricing idea maybe one time purchase fits better than subscription because inference is basically free`. Observed output: `Pricing idea: Maybe one-time purchase is better than a subscription. Inference is basically free.` Purple desktop background included. SHA-256 `e254c63723640734782161b2e2f8d893911352b27b358e51c9da8137ff8fdeba`. |
+
+## Home identity refresh — 0.1.1 / build 7
+
+`public/screenshots/tableau/home.png` is the current unmodified 2000 × 1360
+native capture. The tableau URL includes its content revision to avoid stale
+logo pixels after deployment. Canonical and M1/M3 publication PNGs were
+regenerated. See `docs/companion-review/showcase-export-quality.json` for hashes.
+The recovery demo header now uses the static Brand Symbol at 24px and the
+current “Search thoughts…” label. Search/Refine Thinking Orbs retain their
+semantic roles. The `source-current/` inventory above is retained history.

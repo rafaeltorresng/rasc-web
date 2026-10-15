@@ -70,3 +70,24 @@ The .jpg files retain earlier direct capture-tool output. Home originally used
 All were isolated, light-appearance copies of the same accepted build.
 `search.jpg` (1440 × 880 pixels; 720 × 440 pt) remains in the editorial direction
 study. The final hero and post now use the PNGs above.
+
+## Home refreshed from 0.1.1 / build 7
+
+`home.png` was recaptured on 14 October 2026 from the locally verified Release
+0.1.1/build 7 package, using the same isolated synthetic fixture identifier and
+notes listed above. The bundle was copied from
+`../rasc/build/releases/0.1.1-build7/export/Rasc.app`, assigned only the isolated
+capture identifier, and re-signed with the same sandbox entitlement. The new
+Home identity is 24 pt with native 1x/2x backing assets.
+
+The accepted PNG is a direct `screencapture -x -o -l` output at 2000 × 1360, chosen
+while the native search caret was in its invisible phase. Its pixels were copied
+unchanged. Screen-sharing indicators introduced by the inspection tool were
+avoided by separating native control from the final capture, never retouched.
+Home PNG SHA-256: `757336988001089c2dc13909d864094feba86d138260a4bb7cedc3742d640116`.
+
+Scratchpad and Refine PNGs remain the build-6 native captures documented above:
+those surfaces and behavior are unchanged in build 7. All canonical and mascot
+publication exports were regenerated using the refreshed Home. The release is
+ad-hoc signed and not notarized. Published source: Rasc tag `v0.1.1`, commit
+`6e41805954a91a09f591e6a00dd4384bb59c4809`.

@@ -4,6 +4,7 @@ import { landingCopy } from '../content/copy';
 import WorkContext from './WorkContext';
 import ThinkingOrb from './ThinkingOrb';
 import Icon from '../ui/Icon';
+import { BrandSymbol } from '../page/Brand';
 import { useScenePlayback } from './useScenePlayback';
 import { createTypingPlan, typedLength } from './typing';
 import {
@@ -266,7 +267,7 @@ export function HomeSearchScene() {
     <div className={`home-search-scene${reduced ? ' is-static' : ''}`} ref={rootRef} data-search-phase={phase} data-paused={!visible || !pageVisible || !clock.wantsPlay || clock.complete}>
       <section className="home-window" aria-label="Rasc Home example">
         <div className="home-titlebar" aria-hidden="true"><div className="traffic-lights"><i /><i /><i /></div><span className="window-title">Rasc</span><span className="window-titlebar-spacer" /></div>
-        <div className="home-toolbar"><div className="mini-brand"><span className="home-orb"><ThinkingOrb composing reducedMotion={reduced} paused={orbsPaused} label="Thinking Orb, composing" /></span>Rasc</div><span className="home-toolbar__search"><Icon name="search" />Search notes…</span><span className="new-scratch"><Icon name="plus" /><span className="new-scratch__label">New Scratch</span></span></div>
+        <div className="home-toolbar"><div className="mini-brand"><BrandSymbol />Rasc</div><span className="home-toolbar__search"><Icon name="search" />Search thoughts…</span><span className="new-scratch"><Icon name="plus" /><span className="new-scratch__label">New Scratch</span></span></div>
         <div className="home-content">
           <div className="home-group">
             <h3>Kept</h3>

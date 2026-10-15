@@ -181,3 +181,13 @@ Native-pixel detail crops of the note and Refine are in `../companion-review/`.
 Export dimensions and SHA-256 hashes were checked against the source manifest;
 results are in `showcase-export-quality.json`. Browser inspection confirms all
 three native captures and the 832 × 1136 M3 PNG loaded. Build and lint passed.
+
+## Build 7 Home refresh
+
+The local 0.1.1/build 7 update replaces Home with a new unmodified Retina PNG
+capture showing the compact native logo. Product-only, M1 and M3 PNG exports
+(1x/2x), the JPEG compatibility export, comparison boards and detail crops were
+regenerated. Layout, native note/Refine captures and character poses are unchanged.
+The companion manifest now records the new canonical and variant hashes.
+Rasc v0.1.1 is published; release facts and verification are recorded in
+`docs/releases/v0.1.1.json`. The website uses the matching download metadata.

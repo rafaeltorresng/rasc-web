@@ -1,6 +1,7 @@
 # Real app capture
 
-The new light-mode hero uses the native 0.1.0/build 6 capture set in
+The light-mode hero uses the native capture set (Home refreshed from
+0.1.1/build 7; unchanged editor and Refine from 0.1.0/build 6) in
 [`tableau/README.md`](tableau/README.md). Its layered composition combines
 separate app states; the interfaces themselves are real captures.
 
