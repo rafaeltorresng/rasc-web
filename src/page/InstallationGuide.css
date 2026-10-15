@@ -29,8 +29,10 @@
 .installation-instruction { min-height: 62px; margin: 0; color: var(--ink-muted); font-size: 13px; line-height: 1.65; overflow-wrap: anywhere; }
 .installation-instruction strong { color: var(--ink); font-weight: 550; }
 .installation-figure { position: relative; display: flex; align-items: center; justify-content: center; height: 246px; margin: 18px 0 12px; padding: 16px; border: 1px solid var(--hairline); border-radius: 12px; background: #f1eef4; }
-.installation-drag-direction { position: absolute; left: 50%; top: 43%; transform: translate(-50%, -50%); color: #c2bdce; font-size: 24px; line-height: 1; pointer-events: none; }
-.installation-figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.installation-shot { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; }
+.installation-shot.installation-shot--active { position: relative; left: auto; top: auto; transform: none; opacity: 1; }
+.installation-drag-direction { position: absolute; z-index: 1; left: 50%; top: 43%; transform: translate(-50%, -50%); color: #c2bdce; font-size: 24px; line-height: 1; pointer-events: none; }
+.installation-figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; color: transparent; font-size: 0; }
 .installation-figure[data-step="0"], .installation-figure[data-step="1"] { background: #222; border-color: #222; }
 .installation-figure[data-step="2"] img { border-radius: 17px; box-shadow: 0 8px 20px rgb(29 24 36 / 12%); }
 .installation-figure[data-step="3"] { background: #20212d; padding: 16px 12px; }
