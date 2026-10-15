@@ -170,7 +170,7 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .menu-battery__outline { left: 0; width: 23px; mask: url('/mac-workspace/icons/battery-outline.png') center / contain no-repeat; }
 .menu-battery__cap { right: 0; width: 2px; mask: url('/mac-workspace/icons/battery-cap.png') center / contain no-repeat; }
 .menu-battery__level { position: absolute; top: 2px; bottom: 2px; left: 2px; width: 17px; border-radius: 1px; background: currentColor; }
-.chat-workspace { --chat-canvas: #fff; --chat-sidebar: #f6f6f6; --chat-text: #474747; --chat-heading: #333; --chat-muted: #777; --chat-line: #e8e8e8; --chat-field: #f1f1f1; color-scheme: light; position: absolute; top: 51px; bottom: 18px; left: 5%; width: 90%; display: grid; grid-template-columns: 180px minmax(0, 1fr); overflow: hidden; border: 1px solid rgb(33 26 41 / 14%); border-radius: 12px; background: var(--chat-canvas); box-shadow: 0 16px 36px -16px rgb(33 26 41 / 26%), 0 3px 8px rgb(33 26 41 / 10%); color: var(--chat-text); font-size: 12px; }
+.chat-workspace { --chat-canvas: #fff; --chat-sidebar: #f6f6f6; --chat-text: #474747; --chat-heading: #333; --chat-muted: #6f6f6f; --chat-line: #e8e8e8; --chat-field: #f1f1f1; color-scheme: light; position: absolute; top: 51px; bottom: 18px; left: 5%; width: 90%; display: grid; grid-template-columns: 180px minmax(0, 1fr); overflow: hidden; border: 1px solid rgb(33 26 41 / 14%); border-radius: 12px; background: var(--chat-canvas); box-shadow: 0 16px 36px -16px rgb(33 26 41 / 26%), 0 3px 8px rgb(33 26 41 / 10%); color: var(--chat-text); font-size: 12px; }
 .demo-stage .chat-workspace { top: 41px; bottom: 12px; left: 3.25%; width: 93.5%; }
 .chat-sidebar { min-width: 0; background: var(--chat-sidebar); border-right: 1px solid rgb(0 0 0 / 5%); }
 .chat-sidebar__titlebar { display: flex; height: 42px; align-items: center; justify-content: space-between; padding-inline: 14px; }
@@ -321,7 +321,10 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .interaction-note { display: grid; align-content: start; gap: 8px; min-height: 54px; color: var(--ink-muted); font-size: 12px; line-height: 1.5; }
 .intelligence-attribution { display: flex; align-items: center; gap: 8px; color: var(--ink); }
 .intelligence-attribution .apple-intelligence-icon { width: 20px; height: 20px; }
-.step-scene { min-width: 0; margin: 0; }
+.step-scene { position: relative; min-width: 0; margin: 0; }
+.step-motion { position: absolute; top: -30px; right: 0; display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--ink-muted); }
+.step-motion:hover:not(:disabled) { color: var(--ink); background: var(--surface-raised); }
+.step-motion:disabled { cursor: default; opacity: .45; }
 .step-stage { height: 430px; background: var(--surface-raised); }
 .mac-work--application { background: var(--surface-raised); }
 .mac-work--application .chat-workspace { top: 22px; bottom: 22px; left: 4%; width: 92%; border-color: var(--hairline); box-shadow: 0 3px 16px rgb(33 26 41 / 5%); }

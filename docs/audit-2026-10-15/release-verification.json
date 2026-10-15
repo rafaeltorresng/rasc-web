@@ -1,0 +1,10 @@
+{
+  "sha256": "812323655859a5389cbd872075e81bc51509084ac14966c6a293911b5b383973",
+  "version": "0.1.1",
+  "build": "7",
+  "bundleId": "com.rafaeltorres.rasc",
+  "signature": "Executable=/private/tmp/rasc-audit-release/volume/Rasc.app/Contents/MacOS/Rasc\nIdentifier=com.rafaeltorres.rasc\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=30550 flags=0x10002(adhoc,runtime) hashes=944+7 location=embedded\nHash type=sha256 size=32\nCandidateCDHash sha256=5bf40d48b70b274c3c253dff3ea39e95cacc1320\nCandidateCDHashFull sha256=5bf40d48b70b274c3c253dff3ea39e95cacc132052e3550161362c83f2af7c0e\nHash choices=sha256\nCMSDigest=5bf40d48b70b274c3c253dff3ea39e95cacc132052e3550161362c83f2af7c0e\nCMSDigestType=2\nCDHash=5bf40d48b70b274c3c253dff3ea39e95cacc1320\nSignature=adhoc\nInfo.plist entries=25\nTeamIdentifier=not set\nRuntime Version=26.2.0\nSealed Resources version=2 rules=13 files=31\nInternal requirements count=0 size=12\n",
+  "gatekeeperExitCode": 3,
+  "gatekeeper": "/private/tmp/rasc-audit-release/volume/Rasc.app: rejected\n",
+  "appExecuted": false
+}

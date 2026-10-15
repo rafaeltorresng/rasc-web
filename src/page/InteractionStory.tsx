@@ -6,6 +6,13 @@ import { AppleIntelligenceIcon } from '../ui/Icon';
 
 const shortcuts: Record<ProductStep, string> = { capture: '⌥\\', refine: '⌘J', keep: '⇧⌘K' };
 
+function focusInView(control: HTMLButtonElement | null | undefined) {
+  control?.focus({ preventScroll: true });
+  // Explicit navigation must reveal keyboard focus without leaving a smooth
+  // document scroll competing with the scene's visibility observer.
+  control?.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+}
+
 export default function InteractionStory() {
   const [step, setStep] = useState<ProductStep>('capture');
   const [accepted, setAccepted] = useState(false);
@@ -18,7 +25,7 @@ export default function InteractionStory() {
     if (next !== 'keep') setAccepted(false);
     setStep(next);
     setRevision((value) => value + 1);
-    tabs.current[landingCopy.steps.findIndex((item) => item.id === next)]?.focus({ preventScroll: true });
+    focusInView(tabs.current[landingCopy.steps.findIndex((item) => item.id === next)]);
   };
   const onKey = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     let next: number;
@@ -40,7 +47,7 @@ export default function InteractionStory() {
   useEffect(() => {
     // Accept removes the preview button; hand keyboard focus to the stable
     // continuation control after its label reflects the accepted state.
-    if (accepted && step === 'refine') nextButton.current?.focus({ preventScroll: true });
+    if (accepted && step === 'refine') focusInView(nextButton.current);
   }, [accepted, step]);
   const nextLabel = step === 'capture' ? 'Try Refine' : step === 'refine'
     ? accepted ? 'Keep the thought' : 'Keep the original' : 'Start another thought';

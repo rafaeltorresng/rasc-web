@@ -1,0 +1,35 @@
+[
+  {
+    "stage": "before",
+    "fault": "observer",
+    "headingCount": 0,
+    "errors": [
+      "IntersectionObserver is not a constructor",
+      "IntersectionObserver is not a constructor",
+      "IntersectionObserver is not a constructor",
+      "IntersectionObserver is not a constructor",
+      "IntersectionObserver is not a constructor",
+      "IntersectionObserver is not a constructor"
+    ]
+  },
+  {
+    "stage": "before",
+    "fault": "segmenter",
+    "headingCount": 0,
+    "errors": [
+      "Intl.Segmenter is not a constructor"
+    ]
+  },
+  {
+    "stage": "after",
+    "fault": "observer",
+    "headingCount": 1,
+    "errors": []
+  },
+  {
+    "stage": "after",
+    "fault": "segmenter",
+    "headingCount": 1,
+    "errors": []
+  }
+]

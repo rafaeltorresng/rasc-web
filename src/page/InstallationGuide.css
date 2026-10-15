@@ -22,7 +22,7 @@
 .installation-navigation button[aria-current] { background: var(--violet-wash); color: var(--violet-ink); }
 .installation-number { display: grid; place-items: center; flex: none; width: 24px; height: 24px; border: 1px solid var(--hairline); border-radius: 50%; background: var(--surface-white); font-size: 11px; font-variant-numeric: tabular-nums; }
 [aria-current] > .installation-number { border-color: var(--violet); color: var(--violet-ink); }
-.installation-release { margin: 44px 9px 0; color: var(--ink-tertiary); font-size: 10px; line-height: 1.7; }
+.installation-release { margin: 44px 9px 0; color: var(--ink-muted); font-size: 10px; line-height: 1.7; }
 .installation-panel { padding: 26px 30px 20px; }
 .installation-progress { margin: 0 0 8px; color: var(--violet-ink); font-size: 11px; font-weight: 500; }
 .installation-panel h3 { margin: 0 0 10px; font-size: 23px; font-weight: 550; letter-spacing: -.035em; line-height: 1.2; }
@@ -31,6 +31,9 @@
 .installation-figure { position: relative; display: flex; align-items: center; justify-content: center; height: 246px; margin: 18px 0 12px; padding: 16px; border: 1px solid var(--hairline); border-radius: 12px; background: #f1eef4; }
 .installation-shot { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; }
 .installation-shot.installation-shot--active { position: relative; left: auto; top: auto; transform: none; opacity: 1; }
+.installation-figure[data-image-failed="true"] .installation-shot--active, .installation-figure[data-image-failed="true"] .installation-drag-direction { visibility: hidden; }
+.installation-image-error { position: absolute; inset: 16px; display: grid; place-items: center; text-align: center; color: var(--ink); font-size: 12px; line-height: 1.6; }
+.installation-figure:not([data-step="2"]) .installation-image-error { color: #fff; }
 .installation-drag-direction { position: absolute; z-index: 1; left: 50%; top: 43%; transform: translate(-50%, -50%); color: #c2bdce; font-size: 24px; line-height: 1; pointer-events: none; }
 .installation-figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; color: transparent; font-size: 0; }
 .installation-figure[data-step="0"], .installation-figure[data-step="1"] { background: #222; border-color: #222; }

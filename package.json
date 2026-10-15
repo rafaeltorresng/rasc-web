@@ -6,16 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "typecheck": "tsc -b --pretty",
+    "typecheck": "tsc -b --pretty && tsc -p tsconfig.e2e.json",
     "lint": "eslint .",
     "test": "node --test tests/*.test.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:audit": "VITE_SITE_URL=https://rasc.app/ npm run build",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
     "@types/node": "^22.20.5",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",

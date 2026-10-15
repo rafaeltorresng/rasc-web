@@ -4,6 +4,8 @@ import type { ReactNode } from 'react';
 import { publicUrl } from '../lib/publicUrl';
 
 const glyphs = {
+  pause: <><path d="M9 4H5v16h4z" /><path d="M19 4h-4v16h4z" /></>,
+  play: <path d="m8 4 12 8-12 8z" />,
   close: <><path d="m6 6 12 12" /><path d="m6 18 12-12" /></>,
   download: <><path d="M12 15V3" />
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
