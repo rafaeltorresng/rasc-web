@@ -121,28 +121,32 @@ test('WCAG AA automated checks on landing, Refine and modal', async ({ page }, t
 });
 
 
-test('hero motion ends within five seconds and stays stopped after returning', async ({ page }) => {
+test('hero motion continues beyond five seconds and resumes after suspension', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/');
   const hero = page.locator('.product-tableau');
   await hero.scrollIntoViewIfNeeded();
   await expect(hero).toHaveAttribute('data-motion', 'running');
   await expect(hero.locator('button')).toHaveCount(0);
-  await expect(hero).toHaveAttribute('data-motion', 'paused', { timeout: 5000 });
+  // Exercise the former four-second stop using the real animation clock.
+  await page.waitForTimeout(5500);
+  await expect(hero).toHaveAttribute('data-motion', 'running');
   const canvas = hero.locator('canvas').first();
-  const pixels = await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL());
-  await page.waitForTimeout(250);
-  expect(await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).toBe(pixels);
-  expect(await hero.locator('.product-tableau__caret').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
-  await page.getByRole('tab', { name: /Refine/ }).click();
-  await page.getByRole('heading', { level: 1 }).scrollIntoViewIfNeeded();
-  await hero.scrollIntoViewIfNeeded();
+  const movingPixels = await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL());
+  await expect.poll(() => canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).not.toBe(movingPixels);
+  expect(await hero.locator('.product-tableau__caret').evaluate(el => getComputedStyle(el).animationName)).toBe('tableau-caret-blink');
+  await page.getByRole('heading', { name: 'Your thoughts stay on your Mac.', exact: true }).scrollIntoViewIfNeeded();
   await expect(hero).toHaveAttribute('data-motion', 'paused');
-  expect(await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).toBe(pixels);
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.emulateMedia({ reducedMotion: 'no-preference' });
-  await expect(hero).toHaveAttribute('data-motion', 'paused');
-  const resumedPixels = await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL());
+  const pausedPixels = await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL());
   await page.waitForTimeout(150);
-  expect(await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).toBe(resumedPixels);
+  expect(await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).toBe(pausedPixels);
+  await hero.scrollIntoViewIfNeeded();
+  await expect(hero).toHaveAttribute('data-motion', 'running');
+  const returnedPixels = await canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL());
+  await expect.poll(() => canvas.evaluate(el => (el as HTMLCanvasElement).toDataURL())).not.toBe(returnedPixels);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect(hero).toHaveAttribute('data-motion', 'paused');
+  await expect(hero.locator('canvas, .product-tableau__caret')).toHaveCount(0);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await expect(hero).toHaveAttribute('data-motion', 'running');
 });

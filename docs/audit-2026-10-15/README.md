@@ -57,7 +57,7 @@ Não foi adicionado um Error Boundary para esconder falhas, nem um remount peri�
 | REL-01 | Efeito visual opcional derruba a página sem IntersectionObserver | P1, condicionado à API ausente | Exceções e root vazio em `fault-injection.json`; PNG antes/depois | Guardas e comportamento estático/finito | Corrigido e coberto |
 | REL-02 | Importação da digitação derruba a página sem Intl.Segmenter | P1, condicionado à API ausente | Exceção na inicialização e zero headings | Fallback por code points; modo moderno intacto | Corrigido e coberto |
 | A11Y-01 | Rótulos das ações da nota somem do nome acessível no mobile, restando apenas atalhos | P1 | Primeira rodada mobile não encontra Refine; árvore contém botões “⌘J” e “⇧⌘K” | Nomes acessíveis estáveis incluindo ação e atalho | Corrigido e coberto |
-| A11Y-02 | Hero contínua e Capture automático acima de cinco segundos não oferecem pausa local | P1 | Inspeção de timelines/RAF/CSS; regra WCAG 2.2.2 | Capture recebeu pausa; na rodada complementar a hero passou a encerrar em quatro segundos, sem controle novo | Corrigido e coberto; ver complemento |
+| A11Y-02 | Hero contínua e Capture automático acima de cinco segundos não oferecem pausa local | P1 | Inspeção de timelines/RAF/CSS; regra WCAG 2.2.2 | Capture recebeu pausa; usuário optou por hero contínua sem controle manual | Capture corrigido; hero pendente por decisão visual; ver complemento |
 | A11Y-03 | Foco encaminhado pode permanecer fora da viewport após ação; smooth scroll compete com a observação da cena | P2 | Navegação mobile e inspeção do `preventScroll` | Foco estável e revelação instantânea do controle; navegação comum por âncoras continua suave | Corrigido e coberto |
 | A11Y-04 | Contraste insuficiente em rótulos pequenos do contexto e na versão/requisitos do guia | P2 | Axe apontou `color-contrast` em Pinned/Chats e `.installation-release` | Ajuste pontual do texto auxiliar | Corrigido; scans finais sem violações no conjunto testado |
 | UX-01 | Falha permanente de screenshot deixa quadro vazio no guia | P2 | Recursos bloqueados, `before-guide-images-unavailable.png` | Após a tentativa de recuperação já existente, mensagem explícita; instruções e navegação continuam funcionais | Corrigido e coberto |
@@ -106,7 +106,7 @@ O mecanismo automatizado de downloads artificiais do Playwright/WebKit não emit
 
 - `src/product/ProductScenes.tsx`: nomes acessíveis das ações; fallback de observação no Home/Search e HeroDemo legado; pausa do Capture com relógio preservado.
 - `src/product/ThinkingOrb.tsx`: observação opcional, mantendo o canvas estático quando ausente.
-- `src/product/ProductTableau.tsx` e `.css`: fallback do observer; hero sem botão de pausa, conforme decisão posterior do usuário. Suspensão automática e movimento reduzido preservados; na rodada complementar a animação foi limitada a quatro segundos. Imagens nativas não foram substituídas.
+- `src/product/ProductTableau.tsx` e `.css`: fallback do observer; hero sem botão de pausa, conforme decisão posterior do usuário. Suspensão automática e movimento reduzido preservados; o limite de quatro segundos da rodada complementar foi removido a pedido do usuário, restaurando movimento contínuo. Imagens nativas não foram substituídas.
 - `src/product/typing.ts`: segmentação compatível sem mudar a digitação moderna.
 - `src/page/InteractionStory.tsx`: encaminhamento de foco visível, sem scroll suave concorrente.
 - `src/page/InstallationGuide.tsx` e `.css`: fallback explícito de imagem, preload apenas onde útil, contraste auxiliar.
