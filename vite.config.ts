@@ -18,7 +18,7 @@ export default defineConfig({
     name: 'public-site-metadata',
     transformIndexHtml(html) {
       if (!canonical) return html;
-      const imageUrl = new URL('og-image.png', canonical).href;
+      const imageUrl = new URL('og-image.png?v=20261015', canonical).href;
       return {
         html: html.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+("\s*\/>)/g, `$1${imageUrl}$2`),
         tags: [
