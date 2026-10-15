@@ -7,8 +7,8 @@ no backend, account, or model endpoint. Page views use Cloudflare Web Analytics
 
 ## Current release status
 
-**Rasc 0.1.0 (build 6)** is published as open source with an unsigned ad-hoc DMG on
-[GitHub Releases](https://github.com/rafaeltorresng/rasc/releases/tag/v0.1.0). The
+**Rasc 0.1.1 (build 7)** is published as open source with an unsigned ad-hoc DMG on
+[GitHub Releases](https://github.com/rafaeltorresng/rasc/releases/tag/v0.1.1). The
 landing download CTA points at that release asset; install steps are in the app
 repo’s [INSTALL-UNSIGNED.md](https://github.com/rafaeltorresng/rasc/blob/main/docs/INSTALL-UNSIGNED.md).
 

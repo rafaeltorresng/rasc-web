@@ -2,7 +2,8 @@
 
 ## Current hero assets
 
-These are direct, lossless Retina PNG window captures of Rasc 0.1.0 (build 6).
+These are direct, lossless Retina PNG window captures: Home from Rasc 0.1.1
+(build 7), with the unchanged scratchpad and Refine from 0.1.0 (build 6).
 No product interface, note text, Refine result or dates were painted into them.
 The native macOS capture excludes the mouse pointer and outside window shadow.
 The PNG files are copied unchanged from the capture output.
@@ -13,10 +14,11 @@ The PNG files are copied unchanged from the capture output.
 | refine.png | 640 × 320 pt | 1280 × 640 | Actual Foundation Models proposal, not accepted |
 | home.png | 1000 × 680 pt | 2000 × 1360 | Two kept thoughts and three unfinished thoughts |
 
-Source: the accepted release-candidate build previously captured from
+Original scratchpad and Refine source: the accepted release-candidate build captured from
 `../rasc/build/rc/export/Rasc.app`, app repository HEAD
 `82db8f4505717719c3e58baebef8e736eb0b5f60` at the original capture time.
-Website work did not modify app source, prompts or release artifacts.
+The Home logo was subsequently corrected in the app and recaptured from build 7,
+as documented below; prompts and product behavior were unchanged.
 
 The PNG capture copy is outside both repositories:
 `/private/tmp/rasc-clean-cursor-20261014/RascCursorCapture.app`.
