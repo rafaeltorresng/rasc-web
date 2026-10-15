@@ -9,6 +9,32 @@ import securityShot from '../assets/installation/privacy-security.webp';
 import privacyContextShot from '../assets/installation/privacy-context.webp';
 import privacySelectionShot from '../assets/installation/privacy-selection.webp';
 import './InstallationGuide.css';
+import { currentDownloadPlatform } from '../lib/downloadPlatform';
+
+const installationShots = [downloadShot, dmgShot, blockedShot, privacyContextShot, securityShot, privacySelectionShot];
+const preloadedShots: HTMLImageElement[] = [];
+
+// The DMG download starts in the same click that opens the guide. Decode the
+// shots first so that click does not leave the first frame on its fallback text.
+function preloadInstallationShots() {
+  if (typeof window === 'undefined' || preloadedShots.length > 0) return;
+  for (const src of installationShots) {
+    const image = new Image();
+    image.src = src;
+    preloadedShots.push(image);
+    void image.decode?.().catch(() => undefined);
+  }
+}
+
+preloadInstallationShots();
+
+function retryShot(image: HTMLImageElement) {
+  if (image.dataset.retry === '1') return;
+  image.dataset.retry = '1';
+  const src = image.currentSrc || image.src;
+  image.removeAttribute('src');
+  queueMicrotask(() => { image.src = src; });
+}
 
 const InstallationContext = createContext<((opener: HTMLElement) => void) | null>(null);
 
@@ -16,7 +42,7 @@ const InstallationContext = createContext<((opener: HTMLElement) => void) | null
 export function useInstallationDownload() {
   const open = useContext(InstallationContext);
   return (event: MouseEvent<HTMLAnchorElement>) => {
-    if (launch.publicReleaseReady && !launch.notarized
+    if (currentDownloadPlatform() === 'mac' && launch.publicReleaseReady && !launch.notarized
       && !event.defaultPrevented && event.button === 0 && !event.metaKey && !event.ctrlKey
       && !event.shiftKey && !event.altKey
       && window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine)').matches) {
@@ -27,6 +53,8 @@ export function useInstallationDownload() {
 
 export function InstallationHelp() {
   const open = useContext(InstallationContext);
+  const platform = currentDownloadPlatform();
+  if (platform === 'mobile' || platform === 'other') return null;
   return open
     ? <button className="installation-help" type="button" aria-haspopup="dialog" onClick={event => open(event.currentTarget)}>Installation help</button>
     : <a className="installation-help" href={launch.installGuideHref} target="_blank" rel="noreferrer">Installation help</a>;
@@ -91,7 +119,6 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
       dialog.close();
       document.body.style.overflow = previousOverflow;
       document.body.style.paddingRight = previousPadding;
-      closingFromEffectCleanup.current = false;
     };
   }, [opener]);
 
@@ -108,7 +135,10 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
     aria-describedby="installation-description"
     aria-modal="true"
     onClose={() => {
-      if (closingFromEffectCleanup.current) return;
+      if (closingFromEffectCleanup.current) {
+        closingFromEffectCleanup.current = false;
+        return;
+      }
       if (opener.isConnected) opener.focus({ preventScroll: true });
       onDismiss();
     }}
@@ -157,17 +187,35 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
         <h3 id="installation-step-title">{step.label}</h3>
         <p className="installation-instruction">{step.body}</p>
         <figure className="installation-figure" data-step={active}>
-          {active === 3 ? <div className="installation-security-visual">
-            <div className="installation-setting-cue">
-              <span>System Settings</span>
-              <img src={privacySelectionShot} width={390} height={64} alt="Privacy & Security selected in the Settings sidebar." decoding="async" />
-              <span className="installation-setting-connector" aria-hidden="true">↓</span>
-            </div>
-            <picture>
-              <source media="(max-width: 767px)" srcSet={securityShot} />
-              <img src={step.image} width={step.width} height={step.height} alt={step.alt} decoding="async" />
-            </picture>
-          </div> : <img src={step.image} width={step.width} height={step.height} style={{ width: step.width / 2 }} alt={step.alt} decoding="async" />}
+          {steps.map((item, index) => {
+            const shown = index === active;
+            if (index === 3) {
+              return <div key={item.label} className={`installation-shot installation-security-visual${shown ? ' installation-shot--active' : ''}`} aria-hidden={!shown}>
+                <div className="installation-setting-cue">
+                  <span>System Settings</span>
+                  <img src={privacySelectionShot} width={390} height={64} alt="Privacy & Security selected in the Settings sidebar." decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget)} />
+                  <span className="installation-setting-connector" aria-hidden="true">↓</span>
+                </div>
+                <picture>
+                  <source media="(max-width: 767px)" srcSet={securityShot} />
+                  <img src={item.image} width={item.width} height={item.height} alt={shown ? item.alt : ''} decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget)} />
+                </picture>
+              </div>;
+            }
+            return <img
+              key={item.label}
+              className={`installation-shot${shown ? ' installation-shot--active' : ''}`}
+              src={item.image}
+              width={item.width}
+              height={item.height}
+              style={{ width: item.width / 2 }}
+              alt={shown ? item.alt : ''}
+              decoding="sync"
+              loading="eager"
+              aria-hidden={!shown}
+              onError={event => retryShot(event.currentTarget)}
+            />;
+          })}
           {active === 1 && <span className="installation-drag-direction" aria-hidden="true">←</span>}
         </figure>
         <p className="installation-hint">{step.hint}</p>

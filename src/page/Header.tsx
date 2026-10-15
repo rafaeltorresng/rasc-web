@@ -37,5 +37,5 @@ export default function Header() {
     };
   }, []);
 
-  return <header className="site-header"><div className="site-header__inner" data-scrolled={scrolled} data-download-prominent={downloadProminent}><Wordmark /><nav aria-label="Main navigation"><a className="header-story" href="#how-it-works">How it works</a><SourceLink /></nav><DownloadLink className="button button--primary header-download" /></div></header>;
+  return <header className="site-header"><div className="site-header__inner" data-scrolled={scrolled} data-download-prominent={downloadProminent}><Wordmark /><nav aria-label="Main navigation"><a className="header-story" href="#how-it-works">How it works</a><SourceLink /></nav><DownloadLink className="button button--primary header-download" compact /></div></header>;
 }

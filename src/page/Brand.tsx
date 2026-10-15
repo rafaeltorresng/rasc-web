@@ -2,6 +2,8 @@ import { launch } from '../content/launch';
 import { publicUrl } from '../lib/publicUrl';
 import Icon, { GitHubIcon } from '../ui/Icon';
 import { InstallationHelp, useInstallationDownload } from './InstallationGuide';
+import { currentDownloadPlatform } from '../lib/downloadPlatform';
+import './DownloadAvailability.css';
 
 export function BrandSymbol({ className = '' }: { className?: string }) {
   const mark128 = publicUrl('brand-symbol-128.png');
@@ -24,11 +26,23 @@ export function Wordmark() {
   return <a className="wordmark" href="#top" aria-label="Rasc, home"><BrandSymbol /><span>Rasc</span></a>;
 }
 
-export function DownloadLink({ className = 'button button--primary' }: { className?: string }) {
+export function DownloadLink({ className = 'button button--primary', compact = false, showRequirements = true }: { className?: string; compact?: boolean; showRequirements?: boolean }) {
   const handleDownload = useInstallationDownload();
-  return launch.publicReleaseReady
-    ? <a className={className} href={launch.downloadHref} download={launch.filename} onClick={handleDownload}>Download for Mac <Icon name="download" /></a>
-    : <a className={className} href="#release-status">View release status <span aria-hidden="true">↓</span></a>;
+  if (!launch.publicReleaseReady) return <a className={className} href="#release-status">View release status <span aria-hidden="true">↓</span></a>;
+  const platform = currentDownloadPlatform();
+  if (platform === 'mac' || platform === 'unknown') {
+    return <a className={className} href={launch.downloadHref} download={launch.filename} onClick={handleDownload}>Download for Mac <Icon name="download" /></a>;
+  }
+  if (compact) return <a className={`${className} button--availability`} href="#release-status">Available for Mac</a>;
+  return <div className="download-availability">
+    <span className="download-availability__label">Available for Mac</span>
+    {(platform === 'mobile' || showRequirements) && <p className="download-availability__note">
+      {platform === 'mobile' && 'Open rasc.app on your Mac to download.'}
+      {platform === 'other' && 'Rasc runs on Mac.'}
+      {showRequirements && <span>{launch.platform}</span>}
+    </p>}
+    <a className="download-availability__installer" href={launch.downloadHref} download={launch.filename}>Download Mac installer <Icon name="download" /></a>
+  </div>;
 }
 
 export function SourceLink({ className = 'source-link' }: { className?: string }) {
