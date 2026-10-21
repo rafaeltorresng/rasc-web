@@ -25,7 +25,7 @@ function ClosingSection() {
 }
 
 function Footer() {
-  return <footer className="site-footer"><div className="page-container"><Wordmark /><span>Made for unfinished thoughts.</span><div className="footer-links"><SourceLink /><a href="mailto:rafaeltorresng@gmail.com?subject=Rasc%20website">Contact</a></div></div></footer>;
+  return <footer className="site-footer"><div className="page-container"><Wordmark /><span>Made for unfinished thoughts.</span><div className="footer-links"><a href={launch.installGuideHref}>Installation help</a><SourceLink /><a href="mailto:rafaeltorresng@gmail.com?subject=Rasc%20website">Contact</a></div></div></footer>;
 }
 
 export default function LandingPage() {
