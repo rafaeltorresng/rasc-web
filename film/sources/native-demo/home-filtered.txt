@@ -1,0 +1,21 @@
+AXWindow | Rasc |  | 
+  AXGroup |  |  | 
+    AXStaticText |  |  | Rasc
+    AXGroup |  | Search thoughts | 
+      AXImage |  | Search | 
+      AXTextField |  |  | cover
+    AXButton |  | New Scratch | 
+    AXButton |  | Settings | 
+    AXScrollArea |  |  | 
+      AXOpaqueProviderGroup |  |  | 
+        AXGroup |  | The cover feels too polished., Kept, The cover feels too polished. Maybe place the messy sketch beside it to show where it started., 19:44 | 
+          AXButton |  | The cover feels too polished., The cover feels too polished. Maybe place the messy sketch beside it to show where it started. | 
+          AXStaticText |  |  | 19:44
+          AXMenuButton |  | Note actions | 
+  AXButton |  |  | 
+  AXButton |  |  | 
+    AXGroup |  |  | 
+      AXGroup |  |  | 
+  AXButton |  |  | 
+AXWindow |  |  | 
+  AXGroup |  |  | 

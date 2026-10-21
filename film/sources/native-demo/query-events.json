@@ -1,0 +1,30 @@
+{
+  "events" : [
+    {
+      "character" : "c",
+      "index" : 1,
+      "seconds" : 0.16461896896362305
+    },
+    {
+      "character" : "o",
+      "index" : 2,
+      "seconds" : 0.34613597393035889
+    },
+    {
+      "character" : "v",
+      "index" : 3,
+      "seconds" : 0.47215497493743896
+    },
+    {
+      "character" : "e",
+      "index" : 4,
+      "seconds" : 0.67007601261138916
+    },
+    {
+      "character" : "r",
+      "index" : 5,
+      "seconds" : 0.80640196800231934
+    }
+  ],
+  "text" : "cover"
+}

@@ -1,0 +1,39 @@
+AXWindow | Rasc |  | 
+  AXGroup |  |  | 
+    AXStaticText |  |  | Rasc
+    AXGroup |  | Search thoughts | 
+      AXImage |  | Search | 
+      AXTextField |  |  | 
+    AXButton |  | New Scratch | 
+    AXButton |  | Settings | 
+    AXScrollArea |  |  | 
+      AXHeading |  | Kept | 
+      AXOpaqueProviderGroup |  |  | 
+        AXGroup |  | The cover feels too polished., Kept, Maybe place the messy sketch beside it to show where it started., 19:44 | 
+          AXButton |  | The cover feels too polished., Maybe place the messy sketch beside it to show where it started. | 
+          AXStaticText |  |  | 19:44
+          AXMenuButton |  | Note actions | 
+        AXGroup |  | opening paragraph, Kept, start with the example, explain it after. less setup., 19:44 | 
+          AXButton |  | opening paragraph, start with the example, explain it after. less setup. | 
+          AXStaticText |  |  | 19:44
+        AXGroup |  | leave saturday open, Kept, walk somewhere without a plan, 19:44 | 
+          AXButton |  | leave saturday open, walk somewhere without a plan | 
+          AXStaticText |  |  | 19:44
+      AXHeading |  | Today | 
+      AXOpaqueProviderGroup |  |  | 
+        AXGroup |  | do we need this before the first click?, maybe let people try one thing before asking for the rest, 19:44 | 
+          AXButton |  | do we need this before the first click?, maybe let people try one thing before asking for the rest | 
+          AXStaticText |  |  | 19:44
+        AXGroup |  | the quieter version, less on the front. let the work do the talking., 19:44 | 
+          AXButton |  | the quieter version, less on the front. let the work do the talking. | 
+          AXStaticText |  |  | 19:44
+        AXGroup |  | ask about the courtyard light, late afternoon, before the chairs get stacked, 19:44 | 
+          AXButton |  | ask about the courtyard light, late afternoon, before the chairs get stacked | 
+          AXStaticText |  |  | 19:44
+  AXButton |  |  | 
+  AXButton |  |  | 
+    AXGroup |  |  | 
+      AXGroup |  |  | 
+  AXButton |  |  | 
+AXWindow |  |  | 
+  AXGroup |  |  | 

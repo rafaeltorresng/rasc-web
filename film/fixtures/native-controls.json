@@ -1,0 +1,11 @@
+{
+  "selectedHomeFrames": 157,
+  "minimumRedYellowGreenPixels": [
+    616,
+    608,
+    608
+  ],
+  "allFramesHaveNativeTrafficLights": true,
+  "captureMode": "display region bounded to fixture, native alpha",
+  "appUIUnchanged": true
+}

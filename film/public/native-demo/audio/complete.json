@@ -1,0 +1,558 @@
+{
+  "origin": "Original procedural synthesis; no external samples or music",
+  "sampleRate": 48000,
+  "seed": 20261019,
+  "peakDBFS": -24.564766184290345,
+  "events": [
+    {
+      "seconds": 2.143851163263516,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.23931470406651,
+      "kind": "open"
+    },
+    {
+      "seconds": 2.900584124994529,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "c"
+    },
+    {
+      "seconds": 2.9751422368923177,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "o"
+    },
+    {
+      "seconds": 3.0383882891325853,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "v"
+    },
+    {
+      "seconds": 3.1019178811931947,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 3.1603969187389476,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "r"
+    },
+    {
+      "seconds": 3.2140373515544822,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 3.263265130978975,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "f"
+    },
+    {
+      "seconds": 3.308098177295608,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 3.364225247716584,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 3.4154944784501855,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "l"
+    },
+    {
+      "seconds": 3.4619721445723854,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 3.5021899568542363,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 3.5413281180700746,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 3.5770054255388635,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "o"
+    },
+    {
+      "seconds": 3.6095046693966526,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "o"
+    },
+    {
+      "seconds": 3.649645979763722,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 3.6860787398818,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "p"
+    },
+    {
+      "seconds": 3.7189221846792275,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 3.7464021007413315,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "r"
+    },
+    {
+      "seconds": 3.7737821456733585,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "f"
+    },
+    {
+      "seconds": 3.796681026630263,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 3.820418065047452,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "c"
+    },
+    {
+      "seconds": 3.850550544300858,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 3.8788350104481157,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 3.905392248632981,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "m"
+    },
+    {
+      "seconds": 3.9293513779864453,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "a"
+    },
+    {
+      "seconds": 3.952786071064546,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "y"
+    },
+    {
+      "seconds": 3.974409772919565,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "b"
+    },
+    {
+      "seconds": 3.994022493832396,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.0204621242194705,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.045453969196483,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "p"
+    },
+    {
+      "seconds": 4.06751820299864,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "u"
+    },
+    {
+      "seconds": 4.088682160657238,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.10956551839442,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.1279580513197125,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.146018640699925,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "h"
+    },
+    {
+      "seconds": 4.169092342604579,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.190360778249975,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.212739763037537,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "m"
+    },
+    {
+      "seconds": 4.232793866347983,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.252407642009084,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 4.2699232894350025,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 4.288546780163473,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "y"
+    },
+    {
+      "seconds": 4.310486464487463,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.3339330508688,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 4.356583164941997,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "k"
+    },
+    {
+      "seconds": 4.378365708732369,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.397850488496378,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.415890053691514,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "c"
+    },
+    {
+      "seconds": 4.43542365979372,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "h"
+    },
+    {
+      "seconds": 4.45987877820932,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.484484306771437,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "n"
+    },
+    {
+      "seconds": 4.508939079010869,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.531527795939623,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "x"
+    },
+    {
+      "seconds": 4.5538659043634215,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.576233995105991,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.596532767078404,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.623107738643373,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "o"
+    },
+    {
+      "seconds": 4.650271435599526,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.675318474918168,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "i"
+    },
+    {
+      "seconds": 4.700983510207666,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 4.726083710906054,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.75198730284437,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 4.777192133370368,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "h"
+    },
+    {
+      "seconds": 4.810771186658497,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "o"
+    },
+    {
+      "seconds": 4.843974081005425,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "w"
+    },
+    {
+      "seconds": 4.87401305550242,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 4.906178358839258,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "w"
+    },
+    {
+      "seconds": 4.934828619131466,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "h"
+    },
+    {
+      "seconds": 4.9656521691461055,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 4.992855299775619,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "r"
+    },
+    {
+      "seconds": 5.032920907619036,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 5.072628072447303,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 5.108223128679436,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "i"
+    },
+    {
+      "seconds": 5.143945373260943,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 5.181790091411486,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": " "
+    },
+    {
+      "seconds": 5.218859692348199,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "s"
+    },
+    {
+      "seconds": 5.255035248699301,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 5.303385142365903,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "a"
+    },
+    {
+      "seconds": 5.347383612018193,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "r"
+    },
+    {
+      "seconds": 5.394673597528498,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "t"
+    },
+    {
+      "seconds": 5.43767083308927,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "e"
+    },
+    {
+      "seconds": 5.48341124131899,
+      "kind": "key",
+      "treatment": "soft-typing",
+      "character": "d"
+    },
+    {
+      "seconds": 5.949999999999545,
+      "kind": "key"
+    },
+    {
+      "seconds": 8.749999999999545,
+      "kind": "find"
+    },
+    {
+      "seconds": 10.349999999999545,
+      "kind": "key"
+    },
+    {
+      "seconds": 11.799999999999544,
+      "kind": "key"
+    },
+    {
+      "seconds": 13.199999999999545,
+      "kind": "key"
+    },
+    {
+      "seconds": 14.949999999999545,
+      "kind": "keep"
+    },
+    {
+      "seconds": 15.549999999999544,
+      "kind": "close"
+    },
+    {
+      "seconds": 16.349999999999547,
+      "kind": "key"
+    },
+    {
+      "seconds": 17.699999999999548,
+      "kind": "key"
+    },
+    {
+      "seconds": 17.849999999999547,
+      "kind": "open"
+    },
+    {
+      "seconds": 21.599999999999547,
+      "kind": "find"
+    }
+  ]
+}
