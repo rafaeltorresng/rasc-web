@@ -23,15 +23,8 @@
 .film-frame[data-ended="true"] .film-play:active { transform: translateY(-50%) scale(.98); }
 .film-frame:has(:focus-visible) { outline: 3px solid var(--violet); outline-offset: 4px; }
 .film-poster-fallback { position: absolute; inset: 16% 0 auto; text-align: center; font-family: var(--font-editorial); font-style: italic; color: var(--ink-muted); font-size: 24px; }
-.film-caption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 20px; padding-top: 8px; }
+.film-caption { padding-top: 8px; }
 #product-film-disclosure { margin: 0; color: var(--ink-muted); font-size: 12px; line-height: 1.6; }
-.film-transcript { color: var(--ink-muted); font-size: 12px; line-height: 1.65; }
-.film-transcript summary { display: list-item; width: fit-content; min-height: 44px; padding-block: 12px; cursor: pointer; text-underline-offset: 4px; }
-.film-transcript summary:hover { color: var(--ink); }
-.film-transcript[open] { flex-basis: 100%; }
-.film-transcript[open] > div { max-width: 74ch; padding: 4px 0 12px; }
-.film-transcript p { margin-bottom: 12px; font-size: 13px; }
-.film-transcript p:last-child { margin-bottom: 0; }
 .film-error { margin: 14px 0; font-size: 14px; line-height: 1.6; }
 .film-error a { color: var(--violet-ink); text-underline-offset: 4px; }
 @media (prefers-reduced-motion: no-preference) {

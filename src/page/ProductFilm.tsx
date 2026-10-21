@@ -57,21 +57,13 @@ export default function ProductFilm() {
         {!failed && (!revealed || ended) && <button type="button" className="film-play" aria-label={ended ? 'Replay product film' : 'Play product film'}
           disabled={requested && !revealed && !playRejected} onClick={play}>
           <span className="film-play-icon"><Icon name="play" /></span>
-          <span>{ended ? 'Watch again' : requested ? 'Loading film…' : 'Play film'}<small>{ended ? '0:28' : '0:28 · sound optional'}</small></span>
+          <span>{ended ? 'Watch again' : requested ? 'Loading film…' : 'Play film'}<small>0:28</small></span>
         </button>}
       </div>
-      {failed && <p className="film-error" role="status">Video unavailable. <a href={film}>Open the MP4</a> or read the demo below.</p>}
+      {failed && <p className="film-error" role="status">Video unavailable. <a href={film}>Open the MP4</a>.</p>}
       {playRejected && <p className="film-error" role="status">Playback paused. Select Play to try again.</p>}
       <div className="film-caption">
         <p id="product-film-disclosure">Illustrative demo · Refine results may vary.</p>
-        <details className="film-transcript">
-          <summary>Read the demo</summary>
-          <div>
-            <p>While reviewing a design, someone has an idea: put the rough sketch beside the finished cover. They invoke Rasc over their work and capture the thought.</p>
-            <p>Optional Refine offers clearer wording. They compare Original and Suggested, accept the proposal, then separately Keep the thought and return to work. Later, they open Home, search for “cover” and find the same note.</p>
-            <p>The interface is native. Refine wording and processing time are scripted for this illustrative demonstration.</p>
-          </div>
-        </details>
       </div>
     </div>
   </section>;

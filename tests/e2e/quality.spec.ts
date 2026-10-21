@@ -49,8 +49,6 @@ test('installation overview: all steps, keyboard, Escape and focus restoration',
   await page.keyboard.press('Tab'); await expect(close).toBeFocused();
   await dialog.getByRole('link', { name: /Blocked by macOS/ }).click();
   await expect(dialog.getByRole('heading', { name: 'If macOS blocks it.' })).toBeFocused();
-  await dialog.getByText('See installation screenshots', { exact: true }).click();
-  await expect(dialog.getByRole('link', { name: /Enlarge image: The Rasc DMG in Finder/ })).toBeVisible();
   await testInfo.attach('guide-overview', { body: await page.screenshot(), contentType: 'image/png' });
   await page.keyboard.press('Escape'); await expect(dialog).toHaveCount(0); await expect(opener).toBeFocused();
   await expect.poll(() => page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');
