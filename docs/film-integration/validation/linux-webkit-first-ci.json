@@ -1,0 +1,86 @@
+{
+  "run": "https://github.com/rafaeltorresng/rasc-web/actions/runs/39633766635",
+  "host": "Ubuntu 24.04.5; WebKitGTK under Playwright",
+  "stats": {
+    "startTime": "2026-10-21T16:20:48.162Z",
+    "duration": 308969.575,
+    "expected": 90,
+    "skipped": 2,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "failed": [
+    {
+      "project": "webkit",
+      "test": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "complete-playback": {
+        "duration": 27.9,
+        "currentTime": 0.1341654,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 3,
+        "dropped": 0,
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15"
+      },
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "test": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "test": "missing poster keeps a usable play control",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "test": "a slow media response keeps the poster and reserved geometry until playback",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    }
+  ]
+}

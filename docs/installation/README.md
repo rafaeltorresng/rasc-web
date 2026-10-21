@@ -1,5 +1,7 @@
 # Guided installation — local review
 
+Historical record of the first wizard. The current overview prototype and permanent guide are documented in [current installation architecture](../installation-guide.md).
+
 Branch: `rafa/guided-installation`. No commit, push or deployment was made for this implementation.
 
 ## UX decision

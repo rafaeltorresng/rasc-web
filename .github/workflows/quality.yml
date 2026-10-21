@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   browser-regression:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -21,7 +21,16 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npx playwright install --with-deps chromium firefox webkit
-      - run: npm run test:e2e -- --project=chromium --project=firefox --project=webkit
+      - run: npm run test:e2e -- --project=chromium --project=firefox
+      - name: Observe the Linux native media pipeline
+        if: always()
+        run: node scripts/probe-native-media.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: linux-native-media-observation
+          path: test-results/native-media-probe.json
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

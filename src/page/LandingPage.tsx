@@ -1,13 +1,14 @@
 import { landingCopy } from '../content/copy';
 import { launch } from '../content/launch';
 import { HomeSearchScene } from '../product/ProductScenes';
-import ProductTableau from '../product/ProductTableau';
 import { BrandSymbol, DownloadDetails, DownloadLink, SourceLink, Wordmark } from './Brand';
 import Header from './Header';
 import InteractionStory from './InteractionStory';
 import { NoSystemSection, OwnedMoment } from './EditorialSections';
 import { AppleIntelligenceIcon } from '../ui/Icon';
+import Hero from './Hero';
 import { InstallationHelp, InstallationProvider } from './InstallationGuide';
+import ProductFilm from './ProductFilm';
 
 function RetrievalSection() {
   const { retrieval } = landingCopy;
@@ -25,7 +26,7 @@ function ClosingSection() {
 }
 
 function Footer() {
-  return <footer className="site-footer"><div className="page-container"><Wordmark /><span>Made for unfinished thoughts.</span><div className="footer-links"><SourceLink /><a href="mailto:rafaeltorresng@gmail.com?subject=Rasc%20website">Contact</a></div></div></footer>;
+  return <footer className="site-footer"><div className="page-container"><Wordmark /><span>Made for unfinished thoughts.</span><div className="footer-links"><a href={launch.installGuideHref}>Installation help</a><SourceLink /><a href="mailto:rafaeltorresng@gmail.com?subject=Rasc%20website">Contact</a></div></div></footer>;
 }
 
 export default function LandingPage() {
@@ -34,27 +35,9 @@ export default function LandingPage() {
       <a className="skip-link" href="#main">Skip to content</a>
       <Header />
       <main id="main">
-        <section className="hero-section hero-section--tableau page-container" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <div className="hero-heading">
-              <h1 id="hero-title">A scratchpad for<br /><span>unfinished thoughts.</span></h1>
-              <p className="platform-cue">
-                <span className="platform-cue__product">Native Mac app · {launch.sourcePublic ? 'Open source' : 'MIT licensed'}</span>
-                <span className="platform-cue__refine" title="Refine with Apple Intelligence, on your Mac">
-                  <span className="platform-cue__separator" aria-hidden="true">·</span>
-                  <AppleIntelligenceIcon alt="Apple Intelligence" />
-                  On-device Refine
-                </span>
-              </p>
-            </div>
-            <div className="hero-summary">
-              <p className="hero-description">{landingCopy.hero.description}</p>
-              <div className="hero-download"><DownloadLink />{launch.publicReleaseReady && !launch.notarized && <InstallationHelp />}</div>
-            </div>
-          </div>
-          <ProductTableau live />
-        </section>
+        <Hero />
         <OwnedMoment />
+        <ProductFilm />
         <InteractionStory />
         <NoSystemSection />
         <RetrievalSection />

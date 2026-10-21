@@ -1,0 +1,31 @@
+name: WebKit on macOS
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  webkit-regression:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Media codecs differ by host. Run the complete WebKit suite on the Mac
+      # platform closest to Safari; no playback assertions are skipped.
+      - run: npx playwright install --with-deps webkit
+      - run: npm run test:e2e -- --project=webkit
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: macos-webkit-regression-evidence
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

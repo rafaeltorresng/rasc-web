@@ -12,7 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root')!);
 const params = new URLSearchParams(window.location.search);
 const showcase = params.get('showcase');
 // Local art-direction and export surfaces do not ship in the production bundle.
-if (import.meta.env.DEV && params.has('companion')) {
+if (/\/install(?:\/index\.html|\/)?$/.test(window.location.pathname)) {
+  import('./page/InstallationPage').then(({ default: InstallationPage }) => root.render(<React.StrictMode><InstallationPage /></React.StrictMode>));
+} else if (import.meta.env.DEV && params.has('companion')) {
   import('./page/CompanionStudy').then(({ default: CompanionStudy }) => {
     root.render(<CompanionStudy />);
   });

@@ -5,7 +5,7 @@ export const test = base.extend<{ diagnostics: void }>({
     const runtime: string[] = [];
     const consoleErrors: string[] = [];
     const failedRequests: { url: string; error?: string }[] = [];
-    page.on('pageerror', error => runtime.push(error.stack ?? error.message));
+    page.on('pageerror', error => runtime.push(error.stack || `${error.name}: ${error.message}`));
     page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
     page.on('requestfailed', request => failedRequests.push({ url: request.url(), error: request.failure()?.errorText }));
     await use();

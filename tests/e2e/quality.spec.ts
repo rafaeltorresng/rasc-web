@@ -37,51 +37,36 @@ test('responsive landing: required widths and intermediate short viewports', asy
   await testInfo.attach('responsive-matrix', { body: JSON.stringify(results, null, 2), contentType: 'application/json' });
 });
 
-test('installation guide: keyboard, rapid steps, Escape, close and focus restoration', async ({ page }, testInfo) => {
-  await macIdentity(page);
-  await page.goto('/');
-  const opener = page.locator('.hero-download').getByRole('button', { name: 'Installation help' });
+test('installation overview: all steps, keyboard, Escape and focus restoration', async ({ page }, testInfo) => {
+  await macIdentity(page); await page.goto('/');
+  const opener = page.locator('.hero-download').getByRole('link', { name: 'Installation help' });
   await opener.click();
-  const dialog = page.getByRole('dialog');
-  const close = dialog.getByRole('button', { name: 'Close installation guide' });
-  await expect(dialog).toBeVisible();
+  const dialog = page.getByRole('dialog'); const close = dialog.getByRole('button', { name: 'Close installation guide' });
   await expect(close).toBeFocused();
-  await close.press('Shift+Tab');
-  await expect(dialog.getByRole('button', { name: 'Next', exact: true })).toBeFocused();
-  await dialog.getByRole('button', { name: 'Next', exact: true }).press('Tab');
-  await expect(close).toBeFocused();
-  for (let round = 0; round < 3; round++) {
-    for (const n of [4, 1, 3, 2, 4]) await dialog.getByRole('button', { name: new RegExp(`^Step ${n}:`) }).click();
-  }
-  await expect(dialog.locator('.installation-shot--active img').last()).toBeVisible();
-  await dialog.getByText('Using macOS 14?', { exact: true }).click();
-  await expect(dialog.getByText(/You can also Control-click/)).toBeVisible();
-  await testInfo.attach('guide-step-4', { body: await page.screenshot(), contentType: 'image/png' });
-  await page.keyboard.press('Escape');
-  await expect(dialog).toHaveCount(0);
-  await expect(opener).toBeFocused();
-  await expect.poll(() => page.evaluate(() => document.body.style.overflow), { timeout: 1000 }).not.toBe('hidden');
-  for (let i = 0; i < 3; i++) {
-    await opener.click();
-    await expect(page.getByRole('heading', { name: 'Open the download', exact: true })).toBeVisible();
-    await page.getByRole('button', { name: 'Close installation guide' }).click();
-    await expect(page.getByRole('dialog')).toHaveCount(0);
-  }
+  await expect(dialog.getByRole('heading', { level: 3 })).toHaveCount(4);
+  await expect(dialog.getByRole('button', { name: 'Next', exact: true })).toHaveCount(0);
+  await close.press('Shift+Tab'); await expect(dialog.getByRole('link', { name: 'Download again' })).toBeFocused();
+  await page.keyboard.press('Tab'); await expect(close).toBeFocused();
+  await dialog.getByRole('link', { name: /Blocked by macOS/ }).click();
+  await expect(dialog.getByRole('heading', { name: 'If macOS blocks it.' })).toBeFocused();
+  await dialog.getByText('See installation screenshots', { exact: true }).click();
+  await expect(dialog.getByRole('link', { name: /Enlarge image: The Rasc DMG in Finder/ })).toBeVisible();
+  await testInfo.attach('guide-overview', { body: await page.screenshot(), contentType: 'image/png' });
+  await page.keyboard.press('Escape'); await expect(dialog).toHaveCount(0); await expect(opener).toBeFocused();
+  await expect.poll(() => page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');
+  for(let i=0;i<3;i++) { await opener.click(); await expect(page.getByRole('heading', { name:'Open the .dmg',exact:true })).toBeVisible(); await page.getByRole('button', { name:'Close installation guide' }).click(); await expect(page.getByRole('dialog')).toHaveCount(0); }
 });
 
 test('guide remains usable in short displays and 200% equivalent reflow', async ({ page }) => {
-  await macIdentity(page);
-  await page.goto('/');
-  for (const size of [{ width: 320, height: 568 }, { width: 600, height: 900 }, { width: 768, height: 360 }, { width: 640, height: 360 }]) {
-    await page.setViewportSize(size);
-    await page.locator('.hero-download').getByRole('button', { name: 'Installation help' }).click();
-    const dialog = page.getByRole('dialog');
-    await expect(dialog.getByRole('button', { name: 'Close installation guide' })).toBeInViewport();
-    await expect(dialog.getByRole('button', { name: 'Next', exact: true })).toBeInViewport();
-    expect(await dialog.evaluate(el => el.scrollWidth - el.clientWidth)).toBeLessThanOrEqual(1);
-    await dialog.getByRole('button', { name: /Step 4:/ }).click();
-    await dialog.getByRole('button', { name: 'Close guide', exact: true }).click();
-    await expect(dialog).toHaveCount(0);
+  await macIdentity(page); await page.goto('/');
+  for(const size of [{width:320,height:568},{width:600,height:900},{width:768,height:360},{width:640,height:360}]) {
+    await page.setViewportSize(size); await page.locator('.hero-download').getByRole('link', {name:'Installation help'}).click();
+    const dialog=page.getByRole('dialog'); const close=dialog.getByRole('button',{name:'Close installation guide'});
+    await expect(close).toBeInViewport(); await expect(dialog.getByRole('link',{name:'Open full guide'})).toBeInViewport();
+    expect(await dialog.evaluate(el=>el.scrollWidth-el.clientWidth)).toBeLessThanOrEqual(1);
+    await dialog.getByRole('link',{name:/Blocked by macOS/}).click();
+    await expect(dialog.getByRole('heading',{name:'If macOS blocks it.'})).toBeInViewport();
+    await close.click(); await expect(dialog).toHaveCount(0);
   }
 });
 
@@ -113,7 +98,7 @@ test('WCAG AA automated checks on landing, Refine and modal', async ({ page }, t
   await page.goto('/');
   for (const state of ['landing', 'refine', 'dialog']) {
     if (state === 'refine') await page.getByRole('tab', { name: /Refine/ }).click();
-    if (state === 'dialog') await page.locator('.hero-download').getByRole('button', { name: 'Installation help' }).click();
+    if (state === 'dialog') await page.locator('.hero-download').getByRole('link', { name: 'Installation help' }).click();
     const scan = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
     await testInfo.attach(`axe-${state}`, { body: JSON.stringify(scan.violations, null, 2), contentType: 'application/json' });
     expect.soft(scan.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) })), state).toEqual([]);

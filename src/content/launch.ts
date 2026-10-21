@@ -10,7 +10,7 @@ export const launch = {
   checksumHref: `${RELEASE_BASE}/Rasc-0.1.1-unsigned.dmg.sha256`,
   sha256: '812323655859a5389cbd872075e81bc51509084ac14966c6a293911b5b383973',
   installGuideHref:
-    'https://github.com/rafaeltorresng/rasc/blob/main/docs/INSTALL-UNSIGNED.md',
+    `${import.meta.env.BASE_URL}install/`,
   githubHref: 'https://github.com/rafaeltorresng/rasc',
   sourcePublic: true,
   publicReleaseReady: true,

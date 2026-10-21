@@ -1,0 +1,11 @@
+{
+  "scope": "Production build; five profiles; 104 passed and one Firefox assertion used an unsupported JS playsInline property; corrected to test the actual HTML attribute in the targeted follow-up",
+  "stats": {
+    "startTime": "2026-10-21T14:06:15.639Z",
+    "duration": 257269.358,
+    "expected": 104,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

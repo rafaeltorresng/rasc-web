@@ -1,0 +1,534 @@
+{
+  "stats": {
+    "startTime": "2026-10-21T14:39:36.150Z",
+    "duration": 252536.314,
+    "expected": 94,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "project": "chromium",
+      "title": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "Mac download starts without losing the guide, modified clicks stay native",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "Windows, Linux, iPad desktop, Android and unknown identities use the intended CTA",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "metadata, anchors, assets and production query routes remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 0,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 0,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0"
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 284,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15"
+      }
+    },
+    {
+      "project": "chromium",
+      "title": "permanent installation guide supports direct load, refresh and all platforms",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "installation help remains discoverable on mobile and images open at original resolution",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "first-launch security instructions are visible before expanding supporting screenshots",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "permanent installation guide supports direct load, refresh and all platforms",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "installation help remains discoverable on mobile and images open at original resolution",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "first-launch security instructions are visible before expanding supporting screenshots",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "permanent installation guide supports direct load, refresh and all platforms",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "installation help remains discoverable on mobile and images open at original resolution",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "first-launch security instructions are visible before expanding supporting screenshots",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "lab measurements and final visual evidence",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "webkit",
+      "title": "lab measurements and final visual evidence",
+      "status": "skipped"
+    },
+    {
+      "project": "chromium",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "installation overview: all steps, keyboard, Escape and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "hero motion continues beyond five seconds and resumes after suspension",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "installation overview: all steps, keyboard, Escape and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "hero motion continues beyond five seconds and resumes after suspension",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "responsive landing: required widths and intermediate short viewports",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "installation overview: all steps, keyboard, Escape and focus restoration",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "guide remains usable in short displays and 200% equivalent reflow",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "Home and Search tolerate pause, manual selection and replay",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "WCAG AA automated checks on landing, Refine and modal",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "hero motion continues beyond five seconds and resumes after suspension",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "scene remains intact without canvas support",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "missing optional IntersectionObserver does not blank the landing",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "background and reload recover the selected scene without uncaught errors",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "failed installation screenshots preserve usable instructions",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "older browsers without Intl.Segmenter still render and refine",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "advance through Refine, accept, Keep, restart and cancel",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "rapid repeated and interrupted chapter selection never blanks the page",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "keyboard tabs, viewport interruption and reduced-motion changes",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "Try Refine works during early, middle and completed Capture",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "simulated visibility suspension preserves pending Refine and resumes cleanly",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "automatic Capture can be paused without losing the unfinished thought",
+      "status": "expected"
+    }
+  ]
+}

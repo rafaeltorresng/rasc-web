@@ -55,9 +55,9 @@ test('failed installation screenshots preserve usable instructions', async ({ pa
   });
   await page.route('**/assets/*.webp', route => route.abort());
   await page.goto('/');
-  await page.locator('.hero-download').getByRole('button', { name: 'Installation help' }).click();
-  await expect(page.getByRole('dialog').getByText(/Find.*Rasc-0.1.1-unsigned.dmg/)).toBeVisible();
-  await expect(page.getByRole('dialog').getByText('Image unavailable. Follow the instructions above.', { exact: true })).toBeVisible();
+  await page.locator('.hero-download').getByRole('link', { name: 'Installation help' }).click();
+  await expect(page.getByRole('dialog').getByRole('heading', { name: 'Open the .dmg', exact: true })).toBeVisible();
+  await expect(page.getByRole('dialog').getByText('Image unavailable. Follow the written instructions.', { exact: true }).first()).toBeVisible();
   await page.getByRole('button', { name: 'Close installation guide' }).click();
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');

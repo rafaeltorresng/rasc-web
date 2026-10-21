@@ -1,0 +1,15 @@
+{
+  "stats": {
+    "startTime": "2026-10-21T14:11:33.092Z",
+    "duration": 25197.999,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": {
+    "chromium": 3,
+    "webkit": 3,
+    "iphone-webkit": 3
+  }
+}

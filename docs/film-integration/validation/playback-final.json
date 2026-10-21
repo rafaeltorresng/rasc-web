@@ -1,0 +1,446 @@
+{
+  "stats": {
+    "startTime": "2026-10-21T14:18:13.732Z",
+    "duration": 165153.09199999998,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "project": "chromium",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "complete-playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 0,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      },
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "complete-playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 0,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0"
+      },
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js. (Reason: CORS request did not succeed). Status code: (null).\"]"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "NS_ERROR_FAILURE"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "complete-playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 278,
+        "paused": true,
+        "ended": true,
+        "muted": true,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15"
+      },
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chrome-mac",
+      "title": "full Complete playback records decoding diagnostics without claiming native Safari",
+      "status": "expected",
+      "complete-playback": {
+        "duration": 27.9,
+        "currentTime": 27.9,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "frames": 837,
+        "dropped": 0,
+        "paused": true,
+        "ended": true,
+        "muted": false,
+        "visibility": "visible",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chromium",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "firefox",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "webkit",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "title": "production uses the final public film without loading capture studies",
+      "status": "expected"
+    },
+    {
+      "project": "chrome-mac",
+      "title": "production retains approved hero and excludes comparison controls",
+      "status": "expected"
+    },
+    {
+      "project": "chromium",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chromium",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chromium",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED",
+          "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chromium",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED",
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js. (Reason: CORS request did not succeed). Status code: (null).\"]"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "NS_ERROR_FAILURE"
+          }
+        ]
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js. (Reason: CORS request did not succeed). Status code: (null).\"]"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "NS_ERROR_FAILURE"
+          }
+        ]
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js. (Reason: CORS request did not succeed). Status code: (null).\"]"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "NS_ERROR_FAILURE"
+          }
+        ]
+      }
+    },
+    {
+      "project": "firefox",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "[JavaScript Error: \"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js. (Reason: CORS request did not succeed). Status code: (null).\"]"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "NS_ERROR_FAILURE"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chrome-mac",
+      "title": "inline film is contextual, demand-loaded, playable, pausable and replayable",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chrome-mac",
+      "title": "responsive film and section rhythm remain intact",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chrome-mac",
+      "title": "unavailable video preserves poster, written guidance and other landing interactions",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED",
+          "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "chrome-mac",
+      "title": "missing poster keeps a usable play control",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED",
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    }
+  ]
+}

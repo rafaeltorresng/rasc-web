@@ -9,3 +9,22 @@ dist/
 *.tsbuildinfo
 test-results/
 playwright-report/
+
+# Local art-direction history and raw review evidence (preserved outside Git).
+/docs/film-v*/
+/docs/film-native-demo/
+/docs/installation-film/
+/docs/hero-art-direction/
+/docs/landing-polish/
+/docs/film-integration/validation/*
+
+!/docs/film-integration/validation/minimal-context-*.webp
+!/docs/film-integration/validation/editorial-context-*.webp
+!/docs/film-integration/validation/build-integrity.json
+!/docs/film-integration/validation/functional-final.json
+!/docs/film-integration/validation/playback-final.json
+!/docs/film-integration/validation/slow-network-final.json
+!/docs/film-integration/validation/visual-final.json
+!/docs/film-integration/validation/broad-regression.json
+!/docs/film-integration/validation/consolidation-final.json
+!/docs/film-integration/validation/linux-webkit-first-ci.json
