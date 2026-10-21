@@ -1,0 +1,37 @@
+[
+  {
+    "frame": 600,
+    "pixelsIdentical": true,
+    "size": [
+      1920,
+      1080
+    ],
+    "beforeSha256": "941925bfbde67eac435202f2c7cc47a1b7139a54bbbfea439523da9190ae3c84",
+    "afterSha256": "941925bfbde67eac435202f2c7cc47a1b7139a54bbbfea439523da9190ae3c84",
+    "rgbDifferenceBounds": null,
+    "alphaDifferenceBounds": null,
+    "changedPixels": 0,
+    "maxChannelDifference": 0,
+    "meanAbsoluteChannelDifference": 0.0
+  },
+  {
+    "frame": 1673,
+    "pixelsIdentical": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "beforeSha256": "d4787a79cac033d9cf92a859f97c2e0b069108d10982c7ce20867d953fdd08fd",
+    "afterSha256": "06ca3bdca1fe5cd6b5ae062abf9bc6377a621749c4c6d9bad9e09bbee38d16a2",
+    "rgbDifferenceBounds": [
+      531,
+      259,
+      620,
+      300
+    ],
+    "alphaDifferenceBounds": null,
+    "changedPixels": 2,
+    "maxChannelDifference": 1,
+    "meanAbsoluteChannelDifference": 2.4112654320987655e-07
+  }
+]
