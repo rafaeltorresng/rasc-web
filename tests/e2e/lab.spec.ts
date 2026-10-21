@@ -2,7 +2,8 @@ import { test, expect } from './fixtures';
 import { devices } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const evidence = 'docs/audit-2026-10-15/evidence';
+const evidenceRoot = process.env.RASC_QA_OUTPUT ?? 'test-results/lab';
+const evidence = `${evidenceRoot}/evidence`;
 
 test('lab measurements and final visual evidence', async ({ browser, browserName }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium', 'One repeatable Chromium lab, not field metrics');
@@ -39,7 +40,7 @@ test('lab measurements and final visual evidence', async ({ browser, browserName
     samples.push(result);
     await context.close();
   }
-  await writeFile('docs/audit-2026-10-15/lab.json', JSON.stringify({ engine: browserName, conditions: 'macOS Chromium; 390×844 CSS px; cold cache; 150ms RTT, 400000 B/s down, 100000 B/s up, CPU 4×; local uncompressed preview; analytics blocked; 3 independent contexts; Event Timing samples are interaction latency proxies, not field INP; CLS sum over observed session, not CrUX session-window aggregation', samples }, null, 2));
+  await writeFile(`${evidenceRoot}/lab.json`, JSON.stringify({ engine: browserName, conditions: 'macOS Chromium; 390×844 CSS px; cold cache; 150ms RTT, 400000 B/s down, 100000 B/s up, CPU 4×; local uncompressed preview; analytics blocked; 3 independent contexts; Event Timing samples are interaction latency proxies, not field INP; CLS sum over observed session, not CrUX session-window aggregation', samples }, null, 2));
 
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   await page.route('https://static.cloudflareinsights.com/**', route => route.abort());
