@@ -1,0 +1,29 @@
+{
+  "original": "cover feels too perfect maybe put the messy sketch next to it show where it started",
+  "suggested": "The cover feels too polished.\nMaybe place the messy sketch beside it to show where it started.",
+  "refiningSeconds": 2.4,
+  "query": "cover",
+  "syntheticNotes": [
+    {
+      "content": "leave saturday open\nwalk somewhere without a plan",
+      "kept": true
+    },
+    {
+      "content": "opening paragraph\nstart with the example, explain it after. less setup.",
+      "kept": true
+    },
+    {
+      "content": "ask about the courtyard light\nlate afternoon, before the chairs get stacked",
+      "kept": false
+    },
+    {
+      "content": "the quieter version\nless on the front. let the work do the talking.",
+      "kept": false
+    },
+    {
+      "content": "do we need this before the first click?\nmaybe let people try one thing before asking for the rest",
+      "kept": false
+    }
+  ],
+  "disclosure": "Illustrative demo. Refine results may vary."
+}

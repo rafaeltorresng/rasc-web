@@ -1,0 +1,36 @@
+#if RASC_FILM_DEMO && DEBUG
+    @Test func scriptedFilmUsesNativePreviewAndExplicitAcceptance() async throws {
+        let fixture = try makeFixture(); defer { fixture.remove() }
+        let scenario = FilmDemoScenario(original: "rough cover maybe next to the sketch", suggested: "Maybe put the rough cover next to the sketch.", refiningSeconds: 0.01, syntheticNotes: [])
+        let session = fixture.makeSession(provider: FilmRefinementProvider(scenario: scenario))
+        session.text = scenario.original
+        session.startRefinement()
+        #expect(session.surface == .refining)
+        try await waitUntil { session.surface == .refinementPreview }
+        #expect(session.text == scenario.original)
+        #expect(session.refinementPreview?.result.text == scenario.suggested)
+        #expect(session.refinementPreview?.metadata.provider == "illustrative-film-demo")
+        try await session.acceptRefinement()
+        try await waitUntil { session.surface != .refinementPreview }
+        #expect(session.text == scenario.suggested)
+    }
+    @Test func scriptedFilmRejectsUnexpectedInputInsteadOfGenerating() async throws {
+        let fixture = try makeFixture(); defer { fixture.remove() }
+        let scenario = FilmDemoScenario(original: "only this fixture text", suggested: "Only this fixture text.", refiningSeconds: 0.01, syntheticNotes: [])
+        let session = fixture.makeSession(provider: FilmRefinementProvider(scenario: scenario))
+        session.text = "different thought in fixture"
+        session.startRefinement()
+        try await waitUntil { session.surface != .refining }
+        #expect(session.refinementPreview == nil)
+        #expect(session.text == "different thought in fixture")
+    }
+    @Test func scriptedFilmCancellationDoesNotPublishPreview() async throws {
+        let fixture = try makeFixture(); defer { fixture.remove() }
+        let scenario = FilmDemoScenario(original: "only this fixture text", suggested: "Only this fixture text.", refiningSeconds: 0.1, syntheticNotes: [])
+        let session = fixture.makeSession(provider: FilmRefinementProvider(scenario: scenario))
+        session.text = scenario.original; session.startRefinement(); session.cancelRefinement()
+        try await Task.sleep(for: .milliseconds(150))
+        #expect(session.refinementPreview == nil)
+        #expect(session.text == scenario.original)
+    }
+#endif
