@@ -1,0 +1,5 @@
+# Exact native accessibility dumps retain their original field delimiters.
+film/sources/native-demo/*.txt -whitespace
+# Deterministic capture schedules are reviewed through manifests/checks.
+film/src/**/take.ts linguist-generated=true
+film/src/**/typing.ts linguist-generated=true

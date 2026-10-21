@@ -228,7 +228,7 @@ function Retrieval({
               style={{
                 width: 2280 * scale,
                 height: 1120 * scale,
-                
+
                 display: "block",
               }}
             />
