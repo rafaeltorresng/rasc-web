@@ -1,0 +1,41 @@
+{
+  "nativeHomeControlsVerified": true,
+  "scripted": true,
+  "generatedByModel": false,
+  "nativeTextCrossfadeOverlapTrimmed": true,
+  "uncutProofPreserved": true,
+  "actualNativeUI": true,
+  "providerWaitSeconds": 2.4,
+  "nativeRefineFootageSeconds": 2.8,
+  "nativeProcessingRate": 1,
+  "uniqueProcessingFrames": 159,
+  "verifiedNativeFrames": 1228,
+  "sourcePixels": {
+    "scratchpad": [
+      1600,
+      720
+    ],
+    "home": [
+      2280,
+      1120
+    ]
+  },
+  "maxSourceScale": 0.9119999999999999,
+  "duration": 27.9,
+  "frames": 1674,
+  "maxNewCharacters": 1,
+  "maxTypingGap": 0.07455811189778849,
+  "textContinuousThroughAcceptanceKeepRetrieval": true,
+  "clickHotspot": {
+    "x": 436.75,
+    "y": 320.1
+  },
+  "nativeCard": {
+    "x": 244.56,
+    "y": 244.95000000000002,
+    "width": 462.84000000000003,
+    "height": 142.31
+  },
+  "closingNeverRewindsNativeSource": true,
+  "shortUnchanged": true
+}

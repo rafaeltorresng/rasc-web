@@ -30,3 +30,21 @@ jobs:
             playwright-report/
             test-results/
           retention-days: 7
+
+  film-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: film
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: film/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run verify:native-demo
+      - run: python3 -m py_compile native-harness/build.py native-harness/verify.py native-harness/capture-flow.py

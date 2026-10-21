@@ -1,0 +1,44 @@
+[
+  {
+    "action": "typing complete",
+    "seconds": 4.9015277499565855
+  },
+  {
+    "action": "Refine",
+    "before": 5.3527454159921035,
+    "after": 5.424302625004202,
+    "result": "true"
+  },
+  {
+    "action": "Preview observed",
+    "seconds": 7.9342214580392465
+  },
+  {
+    "action": "Original",
+    "before": 9.839280541054904,
+    "after": 9.975618790951557,
+    "result": "true"
+  },
+  {
+    "action": "Suggested",
+    "before": 11.626052833045833,
+    "after": 11.758587207994424,
+    "result": "true"
+  },
+  {
+    "action": "Accept refinement",
+    "before": 13.41363041603472,
+    "after": 13.457753624999896,
+    "result": "true"
+  },
+  {
+    "action": "accepted text verified",
+    "seconds": 13.847753625013866
+  },
+  {
+    "action": "Keep",
+    "before": 15.098069166066125,
+    "after": 15.138654457987286,
+    "result": "true"
+  }
+]

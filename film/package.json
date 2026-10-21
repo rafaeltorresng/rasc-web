@@ -1,0 +1,39 @@
+{
+  "name": "rasc-product-film",
+  "version": "1.0.0",
+  "description": "Approved native Rasc product films and isolated capture harness",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.536",
+    "@remotion/media": "4.0.536",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.536",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "lint": "eslint src && tsc",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "verify:native-demo": "npm run verify:assets && node scripts/select-assets.mjs && node scripts/check-native-demo.mjs",
+    "render:native-demo": "npm run verify:assets && sh scripts/render-native-demo.sh",
+    "render:short": "npm run verify:assets && sh scripts/render-short.sh",
+    "select:assets": "node scripts/select-assets.mjs --write"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

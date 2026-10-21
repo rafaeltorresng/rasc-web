@@ -1,0 +1,724 @@
+{
+  "origin": "Original procedural synthesis; no external samples or music",
+  "sampleRate": 48000,
+  "seed": 20261019,
+  "peakDBFS": -24.564766184290345,
+  "events": [
+    {
+      "seconds": 1.59,
+      "kind": "key"
+    },
+    {
+      "seconds": 1.65,
+      "kind": "open"
+    },
+    {
+      "seconds": 1.9833333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.0,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.0166666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.05,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.066666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.1,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.1166666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.1333333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.1666666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.183333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.2,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.216666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.2333333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.25,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.283333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.3,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.3333333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.35,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.3666666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.4,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.4166666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.433333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.45,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.466666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.5,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.5166666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.533333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.566666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.5833333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.6,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.6333333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.65,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.6666666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.683333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.716666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.7333333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.75,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.7666666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.8,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.816666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.8333333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.8666666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.8833333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.9,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.9166666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.933333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.966666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 2.9833333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.0,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.033333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.05,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.066666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.1,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.1166666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.1333333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.15,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.183333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.2,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.216666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.2333333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.2666666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.3,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.316666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.3333333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.35,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.3666666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.3833333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.4166666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.433333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.45,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.4833333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.5,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.533333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.55,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.566666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.5833333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.6,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.6166666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.65,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.6666666666666665,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.7,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.716666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.75,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.7666666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.783333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.8,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.816666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.8333333333333335,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.85,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.8833333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.9,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.933333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.95,
+      "kind": "key"
+    },
+    {
+      "seconds": 3.9833333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.0,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.016666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.033333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.05,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.083333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.1,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.116666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.133333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.166666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.183333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.216666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.233333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.25,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.266666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.283333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.316666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.333333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.35,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.366666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.4,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.416666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.45,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.466666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.483333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.5,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.516666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.55,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.566666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.583333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.616666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.633333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.65,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.683333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.7,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.716666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.75,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.766666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.783333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.8,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.833333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.85,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.866666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.9,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.916666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.95,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.966666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 4.983333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.0,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.016666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.033333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.066666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.083333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.1,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.133333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.15,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.183333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.2,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.216666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.233333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.25,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.266666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.3,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.316666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.35,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.366666666666666,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.383333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.416666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.433333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.45,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.466666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.483333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.5,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.533333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.55,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.583333333333333,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.6,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.633333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.65,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.666666666666667,
+      "kind": "key"
+    },
+    {
+      "seconds": 5.683333333333334,
+      "kind": "key"
+    },
+    {
+      "seconds": 6.3,
+      "kind": "keep"
+    },
+    {
+      "seconds": 6.8999999999999995,
+      "kind": "close"
+    },
+    {
+      "seconds": 7.9,
+      "kind": "key"
+    }
+  ]
+}
