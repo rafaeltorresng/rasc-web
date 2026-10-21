@@ -113,4 +113,3 @@ test('a slow media response keeps the poster and reserved geometry until playbac
   await expect.poll(() => section.locator('video').evaluate(v => (v as HTMLVideoElement).currentTime)).toBeGreaterThan(.3);
   expect(await frame.boundingBox()).toEqual(initial);
 });
-
