@@ -6,37 +6,9 @@ import downloadShot from '../assets/installation/download.webp';
 import dmgShot from '../assets/installation/dmg.webp';
 import blockedShot from '../assets/installation/blocked.webp';
 import securityShot from '../assets/installation/privacy-security.webp';
-import privacyContextShot from '../assets/installation/privacy-context.webp';
 import privacySelectionShot from '../assets/installation/privacy-selection.webp';
 import './InstallationGuide.css';
 import { currentDownloadPlatform } from '../lib/downloadPlatform';
-
-const installationShots = [downloadShot, dmgShot, blockedShot, privacyContextShot, securityShot, privacySelectionShot];
-const preloadedShots: HTMLImageElement[] = [];
-
-// The DMG download starts in the same click that opens the guide. Decode the
-// shots first so that click does not leave the first frame on its fallback text.
-function preloadInstallationShots() {
-  if (typeof window === 'undefined' || preloadedShots.length > 0) return;
-  const platform = currentDownloadPlatform();
-  if (platform === 'mobile' || platform === 'other') return;
-  for (const src of installationShots) {
-    const image = new Image();
-    image.src = src;
-    preloadedShots.push(image);
-    void image.decode?.().catch(() => undefined);
-  }
-}
-
-preloadInstallationShots();
-
-function retryShot(image: HTMLImageElement, onFailure: () => void) {
-  if (image.dataset.retry === '1') { onFailure(); return; }
-  image.dataset.retry = '1';
-  const src = image.currentSrc || image.src;
-  image.removeAttribute('src');
-  queueMicrotask(() => { image.src = src; });
-}
 
 const InstallationContext = createContext<((opener: HTMLElement) => void) | null>(null);
 
@@ -44,10 +16,18 @@ const InstallationContext = createContext<((opener: HTMLElement) => void) | null
 export function useInstallationDownload() {
   const open = useContext(InstallationContext);
   return (event: MouseEvent<HTMLAnchorElement>) => {
-    if (currentDownloadPlatform() === 'mac' && launch.publicReleaseReady && !launch.notarized
-      && !event.defaultPrevented && event.button === 0 && !event.metaKey && !event.ctrlKey
-      && !event.shiftKey && !event.altKey
-      && window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine)').matches) {
+    if (
+      currentDownloadPlatform() === 'mac' &&
+      launch.publicReleaseReady &&
+      !launch.notarized &&
+      !event.defaultPrevented &&
+      event.button === 0 &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey &&
+      window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine)').matches
+    ) {
       open?.(event.currentTarget);
     }
   };
@@ -55,60 +35,184 @@ export function useInstallationDownload() {
 
 export function InstallationHelp() {
   const open = useContext(InstallationContext);
-  const platform = currentDownloadPlatform();
-  if (platform === 'mobile' || platform === 'other') return null;
-  return open
-    ? <button className="installation-help" type="button" aria-haspopup="dialog" onClick={event => open(event.currentTarget)}>Installation help</button>
-    : <a className="installation-help" href={launch.installGuideHref} target="_blank" rel="noreferrer">Installation help</a>;
+  return (
+    <a
+      className="installation-help"
+      href={launch.installGuideHref}
+      aria-haspopup={open ? 'dialog' : undefined}
+      onClick={(event) => {
+        if (
+          open &&
+          !event.defaultPrevented &&
+          !event.metaKey &&
+          !event.ctrlKey &&
+          !event.shiftKey &&
+          !event.altKey &&
+          event.button === 0
+        ) {
+          event.preventDefault();
+          open(event.currentTarget);
+        }
+      }}
+    >
+      Installation help <span aria-hidden="true">↗</span>
+    </a>
+  );
 }
 
 export function InstallationProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<{ opener: HTMLElement } | null>(null);
-  return <InstallationContext.Provider value={opener => setSession({ opener })}>
-    {children}
-    {session && <InstallationDialog opener={session.opener} onDismiss={() => setSession(null)} />}
-  </InstallationContext.Provider>;
+  return (
+    <InstallationContext.Provider value={(opener) => setSession({ opener })}>
+      {children}
+      {session && <InstallationDialog opener={session.opener} onDismiss={() => setSession(null)} />}
+    </InstallationContext.Provider>
+  );
 }
 
 const steps = [
   {
-    label: 'Open the download',
-    body: <>Find <strong>{launch.filename}</strong> in your browser’s downloads or Downloads folder. Double-click it.</>,
-    image: downloadShot, width: 280, height: 360,
-    alt: 'The downloaded Rasc DMG file in Finder.',
-    hint: 'The disk image opens in Finder.',
+    label: 'Open the .dmg',
+    body: null,
+    image: downloadShot,
+    width: 280,
+    height: 360,
+    alt: 'The Rasc DMG in Finder.',
   },
   {
-    label: 'Move to Applications',
-    body: <>In the window that opens, drag <strong>Rasc</strong> onto the <strong>Applications</strong> folder. Wait for the copy to finish.</>,
-    image: dmgShot, width: 650, height: 320,
-    alt: 'The real Rasc disk image, with the Rasc app and Applications shortcut.',
-    hint: 'Then open Applications in Finder.',
+    label: 'Drag Rasc to Applications',
+    body: null,
+    image: dmgShot,
+    width: 650,
+    height: 320,
+    alt: 'Rasc and the Applications shortcut inside the real disk image. Drag Rasc to Applications.',
   },
   {
-    label: 'Open Rasc',
-    body: <>In <strong>Applications</strong>, double-click <strong>Rasc</strong>. If you see this alert, choose <strong>Done</strong> and continue to the last step.</>,
-    image: blockedShot, width: 520, height: 536,
-    alt: 'The macOS “Rasc” Not Opened alert, with a Done button.',
-    hint: 'Rasc opened without an alert? You’re all set.',
-  },
-  {
-    label: 'If macOS blocks it',
-    body: <>Open <strong>System Settings → Privacy &amp; Security</strong>. Scroll to Security and choose <strong>Open Anyway</strong> beside Rasc. Follow the prompts, then confirm <strong>Open</strong>.</>,
-    image: privacyContextShot, width: 1392, height: 336,
-    alt: 'System Settings with Privacy & Security selected, showing Open Anyway for Rasc in the Security section.',
-    hint: 'Rasc isn’t notarized by Apple yet. Only continue if you trust this download.',
+    label: 'Open Rasc in Applications',
+    body: (
+      <>
+        Blocked? Choose <strong>Done</strong>.
+      </>
+    ),
+    image: blockedShot,
+    width: 520,
+    height: 536,
+    alt: 'The macOS Rasc Not Opened alert. Choose Done if this appears.',
   },
 ] as const;
 
+function GuideImage({
+  src,
+  width,
+  height,
+  alt,
+}: {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}) {
+  const [failed, setFailed] = useState(false);
+  return failed ? (
+    <p className="installation-image-error" role="status">
+      Image unavailable. Follow the written instructions.
+    </p>
+  ) : (
+    <a
+      className="installation-image-link"
+      href={src}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`Enlarge image: ${alt} (opens in a new tab)`}
+    >
+      <img src={src} width={width} height={height} alt={alt} onError={() => setFailed(true)} />
+    </a>
+  );
+}
+
+export function InstallationContent() {
+  return (
+    <div className="installation-content">
+      <ol className="installation-basics">
+        {steps.map((step, index) => (
+          <li key={step.label}>
+            <span className="installation-number">0{index + 1}</span>
+            <div>
+              <h3>{step.label}</h3>
+              {step.body && <p>{step.body}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
+      <section
+        id="installation-security"
+        className="installation-security"
+        aria-labelledby="installation-security-title"
+      >
+        <div className="installation-security-copy">
+          <span className="installation-number">04 · First launch</span>
+          <h3 id="installation-security-title" tabIndex={-1}>
+            If macOS blocks it.
+          </h3>
+          <p>Rasc isn’t notarized by Apple. Continue only if you trust this download.</p>
+          <ol>
+            <li>
+              Open <strong>System Settings → Privacy &amp; Security</strong>.
+            </li>
+            <li>
+              Under <strong>Security</strong>, choose <strong>Open Anyway</strong> for Rasc.
+            </li>
+            <li>
+              Authenticate if asked, then <strong>Open</strong>.
+            </li>
+          </ol>
+          <p className="installation-hint">
+            Not listed? Open Rasc again, then return here.
+          </p>
+        </div>
+        <div className="installation-security-images">
+          <figure className="installation-selection">
+            <GuideImage
+              src={privacySelectionShot}
+              width={390}
+              height={64}
+              alt="Privacy & Security selected in the System Settings sidebar."
+            />
+          </figure>
+          <figure className="installation-security-detail">
+            <GuideImage
+              src={securityShot}
+              width={920}
+              height={330}
+              alt="Security section with Open Anyway beside the blocked Rasc app."
+            />
+          </figure>
+          <p className="installation-capture-note">Shown on macOS 26.</p>
+        </div>
+      </section>
+      <details className="installation-screenshots">
+        <summary>See installation screenshots</summary>
+        <div className="installation-shots">
+          {steps.map((step, index) => (
+            <figure key={step.label}>
+              <figcaption><span>0{index + 1}</span> {step.label}</figcaption>
+              <div className="installation-figure" data-step={index}>
+                <GuideImage src={step.image} width={step.width} height={step.height} alt={step.alt} />
+              </div>
+            </figure>
+          ))}
+        </div>
+      </details>
+      <p className="installation-complete">
+        Rasc is ready in your menu bar.
+      </p>
+    </div>
+  );
+}
+
 function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDismiss: () => void }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const bodyRef = useRef<HTMLDivElement>(null);
   const closingFromEffectCleanup = useRef(false);
-  const [active, setActive] = useState(0);
-  const [failedShots, setFailedShots] = useState<readonly number[]>([]);
-  const failShot = (index: number) => setFailedShots(previous => previous.includes(index) ? previous : [...previous, index]);
-  const step = steps[active];
 
   useEffect(() => {
     const dialog = dialogRef.current!;
@@ -118,6 +222,7 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
     document.body.style.overflow = 'hidden';
     if (gutter > 0) document.body.style.paddingRight = `${gutter}px`;
     dialog.showModal();
+    dialog.querySelector<HTMLButtonElement>('.installation-close')?.focus({ preventScroll: true });
     return () => {
       closingFromEffectCleanup.current = true;
       dialog.close();
@@ -126,116 +231,91 @@ function InstallationDialog({ opener, onDismiss }: { opener: HTMLElement; onDism
     };
   }, [opener]);
 
-  useEffect(() => {
-    bodyRef.current?.scrollTo(0, 0);
-  }, [active]);
-
   const close = () => dialogRef.current?.close();
 
-  return <dialog
-    ref={dialogRef}
-    className="installation-dialog"
-    aria-labelledby="installation-title"
-    aria-describedby="installation-description"
-    aria-modal="true"
-    onClose={() => {
-      if (closingFromEffectCleanup.current) {
-        closingFromEffectCleanup.current = false;
-        return;
-      }
-      if (opener.isConnected) opener.focus({ preventScroll: true });
-      onDismiss();
-    }}
-    onKeyDown={event => {
-      if (event.key !== 'Tab') return;
-      const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], summary'))
-        .filter(element => element.getClientRects().length > 0);
-      const first = controls[0];
-      const last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last?.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first?.focus();
-      }
-    }}
-    onClick={event => {
-      if (event.target !== event.currentTarget) return;
-      const rect = event.currentTarget.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
-    }}
-  >
-    <header className="installation-header">
-      <div>
-        <p className="installation-eyebrow">Rasc for Mac <span>·</span> Installation</p>
-        <h2 id="installation-title">Set up Rasc.</h2>
-        <p id="installation-description">A short guide for your first launch. Keep this open as you go.</p>
+  return (
+    <dialog
+      ref={dialogRef}
+      className="installation-dialog"
+      aria-labelledby="installation-title"
+      aria-describedby="installation-description"
+      aria-modal="true"
+      onClose={() => {
+        if (closingFromEffectCleanup.current) {
+          closingFromEffectCleanup.current = false;
+          return;
+        }
+        if (opener.isConnected) opener.focus({ preventScroll: true });
+        onDismiss();
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== 'Tab') return;
+        const controls = Array.from(
+          event.currentTarget.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], summary'),
+        ).filter((element) => element.getClientRects().length > 0);
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }}
+      onClick={(event) => {
+        if (event.target !== event.currentTarget) return;
+        const rect = event.currentTarget.getBoundingClientRect();
+        if (
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom
+        )
+          close();
+      }}
+    >
+      <header className="installation-header">
+        <button
+          type="button"
+          className="installation-close"
+          aria-label="Close installation guide"
+          onClick={close}
+          autoFocus
+        >
+          <Icon name="close" />
+        </button>
+        <div>
+          <p className="installation-eyebrow">
+            Rasc for Mac <span>·</span> Installation
+          </p>
+          <h2 id="installation-title">Set up Rasc.</h2>
+          <p id="installation-description">Install once. Allow the first launch.</p>
+          <a
+            className="installation-jump"
+            href="#installation-security"
+            onClick={(event) => {
+              event.preventDefault();
+              const heading = dialogRef.current?.querySelector<HTMLElement>('#installation-security-title');
+              heading?.closest('section')?.scrollIntoView({ block: 'start' });
+              heading?.focus({ preventScroll: true });
+            }}
+          >
+            Blocked by macOS? Open Anyway <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </header>
+      <div className="installation-body">
+        <InstallationContent />
       </div>
-      <button type="button" className="installation-close" aria-label="Close installation guide" onClick={close} autoFocus><Icon name="close" /></button>
-    </header>
-    <div ref={bodyRef} className="installation-body">
-      <nav className="installation-navigation" aria-label="Installation steps">
-        <ol>
-          {steps.map((item, index) => <li key={item.label}>
-            <button type="button" aria-current={index === active ? 'step' : undefined} onClick={() => setActive(index)}>
-              <span className="installation-number" aria-hidden="true">{index + 1}</span>
-              <span className="installation-step-label"><span className="sr-only">Step {index + 1}: </span>{item.label}</span>
-            </button>
-          </li>)}
-        </ol>
-        <p className="installation-release">Version {launch.version}<br />{launch.platform}</p>
-      </nav>
-      <section className="installation-panel" aria-labelledby="installation-step-title">
-        <p className="installation-progress" aria-live="polite" aria-atomic="true">Step {active + 1} of 4 <span className="sr-only">— {step.label}</span></p>
-        <h3 id="installation-step-title">{step.label}</h3>
-        <p className="installation-instruction">{step.body}</p>
-        <figure className="installation-figure" data-step={active} data-image-failed={failedShots.includes(active)}>
-          {steps.map((item, index) => {
-            const shown = index === active;
-            if (index === 3) {
-              return <div key={item.label} className={`installation-shot installation-security-visual${shown ? ' installation-shot--active' : ''}`} aria-hidden={!shown}>
-                <div className="installation-setting-cue">
-                  <span>System Settings</span>
-                  <img src={privacySelectionShot} width={390} height={64} alt="Privacy & Security selected in the Settings sidebar." decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget, () => failShot(index))} />
-                  <span className="installation-setting-connector" aria-hidden="true">↓</span>
-                </div>
-                <picture>
-                  <source media="(max-width: 767px)" srcSet={securityShot} />
-                  <img src={item.image} width={item.width} height={item.height} alt={shown ? item.alt : ''} decoding="sync" loading="eager" onError={event => retryShot(event.currentTarget, () => failShot(index))} />
-                </picture>
-              </div>;
-            }
-            return <img
-              key={item.label}
-              className={`installation-shot${shown ? ' installation-shot--active' : ''}`}
-              src={item.image}
-              width={item.width}
-              height={item.height}
-              style={{ width: item.width / 2 }}
-              alt={shown ? item.alt : ''}
-              decoding="sync"
-              loading="eager"
-              aria-hidden={!shown}
-              onError={event => retryShot(event.currentTarget, () => failShot(index))}
-            />;
-          })}
-          {active === 1 && <span className="installation-drag-direction" aria-hidden="true">←</span>}
-          {failedShots.includes(active) && <figcaption className="installation-image-error" role="status">Image unavailable. Follow the instructions above.</figcaption>}
-        </figure>
-        <p className="installation-hint">{step.hint}</p>
-        {active === 3 && <details className="installation-older-mac">
-            <summary>Using macOS 14?</summary>
-            <p>You can also Control-click Rasc in Applications, choose <strong>Open</strong>, then confirm. On macOS 15 or later, use Privacy &amp; Security above.</p>
-          </details>}
-      </section>
-    </div>
-    <footer className="installation-footer">
-      <a href={launch.downloadHref} download={launch.filename}>Download again <Icon name="download" /></a>
-      <div className="installation-controls">
-        {active > 0 && <button type="button" className="installation-back" onClick={() => setActive(active - 1)}>Back</button>}
-        <button type="button" className="button button--primary installation-next" onClick={() => active < 3 ? setActive(active + 1) : close()}>{active < 3 ? 'Next' : 'Close guide'}{active < 3 && <span aria-hidden="true">→</span>}</button>
-      </div>
-    </footer>
-  </dialog>;
+      <footer className="installation-footer">
+        <a href={launch.installGuideHref}>
+          Open full guide <span aria-hidden="true">↗</span>
+        </a>
+        <a href={launch.downloadHref} download={launch.filename}>
+          Download again <Icon name="download" />
+        </a>
+      </footer>
+    </dialog>
+  );
 }

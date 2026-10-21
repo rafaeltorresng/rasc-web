@@ -14,16 +14,19 @@ if (canonical && (!['https:', 'http:'].includes(canonical.protocol)
 // Production site: https://rasc.app/ (GitHub Pages custom domain, root base path).
 export default defineConfig({
   base: process.env.VITE_BASE_PATH ?? '/',
+  build: { rollupOptions: { input: { main: 'index.html', install: 'install/index.html' } } },
   plugins: [react(), {
     name: 'public-site-metadata',
-    transformIndexHtml(html) {
+    transformIndexHtml(html, context) {
+      const installation = context.path.startsWith('/install');
+      const pageCanonical = canonical && new URL(installation ? 'install/' : '', canonical).href;
       if (!canonical) return html;
       const imageUrl = new URL('og-image.png?v=20261015', canonical).href;
       return {
         html: html.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+("\s*\/>)/g, `$1${imageUrl}$2`),
         tags: [
-          { tag: 'link', attrs: { rel: 'canonical', href: canonical.href }, injectTo: 'head' },
-          { tag: 'meta', attrs: { property: 'og:url', content: canonical.href }, injectTo: 'head' },
+          { tag: 'link', attrs: { rel: 'canonical', href: pageCanonical! }, injectTo: 'head' },
+          { tag: 'meta', attrs: { property: 'og:url', content: pageCanonical! }, injectTo: 'head' },
         ],
       };
     },

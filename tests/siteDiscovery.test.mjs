@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { siteDiscoveryFiles } from '../src/lib/siteDiscovery.ts';
 
-test('discovery files advertise only the canonical landing URL', () => {
+test('discovery files advertise the canonical landing and permanent installation guide', () => {
   const { robotsTxt, sitemapXml } = siteDiscoveryFiles('https://rasc.app/');
 
   assert.equal(robotsTxt, 'User-agent: *\nAllow: /\n\nSitemap: https://rasc.app/sitemap.xml\n');
@@ -10,6 +10,9 @@ test('discovery files advertise only the canonical landing URL', () => {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rasc.app/</loc>
+  </url>
+  <url>
+    <loc>https://rasc.app/install/</loc>
   </url>
 </urlset>
 `);
