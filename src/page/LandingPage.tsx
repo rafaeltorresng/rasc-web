@@ -8,6 +8,7 @@ import { NoSystemSection, OwnedMoment } from './EditorialSections';
 import { AppleIntelligenceIcon } from '../ui/Icon';
 import Hero from './Hero';
 import { InstallationHelp, InstallationProvider } from './InstallationGuide';
+import ProductFilm from './ProductFilm';
 
 function RetrievalSection() {
   const { retrieval } = landingCopy;
@@ -36,6 +37,7 @@ export default function LandingPage() {
       <main id="main">
         <Hero />
         <OwnedMoment />
+        <ProductFilm />
         <InteractionStory />
         <NoSystemSection />
         <RetrievalSection />

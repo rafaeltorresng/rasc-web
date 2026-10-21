@@ -1,0 +1,50 @@
+/* An editorial interval between the manifesto and the interactive walkthrough. */
+.film-section { padding-block: clamp(20px, 3vw, 36px) clamp(20px, 2.5vw, 32px); }
+.film-inner { max-width: 1040px; }
+.film-frame { position: relative; isolation: isolate; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--hairline-soft); border-radius: 16px; background: var(--surface-raised); box-shadow: 0 16px 40px -24px rgb(41 36 48 / 18%); }
+.film-frame video, .film-poster { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.film-frame video { opacity: 0; }
+.film-frame[data-revealed="true"] video { opacity: 1; }
+.film-poster { pointer-events: none; opacity: 1; }
+.film-frame[data-revealed="true"] .film-poster { opacity: 0; visibility: hidden; }
+.film-play { position: absolute; top: 56%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 20px 10px 12px; border: 1px solid var(--hairline); border-radius: 999px; background: var(--canvas); color: var(--ink); box-shadow: 0 4px 20px rgb(41 36 48 / 9%); text-align: left; white-space: nowrap; }
+.film-play-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--canvas); }
+.film-play-icon .ui-icon { width: 17px; height: 17px; margin-left: 2px; }
+.film-play > span:last-child { font-size: 14px; font-weight: 500; line-height: 1.4; }
+.film-play small { display: block; margin-top: 2px; color: var(--ink-muted); font-size: 11px; font-weight: 400; }
+.film-play:hover:not(:disabled) { border-color: var(--violet); }
+.film-play:hover:not(:disabled) .film-play-icon { background: var(--violet-ink); }
+.film-play:active:not(:disabled) { transform: translate(-50%, -50%) scale(.98); }
+.film-play:disabled { cursor: progress; }
+/* Keep the final brand frame unobstructed; native transport stays available. */
+.film-frame[data-ended="true"] .film-play { left: auto; right: clamp(12px, 2vw, 24px); width: 44px; min-height: 44px; padding: 0; border: 0; transform: translateY(-50%); }
+.film-frame[data-ended="true"] .film-play-icon { width: 44px; height: 44px; }
+.film-frame[data-ended="true"] .film-play > span:last-child { display: none; }
+.film-frame[data-ended="true"] .film-play:active { transform: translateY(-50%) scale(.98); }
+.film-frame:has(:focus-visible) { outline: 3px solid var(--violet); outline-offset: 4px; }
+.film-poster-fallback { position: absolute; inset: 16% 0 auto; text-align: center; font-family: var(--font-editorial); font-style: italic; color: var(--ink-muted); font-size: 24px; }
+.film-caption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 20px; padding-top: 8px; }
+#product-film-disclosure { margin: 0; color: var(--ink-muted); font-size: 12px; line-height: 1.6; }
+.film-transcript { color: var(--ink-muted); font-size: 12px; line-height: 1.65; }
+.film-transcript summary { display: list-item; width: fit-content; min-height: 44px; padding-block: 12px; cursor: pointer; text-underline-offset: 4px; }
+.film-transcript summary:hover { color: var(--ink); }
+.film-transcript[open] { flex-basis: 100%; }
+.film-transcript[open] > div { max-width: 74ch; padding: 4px 0 12px; }
+.film-transcript p { margin-bottom: 12px; font-size: 13px; }
+.film-transcript p:last-child { margin-bottom: 0; }
+.film-error { margin: 14px 0; font-size: 14px; line-height: 1.6; }
+.film-error a { color: var(--violet-ink); text-underline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .film-frame video, .film-poster { transition: opacity 180ms ease, visibility 180ms; }
+  .film-play, .film-play-icon { transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease; }
+}
+@media (max-width: 767px) {
+  .film-frame { border-radius: 12px; }
+}
+@media (max-width: 600px) {
+  .film-play { gap: 8px; min-height: 52px; padding: 6px 14px 6px 6px; }
+  .film-play-icon { width: 36px; height: 36px; }
+  .film-play > span:last-child { font-size: 13px; }
+  .film-caption { padding-top: 12px; }
+  #product-film-disclosure { font-size: 11px; }
+}
