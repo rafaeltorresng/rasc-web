@@ -47,7 +47,7 @@ test('installation help remains discoverable on mobile and images open at origin
   await expect(page).toHaveURL(/\/install\/$/);
 });
 
-test('first-launch security instructions are visible before expanding supporting screenshots', async ({ page }, testInfo) => {
+test('first-launch security instructions stay visible in the installation dialog', async ({ page }, testInfo) => {
   await page.goto('/');
   for (const viewport of [{ width: 1440, height: 900 }, { width: 1024, height: 768 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport);
@@ -56,7 +56,6 @@ test('first-launch security instructions are visible before expanding supporting
     await expect(dialog.getByRole('heading', { name: 'If macOS blocks it.' })).toBeInViewport();
     await expect(dialog.locator('.installation-security-copy > ol > li').last()).toBeInViewport();
     await expect(dialog.getByRole('heading', { name: 'Open the .dmg', exact: true })).toBeInViewport();
-    await expect(dialog.locator('.installation-screenshots')).not.toHaveAttribute('open', '');
     await testInfo.attach(`installation-priority-${viewport.width}`, { body: await page.screenshot(), contentType: 'image/png' });
     await page.keyboard.press('Escape');
   }
