@@ -190,22 +190,6 @@ export function InstallationContent() {
           <p className="installation-capture-note">Shown on macOS 26.</p>
         </div>
       </section>
-      <details className="installation-screenshots">
-        <summary>See installation screenshots</summary>
-        <div className="installation-shots">
-          {steps.map((step, index) => (
-            <figure key={step.label}>
-              <figcaption><span>0{index + 1}</span> {step.label}</figcaption>
-              <div className="installation-figure" data-step={index}>
-                <GuideImage src={step.image} width={step.width} height={step.height} alt={step.alt} />
-              </div>
-            </figure>
-          ))}
-        </div>
-      </details>
-      <p className="installation-complete">
-        Rasc is ready in your menu bar.
-      </p>
     </div>
   );
 }

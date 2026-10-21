@@ -222,26 +222,6 @@
 .installation-security-images .installation-image-error {
   color: #fff;
 }
-.installation-screenshots {
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.installation-screenshots summary {
-  width: fit-content;
-  cursor: pointer;
-  min-height: 44px;
-  padding-block: 12px;
-}
-.installation-screenshots { border-top: 1px solid var(--hairline-soft); margin-top: 20px; padding-top: 4px; }
-.installation-shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-block: 8px 16px; }
-.installation-shots > figure { margin: 0; min-width: 0; }
-.installation-shots figcaption { font-size: 12px; line-height: 1.5; color: var(--ink); }
-.installation-shots figcaption span { color: var(--violet-ink); margin-right: 5px; }
-.installation-content .installation-complete {
-  margin-top: 12px;
-  font-size: 12px;
-}
 .installation-footer {
   display: flex;
   justify-content: space-between;
@@ -316,7 +296,6 @@
     gap: 10px;
   }
   .installation-basics > li > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
-  .installation-shots { grid-template-columns: 1fr; gap: 18px; }
   .installation-figure {
     height: 172px;
     margin-top: 14px;
