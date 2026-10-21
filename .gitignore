@@ -26,3 +26,4 @@ playwright-report/
 !/docs/film-integration/validation/slow-network-final.json
 !/docs/film-integration/validation/visual-final.json
 !/docs/film-integration/validation/broad-regression.json
+!/docs/film-integration/validation/consolidation-final.json

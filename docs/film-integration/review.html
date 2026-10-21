@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Rasc — Film integration comparison</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; color: #29272f; background: #fbfafd; }
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; max-width: 1440px; padding: 40px 28px 60px; }
+    header { max-width: 850px; margin-bottom: 28px; }
+    h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 550; letter-spacing: -.045em; margin: 12px 0; }
+    h2 { font-size: 17px; font-weight: 550; margin: 0; }
+    p { color: #6c6870; font-size: 14px; line-height: 1.6; }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible, input:focus-visible { outline: 3px solid #7564d8; outline-offset: 4px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; color: #6253bc; }
+    fieldset { display: flex; flex-wrap: wrap; gap: 8px 24px; border: 0; margin: 20px 0 28px; padding: 0; }
+    legend { font-size: 12px; color: #6c6870; margin-bottom: 8px; }
+    label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; cursor: pointer; }
+    input { accent-color: #6253bc; }
+    main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+    article { min-width: 0; }
+    .study-label { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+    .study-label a { font-size: 13px; min-height: 44px; display: inline-flex; align-items: center; }
+    .capture { display: block; border: 1px solid #e2dde7; border-radius: 10px; overflow: hidden; }
+    img { display: block; width: 100%; height: auto; }
+    footer { margin-top: 40px; border-top: 1px solid #e2dde7; padding-top: 20px; }
+    footer p { max-width: 85ch; }
+    body[data-view="mobile"] main { grid-template-columns: repeat(2, minmax(0, 390px)); justify-content: center; }
+    body[data-view="mobile"] .study-label { display: block; }
+    @media (max-width: 900px) { body[data-view="mobile"] main { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { body { padding: 24px 20px 40px; } main { grid-template-columns: 1fr; } .study-label { flex-wrap: wrap; gap: 4px; } }
+  </style>
+</head>
+<body data-view="desktop">
+  <header>
+    <p>Rasc · Local product film review</p>
+    <h1>From thought to motion.</h1>
+    <p>Archived visual comparison of the two presentations. Minimal is consolidated in the landing. Select a capture to inspect it at full resolution.</p>
+    <nav aria-label="Review links"><a href="/#product-film">Open integrated player</a><a href="/">View selected landing</a><a href="README.md">Design decisions &amp; verification</a></nav>
+  </header>
+  <fieldset><legend>Screenshot set</legend>
+    <label><input type="radio" name="view" value="desktop" checked>Desktop · 1440 px</label>
+    <label><input type="radio" name="view" value="mobile">Mobile · 390 px · emulated iPhone</label>
+  </fieldset>
+  <main>
+<article data-study="minimal"><div class="study-label"><h2>A · Minimal Film</h2><a href="/#product-film">View landing</a></div><a class="capture" href="validation/minimal-context-1440.webp"><img src="validation/minimal-context-1440.webp" alt="A · Minimal Film: manifesto, film and features"></a></article>
+<article data-study="editorial"><div class="study-label"><h2>B · Editorial Film</h2><a href="/#product-film">View landing</a></div><a class="capture" href="validation/editorial-context-1440.webp"><img src="validation/editorial-context-1440.webp" alt="B · Editorial Film: manifesto, film and features"></a></article>
+  </main>
+  <footer>
+    <p><strong>Recommendation: A / Minimal.</strong> The film becomes the visual answer to the manifesto. It avoids an additional headline immediately before Capture. Refine. Keep.</p>
+    <p>The Complete is unchanged: 27.9 seconds, 1080p, 30 fps. The poster is an actual frame at 5.55 seconds. Playback starts only on request, with native controls, a written alternative and an explicit illustrative-demo disclosure.</p>
+    <p>All work remains local. No app changes, merge or deployment.</p>
+  </footer>
+  <script>
+    function show(view) {
+      document.body.dataset.view = view;
+      document.querySelector(`input[value="${view}"]`).checked = true;
+      for (const article of document.querySelectorAll('[data-study]')) {
+        const suffix = view === 'mobile' ? '390' : '1440';
+        const path = `validation/${article.dataset.study}-context-${suffix}.webp`;
+        article.querySelector('.capture').href = path;
+        article.querySelector('img').src = path;
+      }
+    }
+    for (const input of document.querySelectorAll('input[name="view"]')) input.addEventListener('change', () => show(input.value));
+    if (new URLSearchParams(location.search).get('view') === 'mobile') show('mobile');
+  </script>
+</body>
+</html>

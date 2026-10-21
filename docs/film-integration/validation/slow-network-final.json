@@ -1,0 +1,64 @@
+{
+  "stats": {
+    "startTime": "2026-10-21T14:22:17.692Z",
+    "duration": 8948.172999999999,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "project": "chromium",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "net::ERR_FAILED"
+          }
+        ]
+      }
+    },
+    {
+      "project": "webkit",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    },
+    {
+      "project": "iphone-webkit",
+      "title": "a slow media response keeps the poster and reserved geometry until playback",
+      "status": "expected",
+      "browser-diagnostics": {
+        "runtime": [],
+        "consoleErrors": [
+          "Button failed to load, iconName = invalid-placard, layoutTraits = [MacOSLayoutTraits Inline], src = blob:http://127.0.0.1:5190/dba3d1dc-d6fb-4278-857b-0b26c6567f49",
+          "Button failed to load, iconName = pip-placard, layoutTraits = [MacOSLayoutTraits Inline], src = blob:http://127.0.0.1:5190/34a31d1c-04c8-4bd4-bfa9-11ae374988b1",
+          "Button failed to load, iconName = pip-placard, layoutTraits = [MacOSLayoutTraits Inline], src = blob:http://127.0.0.1:5190/34a31d1c-04c8-4bd4-bfa9-11ae374988b1",
+          "Button failed to load, iconName = airplay-placard, layoutTraits = [MacOSLayoutTraits Inline], src = blob:http://127.0.0.1:5190/46bb5f9f-97f2-473b-9d60-c5b6dbc59a44"
+        ],
+        "failedRequests": [
+          {
+            "url": "https://static.cloudflareinsights.com/beacon.min.js",
+            "error": "Blocked by Web Inspector"
+          }
+        ]
+      }
+    }
+  ]
+}
