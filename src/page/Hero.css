@@ -1,0 +1,56 @@
+/* Approved editorial composition. */
+.hero-section.product-hero { position: relative; isolation: isolate; padding-top: clamp(36px, 4vw, 64px); }
+.product-hero-inner { position: relative; }
+.product-hero-intro { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; align-items: end; }
+.product-hero-main { min-width: 0; }
+.product-hero h1 { margin: 0; font-size: clamp(52px, 5.2vw, 76px); line-height: 1.035; letter-spacing: -.052em; font-weight: 560; }
+.product-hero h1 > span { display: block; color: var(--violet); }
+.product-hero .platform-cue { margin-top: 20px; justify-content: flex-start; }
+.product-hero-download { margin-top: 24px; }
+.product-hero-actions { display: flex; align-items: center; }
+.product-hero-actions > .button { min-height: 50px; padding-inline: 22px; }
+.product-hero .installation-help { font-size: 12px; min-height: 36px; margin-top: 4px; }
+.product-hero .product-hero-editorial { width: fit-content; max-width: 240px; margin: 0 0 42px; font-size: 24px; line-height: 1.48; text-align: left; letter-spacing: -.025em; }
+.product-hero-editorial > span { display: block; white-space: nowrap; }
+.product-hero-product { position: relative; isolation: isolate; }
+.product-hero .product-tableau { margin-top: 24px; }
+.product-hero .product-tableau__caption { padding-top: 14px; }
+/* Both pigment ellipses become transparent before the edges of their layer. */
+.product-hero[data-atmosphere="ambient"] .product-hero-product::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none;
+  inset: -16px calc(var(--page-gutter) * -1) -12px;
+  background:
+    radial-gradient(ellipse 40% 46% at 58% 50%, rgb(117 100 216 / 8%), rgb(117 100 216 / 0%) 100%),
+    radial-gradient(ellipse 24% 34% at 26% 62%, rgb(213 81 27 / 3.5%), rgb(213 81 27 / 0%) 100%);
+}
+@media (min-width: 1600px) {
+  .product-hero-intro { grid-template-columns: minmax(0, 1fr) 270px; gap: 64px; }
+  .product-hero .product-hero-editorial { font-size: 26px; max-width: 270px; }
+}
+@media (min-width: 821px) and (max-width: 1100px) {
+  .product-hero-intro { grid-template-columns: minmax(0, 1fr) 190px; gap: 32px; }
+  .product-hero .product-hero-editorial { font-size: 21px; }
+}
+@media (max-width: 820px) {
+  .hero-section.product-hero { padding-top: 32px; }
+  .product-hero-intro { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+  .product-hero-main { width: 100%; }
+  .product-hero h1 { font-size: clamp(44px, 7.3vw, 60px); }
+  .product-hero .platform-cue { justify-content: center; }
+  .product-hero-download { align-items: center; margin-top: 20px; }
+  .product-hero-actions { justify-content: center; }
+  .product-hero-actions > .download-availability { align-items: center; }
+  .product-hero .product-hero-editorial { max-width: none; margin: 0; font-size: 19px; text-align: center; white-space: normal; }
+  .product-hero .product-hero-editorial > span { display: inline-block; }
+}
+@media (max-width: 600px) {
+  .hero-section.product-hero { padding-top: 26px; }
+  .product-hero h1 { font-size: clamp(31px, 8.6vw, 46px); line-height: 1.08; letter-spacing: -.047em; }
+  .product-hero .platform-cue { margin-top: 16px; gap: 3px 8px; font-size: 11px; }
+  .product-hero .platform-cue__refine .apple-intelligence-icon { width: 20px; height: 20px; }
+  .product-hero-download { margin-top: 20px; width: 100%; }
+  .product-hero-actions > .button { min-height: 48px; padding-inline: 20px; font-size: 13px; }
+  .product-hero .product-hero-editorial { max-width: 290px; font-size: 17px; line-height: 1.45; }
+  .product-hero-intro { gap: 12px; }
+  .product-hero .product-tableau { margin-top: 26px; }
+}
