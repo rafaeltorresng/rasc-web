@@ -27,3 +27,4 @@ playwright-report/
 !/docs/film-integration/validation/visual-final.json
 !/docs/film-integration/validation/broad-regression.json
 !/docs/film-integration/validation/consolidation-final.json
+!/docs/film-integration/validation/linux-webkit-first-ci.json

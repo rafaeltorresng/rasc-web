@@ -103,3 +103,23 @@ The independent film-production PR contains the editable two-cut Studio, selecte
 lossless source assets, isolated harness and frame/asset verification. Neither PR
 requires changing the macOS repository. Both are based directly on the same current
 `main`; neither requires merging the other first.
+
+## CI host distinction found during consolidation
+
+The first GitHub Ubuntu 24.04.5 run passed 90 cases and skipped the two lab-only
+variants, but failed four WebKit media cases. The full-video observation reached
+0.134 s / three decoded frames, remained unpaused with no media/runtime/network
+error, and did not finish. This does not establish a React/player root cause.
+The original evidence is retained in `validation/linux-webkit-first-ci.json`.
+
+CI now runs Chromium/Firefox on pinned Ubuntu 24.04 and the **entire WebKit suite
+on macOS 15**; no media assertions were relaxed or skipped. This follows
+[Playwright's host/codec guidance](https://playwright.dev/docs/browsers#webkit),
+which specifically recommends macOS WebKit for video testing close to Safari.
+A separate plain-native-video Linux probe records the media clock, buffering,
+frames and errors without React/player styling. It is explicitly an observation,
+not a passing playback assertion. Its artifact keeps the Linux uncertainty visible.
+
+Moving the test host does not claim that the Linux WebKit playback stall is fixed,
+and automated macOS WebKit is still not the installed Safari app. No movie bytes
+or application playback behavior changed for this CI adjustment.
