@@ -22,6 +22,21 @@ export function BrandSymbol({ className = '' }: { className?: string }) {
   );
 }
 
+/** App chrome mark for editorial moments on the landing (`public/rasc-symbol-current.png`). */
+export function BrandSymbolCurrent({ className = '' }: { className?: string }) {
+  const mark = publicUrl('rasc-symbol-current.png');
+  return (
+    <img
+      className={`brand-symbol brand-symbol--current ${className}`}
+      src={mark}
+      width={1440}
+      height={1440}
+      alt=""
+      decoding="async"
+    />
+  );
+}
+
 export function Wordmark() {
   return <a className="wordmark" href="#top" aria-label="Rasc, home"><BrandSymbol /><span>Rasc</span></a>;
 }

@@ -1,7 +1,7 @@
 import { landingCopy } from '../content/copy';
 import { launch } from '../content/launch';
 import { HomeSearchScene } from '../product/ProductScenes';
-import { BrandSymbol, DownloadDetails, DownloadLink, SourceLink, Wordmark } from './Brand';
+import { BrandSymbolCurrent, DownloadDetails, DownloadLink, SourceLink, Wordmark } from './Brand';
 import Header from './Header';
 import InteractionStory from './InteractionStory';
 import { NoSystemSection, OwnedMoment } from './EditorialSections';
@@ -22,7 +22,7 @@ function TrustSection() {
 
 function ClosingSection() {
   const { closing } = landingCopy;
-  return <section id="release-status" className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbol className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p>{launch.publicReleaseReady ? <><DownloadLink showRequirements={false} />{!launch.notarized && <InstallationHelp />}</> : <p>Public release in preparation. Download and public source links will appear here when ready.</p>}<DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
+  return <section id="release-status" className="closing-section section-pad" aria-labelledby="closing-title"><div className="page-container closing-inner"><BrandSymbolCurrent className="closing-symbol" /><p className="eyebrow">For the thought before the note</p><h2 id="closing-title">{closing.title}</h2><p>{closing.body}</p>{launch.publicReleaseReady ? <><DownloadLink showRequirements={false} />{!launch.notarized && <InstallationHelp />}</> : <p>Public release in preparation. Download and public source links will appear here when ready.</p>}<DownloadDetails /><p className="closing-trust">Native Mac app. No account. A little more room to think.</p></div></section>;
 }
 
 function Footer() {

@@ -401,7 +401,13 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
 .compatibility-note { margin: 32px 0 0; max-width: 720px; color: var(--ink-muted); font-size: 12px; line-height: 1.65; }
 .closing-section { padding-block: var(--section-space); }
 .closing-inner { text-align: center; }
-.closing-symbol { width: 48px; height: 48px; margin: 0 auto 30px; }
+.closing-symbol,
+.brand-symbol--current.closing-symbol {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 32px;
+  object-fit: contain;
+}
 .closing-inner h2 { max-width: 750px; margin: 0 auto 24px; }
 .closing-inner > p:not(.eyebrow):not(.closing-trust) { max-width: 515px; margin: 0 auto 28px; color: var(--ink-muted); font-size: 17px; line-height: 1.65; }
 .closing-trust { margin: 20px 0 0; color: var(--ink-muted); font-size: 12px; }
@@ -598,7 +604,8 @@ h2 { margin-bottom: 24px; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.07
   .trust-fact + .trust-fact { border-top: 1px solid var(--hairline); }
   .compatibility-note { margin-top: 18px; }
   .closing-inner > p:not(.eyebrow):not(.closing-trust) { font-size: 16px; }
-  .closing-symbol { width: 42px; height: 42px; margin-bottom: 24px; }
+  .closing-symbol,
+  .brand-symbol--current.closing-symbol { width: 104px; height: 104px; margin-bottom: 28px; }
   .closing-trust { font-size: 11px; }
   .site-footer > .page-container { flex-wrap: wrap; padding-block: 24px; gap: 18px; }
   .site-footer > .page-container > span { order: 3; flex-basis: 100%; font-size: 11px; }
