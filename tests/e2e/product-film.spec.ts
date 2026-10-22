@@ -65,8 +65,7 @@ test('responsive film and section rhythm remain intact', async ({ page }, testIn
       await testInfo.attach(`hero-${width}`, { body: await page.screenshot(), contentType: 'image/png' });
     }
   }
-  await section.locator('summary').click();
-  await expect(section.getByText(/The interface is native/)).toBeVisible();
+  await expect(section.getByText('Illustrative demo · Refine results may vary.', { exact: true })).toBeVisible();
 });
 
 test('unavailable video preserves poster, written guidance and other landing interactions', async ({ page }) => {
@@ -77,8 +76,7 @@ test('unavailable video preserves poster, written guidance and other landing int
   await expect(section.getByRole('status')).toContainText('Video unavailable.');
   await expect(section.getByRole('link', { name: 'Open the MP4' })).toHaveAttribute('href', /\/media\/rasc-product-film.mp4$/);
   await expect(section.locator('img')).toBeVisible();
-  await section.locator('summary').click();
-  await expect(section.getByText(/The interface is native/)).toBeVisible();
+  await expect(section.getByText('Illustrative demo · Refine results may vary.', { exact: true })).toBeVisible();
   await page.getByRole('tab', { name: /Refine/ }).click();
   await expect(page.locator('#interaction-panel')).toHaveAttribute('data-step', 'refine');
 });
