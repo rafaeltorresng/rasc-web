@@ -6,6 +6,24 @@ import m1 from '../../brand/companion/m1-master.png';
 import m3 from '../../brand/companion/m3-master.png';
 import './ShowcaseStudy.css';
 
+function ShowcasePostMark() {
+  const mark512 = publicUrl('showcase/rasc-symbol-wordmark-512.png');
+  const mark1024 = publicUrl('showcase/rasc-symbol-wordmark-1024.png');
+  return (
+    <img
+      className="brand-symbol brand-symbol--showcase-post"
+      src={mark1024}
+      srcSet={`${mark512} 512w, ${mark1024} 1024w`}
+      sizes="112px"
+      width={1024}
+      height={1024}
+      alt=""
+      decoding="sync"
+      fetchPriority="high"
+    />
+  );
+}
+
 const directions = [
   { id: 'a', title: 'A — Product Tableau', note: 'Home anchors the scene. The scratchpad leads. Refine is optional and close at hand.' },
   { id: 'b', title: 'B — Mac Context, Minimal', note: 'A quiet working surface establishes context, but gives less room to the Rasc ecosystem.' },
@@ -15,7 +33,10 @@ const directions = [
 export default function ShowcaseStudy({ post = false, companion }: { post?: boolean; companion?: 'm1' | 'm3' }) {
   if (post) return (
     <main className="showcase-post">
-      <Wordmark />
+      <a className="wordmark showcase-post__wordmark" href="#top" aria-label="Rasc">
+        <ShowcasePostMark />
+        <span>Rasc</span>
+      </a>
       <div className="showcase-post__heading">
         <h1>A scratchpad for<br /><span>unfinished thoughts.</span></h1>
         <p>The place before the note.</p>

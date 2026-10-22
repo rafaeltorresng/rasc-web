@@ -21,6 +21,12 @@
 .showcase-study--c .product-tableau__refine { width: 41%; left: 58%; top: 47%; }
 .showcase-study__search { position: absolute; width: 32%; height: auto; left: 10%; top: 63%; border-radius: 10px; box-shadow: var(--shadow-panel); }
 .showcase-post { position: relative; width: 1200px; height: 1080px; padding: 54px 60px 36px; background: white; }
+.showcase-post__wordmark { gap: 12px; font-size: 24px; }
+.showcase-post__wordmark .brand-symbol--showcase-post {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
 .showcase-post__heading { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 48px; }
 .showcase-post h1 { margin: 0; font-size: 62px; line-height: 1.08; }
 .showcase-post h1 span { color: var(--violet); }
