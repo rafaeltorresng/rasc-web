@@ -27,13 +27,13 @@ export const landingCopy = {
       id: 'capture',
       label: 'Capture',
       heading: 'Catch it\nwhile it’s here.',
-      copy: 'Press ⌥\\ and start writing. There’s nothing to name or organize first. Just a little room for the thought.',
+      copy: 'Press ⌥\\ to bring Rasc up over your work. Jot down a thought, hit Esc, and carry on. No title or folder needed.',
     },
     {
       id: 'refine',
       label: 'Refine',
       heading: 'Same thought.\nClearer words.',
-      copy: 'Press ⌘J when the wording needs work. Rasc offers an edit on your Mac. Accept it, or keep your original.',
+      copy: 'Press ⌘J to refine your writing on-device. No prompts or modes to choose. Review any suggestion against your original, then decide.',
     },
     {
       id: 'keep',
@@ -53,7 +53,7 @@ export const landingCopy = {
   },
   retrieval: {
     title: 'Pick it up later.',
-    body: 'The thought you just kept is still here. Open Home to pick it up, or Search when you know what you’re looking for. Unfinished thoughts stay within reach, too.',
+    body: 'Closing Rasc doesn’t mean losing your thought. Browse Home or search when you need it again — whether it’s kept or still unfinished.',
   },
   trust: {
     title: 'Your thoughts stay on your Mac.',
@@ -67,6 +67,6 @@ export const landingCopy = {
   },
   closing: {
     title: 'Give unfinished thoughts somewhere to land.',
-    body: 'Capture them before they become notes. Shape them when they need it. Keep only what matters.',
+    body: 'Write it down without leaving your work. Refine if it helps. Keep it if you want to come back. Then carry on.',
   },
 } as const;

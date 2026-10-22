@@ -84,7 +84,7 @@ export function DownloadDetails({ compact = false, showDetails = true }: { compa
             ) : (
               <p>A public download is not available yet.</p>
             )}
-            <p>{launch.refineRequirement} Capture, Keep, Home and Search work without Apple Intelligence.</p>
+            <p>{launch.refineRequirement}</p>
           </div>
         </details>
       )}

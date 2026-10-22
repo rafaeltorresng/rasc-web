@@ -52,7 +52,7 @@ export default function ProductTableau({ className = '', caption = true, live = 
         </div>
       </div>
       {caption && <figcaption className="product-tableau__caption">
-        <p><span>Catch a thought.</span> A little room to come back to it.</p>
+        <p>Right where you&apos;re working.</p>
         {!live && <span className="product-tableau__provenance">Real Mac app · composed views</span>}
       </figcaption>}
     </figure>

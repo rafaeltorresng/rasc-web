@@ -15,6 +15,7 @@ export const launch = {
   sourcePublic: true,
   publicReleaseReady: true,
   platform: 'Apple silicon · macOS 14+',
-  refineRequirement: 'Refine needs macOS 26+ with Apple Intelligence enabled.',
+  refineRequirement:
+    'Refine requires macOS 26+, a compatible Mac, and Apple Intelligence enabled and ready. Capture, Keep, Home, and Search work without it.',
   notarized: false,
 } as const;
