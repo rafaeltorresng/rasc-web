@@ -1,14 +1,14 @@
-// Distribution facts for Rasc 0.1.1 — verified 2026-10-15 against GitHub Release v0.1.1.
-const RELEASE_TAG = 'v0.1.1';
+// Distribution facts for Rasc 0.1.3 — verified 2026-10-22 against GitHub Release v0.1.3.
+const RELEASE_TAG = 'v0.1.3';
 const RELEASE_BASE = `https://github.com/rafaeltorresng/rasc/releases/download/${RELEASE_TAG}`;
 
 export const launch = {
-  version: '0.1.1',
-  build: 7,
-  filename: 'Rasc-0.1.1-unsigned.dmg',
-  downloadHref: `${RELEASE_BASE}/Rasc-0.1.1-unsigned.dmg`,
-  checksumHref: `${RELEASE_BASE}/Rasc-0.1.1-unsigned.dmg.sha256`,
-  sha256: '812323655859a5389cbd872075e81bc51509084ac14966c6a293911b5b383973',
+  version: '0.1.3',
+  build: 9,
+  filename: 'Rasc-0.1.3-unsigned.dmg',
+  downloadHref: `${RELEASE_BASE}/Rasc-0.1.3-unsigned.dmg`,
+  checksumHref: `${RELEASE_BASE}/Rasc-0.1.3-unsigned.dmg.sha256`,
+  sha256: 'a3ee1b99cfd8839238a589aee2a8d68768bb2c021e8a7efbe2557b22df969ee1',
   installGuideHref:
     `${import.meta.env.BASE_URL}install/`,
   githubHref: 'https://github.com/rafaeltorresng/rasc',

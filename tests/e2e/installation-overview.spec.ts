@@ -9,7 +9,7 @@ test('permanent installation guide supports direct load, refresh and all platfor
   await expect(page.getByRole('heading', { level: 3 })).toHaveCount(4);
   await expect(page.getByRole('link', { name: /Download (for Mac|Mac installer)/ })).toHaveAttribute(
     'href',
-    /releases\/download\/v0.1.1/,
+    /releases\/download\/v0.1.3/,
   );
   await page.reload();
   await expect(page.getByRole('heading', { name: 'Install Rasc.', exact: true })).toBeVisible();

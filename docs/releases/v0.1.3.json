@@ -1,0 +1,17 @@
+{
+  "status": "published; public download checksum verified",
+  "version": "0.1.3",
+  "build": 9,
+  "tag": "v0.1.3",
+  "filename": "Rasc-0.1.3-unsigned.dmg",
+  "sha256": "a3ee1b99cfd8839238a589aee2a8d68768bb2c021e8a7efbe2557b22df969ee1",
+  "notarized": false,
+  "checks": {
+    "releaseBuild": true,
+    "dmgVerification": true,
+    "publicDownloadChecksumVerified": true
+  },
+  "releaseUrl": "https://github.com/rafaeltorresng/rasc/releases/tag/v0.1.3",
+  "sourceCommit": "9af8809ef336b25627b18067263c13e23d9df8d1",
+  "publishedAt": "2026-10-22T13:26:59Z"
+}

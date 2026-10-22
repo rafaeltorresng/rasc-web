@@ -2,8 +2,8 @@ import { devices } from '@playwright/test';
 import { test, expect } from './fixtures';
 import { createHash } from 'node:crypto';
 
-const installer = 'https://github.com/rafaeltorresng/rasc/releases/download/v0.1.1/Rasc-0.1.1-unsigned.dmg';
-const sha256 = '812323655859a5389cbd872075e81bc51509084ac14966c6a293911b5b383973';
+const installer = 'https://github.com/rafaeltorresng/rasc/releases/download/v0.1.3/Rasc-0.1.3-unsigned.dmg';
+const sha256 = 'a3ee1b99cfd8839238a589aee2a8d68768bb2c021e8a7efbe2557b22df969ee1';
 
 test.beforeEach(async ({ page }) => {
   await page.route('https://static.cloudflareinsights.com/**', route => route.abort());
@@ -20,11 +20,11 @@ test('Mac download starts without losing the guide, modified clicks stay native'
   const link = page.locator('.hero-download').getByRole('link', { name: 'Download for Mac', exact: true });
   await expect(link).toHaveAttribute('href', installer);
   // Full public download on one desktop project; equivalent link behavior on all others.
-  if (testInfo.project.name !== 'chrome-mac' && !testInfo.project.name.includes('webkit')) await page.route(installer, route => route.fulfill({ status: 200, headers: { 'content-type': 'application/x-apple-diskimage', 'content-disposition': 'attachment; filename="Rasc-0.1.1-unsigned.dmg"' }, body: Buffer.from('fixture-dmg') }));
+  if (testInfo.project.name !== 'chrome-mac' && !testInfo.project.name.includes('webkit')) await page.route(installer, route => route.fulfill({ status: 200, headers: { 'content-type': 'application/x-apple-diskimage', 'content-disposition': 'attachment; filename="Rasc-0.1.3-unsigned.dmg"' }, body: Buffer.from('fixture-dmg') }));
   const download = page.waitForEvent('download');
   await link.click();
   const downloaded = await download;
-  expect(downloaded.suggestedFilename()).toBe('Rasc-0.1.1-unsigned.dmg');
+  expect(downloaded.suggestedFilename()).toBe('Rasc-0.1.3-unsigned.dmg');
   if (testInfo.project.name === 'chrome-mac') {
     const hash = createHash('sha256');
     for await (const chunk of (await downloaded.createReadStream())!) hash.update(chunk);
